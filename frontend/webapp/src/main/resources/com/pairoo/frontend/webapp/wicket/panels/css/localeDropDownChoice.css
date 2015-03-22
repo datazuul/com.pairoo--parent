@@ -1,0 +1,337 @@
+.sq, .sq_AL, .AL { /* Albanisch, Albanisch (Albanien) */
+	background-image: url("../images/al.png") !important;
+}
+.ar { /* Arabisch */
+	/*background-image: url("../images/??.png") !important;*/
+}
+.ar_DZ, .DZ { /* Arabisch (Algerien) */
+	background-image: url("../images/dz.png") !important;
+}
+.ar_BH, .BH { /* Arabisch (Bahrain) */
+	background-image: url("../images/bh.png") !important;
+}
+.ar_IQ, .IQ { /* Arabisch (Irak) */
+	background-image: url("../images/iq.png") !important;
+}
+.ar_YE, .YE { /* Arabisch (Jemen) */
+	background-image: url("../images/ye.png") !important;
+}
+.ar_JO, .JO { /* Arabisch (Jordanien) */
+	background-image: url("../images/jo.png") !important;
+}
+.ar_QA, QA { /* Arabisch (Qatar) */
+	background-image: url("../images/qa.png") !important;
+}
+.ar_KW, .KW { /* Arabisch (Kuwait) */
+	background-image: url("../images/kw.png") !important;
+}
+.ar_LB, .LB { /* Arabisch (Libanon) */
+	background-image: url("../images/lb.png") !important;
+}
+.ar_LY, .LY { /* Arabisch (Libyen) */
+	background-image: url("../images/ly.png") !important;
+}
+.ar_MA, .MA { /* Arabisch (Marokko) */
+	background-image: url("../images/ma.png") !important;
+}
+.ar_OM, .OM { /* Arabisch (Oman) */
+	background-image: url("../images/om.png") !important;
+}
+.ar_SA, .SA { /* Arabisch (Saudi-Arabien) */
+	background-image: url("../images/sa.png") !important;
+}
+.ar_SD, .SD { /* Arabisch (Sudan) */
+	background-image: url("../images/sd.png") !important;
+}
+.ar_SY, .SY { /* Arabisch (Syrien) */
+	background-image: url("../images/sy.png") !important;
+}
+.ar_TN, .TN { /* Arabisch (Tunesien) */
+	background-image: url("../images/tn.png") !important;
+}
+.ar_AE, .AE { /* Arabisch (Vereinigte Arabische Emirate) */
+	background-image: url("../images/ae.png") !important;
+}
+.ar_EG, .EG { /* Arabisch (Ägypten) */
+	background-image: url("../images/eg.png") !important;
+}
+
+.be, .be_BY, .BY { /* Belorussisch, Belorussisch (Belarus) */
+	background-image: url("../images/by.png") !important;
+}
+.bg, .bg_BG, .BG { /* Bulgarisch, Bulgarisch (Bulgarien) */
+	background-image: url("../images/bg.png") !important;
+}
+
+.zh, .zh_CN, .CN, .zh_HK, .HK { /* Chinesisch, Chinesisch (China), Chinesisch (Hongkong) */
+	background-image: url("../images/cn.png") !important;
+}
+.zh_SG, .SG, .en_SG { /* Chinesisch (Singapur), Englisch (Singapur) */
+	background-image: url("../images/sg.png") !important;
+}
+.zh_TW, .TW { /* Chinesisch (Taiwan) */
+	background-image: url("../images/tw.png") !important;
+}
+
+.de, .de_DE, .DE { /* Deutsch, Deutsch (Deutschland) */
+	background-image: url("../images/de.png") !important;
+}
+.de_LU, .LU, .fr_LU { /* Deutsch (Luxemburg), Französisch (Luxemburg) */
+	background-image: url("../images/lu.png") !important;
+}
+.de_CH, .CH, .fr_CH, .it_CH { /* Deutsch (Schweiz), Französisch (Schweiz), Italienisch (Schweiz) */
+	background-image: url("../images/ch.png") !important;
+}
+.de_AT, .AT { /* Deutsch (Österreich) */
+	background-image: url("../images/at.png") !important;
+}
+
+.da, .da_DK, .DK { /* Dänisch, Dänisch (Dänemark) */
+	background-image: url("../images/dk.png") !important;
+}
+
+.en, .GB, .en_GB { /* Englisch, Englisch (Vereinigtes Königreich) */
+	background-image: url("../images/gb.png") !important;
+}
+.en_AU, .AU { /* Englisch (Australien) */
+	background-image: url("../images/au.png") !important;
+}
+.en_IN, .IN, .hi_IN { /* Englisch (Indien), Hindi (Indien) */
+	background-image: url("../images/in.png") !important;
+}
+.en_IE, .IE, .ga, .ga_IE { /* Englisch (Irland), Irisch */
+	background-image: url("../images/ie.png") !important;
+}
+.en_CA, .CA, .fr_CA { /* Englisch (Kanada), Französisch (Kanada) */
+	background-image: url("../images/ca.png") !important;
+}
+.en_MT, .MT { /* Englisch (Malta) */
+	background-image: url("../images/mt.png") !important;
+}
+.en_NZ, .NZ { /* Englisch (Neuseeland) */
+	background-image: url("../images/nz.png") !important;
+}
+.en_PH, .PH { /* Englisch (Philippinen) */
+	background-image: url("../images/ph.png") !important;
+}
+.en_ZA, .ZA { /* Englisch (Südafrika) */
+	background-image: url("../images/za.png") !important;
+}
+.en_US, .US { /* Englisch (Vereinigte Staaten von Amerika) */
+	background-image: url("../images/us.png") !important;
+}
+
+.et, .et_EE, .EE { /* Estnisch, Estnisch (Estland) */
+	background-image: url("../images/ee.png") !important;
+}
+.fi, .fi_FI, .FI { /* Finnisch, Finnisch (Finnland) */
+	background-image: url("../images/fi.png") !important;
+}
+
+.fr, .fr_FR, .FR { /* Französisch, Französisch (Frankreich) */
+	background-image: url("../images/fr.png") !important;
+}
+.fr_BE, .BE, .nl_BE { /* Französisch (Belgien), Niederländisch (Belgien) */
+	background-image: url("../images/be.png") !important;
+}
+
+.el, .el_GR, .GR { /* Griechisch, Griechisch (Griechenland) */
+	background-image: url("../images/gr.png") !important;
+}
+.el_CY, .CY { /* Griechisch (Zypern) */
+	background-image: url("../images/cy.png") !important;
+}
+
+.iw, .iw_IL, .IL { /* Hebräisch, Hebräisch (Israel) */
+	background-image: url("../images/il.png") !important;
+}
+.in, .in_ID, .ID { /* Indonesisch, Indonesisch (Indonesien) */
+	background-image: url("../images/id.png") !important;
+}
+.is, .is_IS, .IS { /* Isländisch, Isländisch (Island) */
+	background-image: url("../images/is.png") !important;
+}
+.it, .it_IT, .IT { /* Italienisch, Italienisch (Italien) */
+	background-image: url("../images/it.png") !important;
+}
+.ja, .ja_JP, .JP, .ja_JP_JP { /* Japanisch, Japanisch (Japan), Japanisch (Japan, JP) */
+	background-image: url("../images/jp.png") !important;
+}
+.ca { /* Katalanisch */
+	background-image: url("../images/catalonia.png") !important;
+}
+.ca_ES { /* Katalanisch (Spanien) */
+	background-image: url("../images/es.png") !important;
+}
+.ko { /* Koreanisch */
+	/*background-image: url("../images/??.png") !important;*/
+}
+.ko_KR, .KR { /* Koreanisch (Südkorea) */
+	background-image: url("../images/kr.png") !important;
+}
+.hr, .HR, .hr_HR { /* Kroatisch, Kroatisch (Kroatien) */
+	background-image: url("../images/hr.png") !important;
+}
+.lv, .LV, .lv_LV { /* Lettisch, Lettisch (Lettland) */
+	background-image: url("../images/lv.png") !important;
+}
+.lt, .LT, .lt_LT { /* Litauisch, Litauisch (Litauen) */
+	background-image: url("../images/lt.png") !important;
+}
+.ms, .MY, .ms_MY { /* Malay, Malay (Malaysia) */
+	background-image: url("../images/my.png") !important;
+}
+.mt, .MT, .mt_MT { /* Maltesisch, Maltesisch (Malta) */
+	background-image: url("../images/mt.png") !important;
+}
+.mk, .MK, .mk_MK { /* Mazedonisch, Mazedonisch (Mazedonien) */
+	background-image: url("../images/mk.png") !important;
+}
+.nl, .NL, .nl_NL { /* Niederländisch, Niederländisch (Niederlande) */
+	background-image: url("../images/nl.png") !important;
+}
+.no, .NO, .no_NO, .no_NO_NY { /* Norwegisch, Norwegisch (Norwegen), Norwegisch (Norwegen, Nynorsk) */
+	background-image: url("../images/no.png") !important;
+}
+.pl, .PL, .pl_PL { /* Polnisch, Polnisch (Polen) */
+	background-image: url("../images/pl.png") !important;
+}
+
+.pt, .PT, .pt_PT { /* Portugiesisch, Portugiesisch (Portugal) */
+	background-image: url("../images/pt.png") !important;
+}
+.pt_BR, .BR { /* Portugiesisch (Brasilien) */
+	background-image: url("../images/br.png") !important;
+}
+
+.ro, .RO, .ro_RO { /* Rumänisch, Rumänisch (Rumänien) */
+	background-image: url("../images/ro.png") !important;
+}
+.ru, .RU, .ru_RU { /* Russisch, Russisch (Russland) */
+	background-image: url("../images/ru.png") !important;
+}
+.sv, .SE, .sv_SE { /* Schwedisch, Schwedisch (Schweden) */
+	background-image: url("../images/se.png") !important;
+}
+
+.sr { /* Serbisch */
+	/*background-image: url("../images/??.png") !important;*/
+}
+.sr_BA, .BA { /* Serbisch (Bosnien und Herzegowina) */
+	background-image: url("../images/ba.png") !important;
+}
+.sr_ME, .ME { /* Serbisch (Montenegro) */
+	background-image: url("../images/me.png") !important;
+}
+.sr_CS, .CS { /* Serbisch (Serbien und Montenegro) */
+	background-image: url("../images/cs.png") !important;
+}
+.sr_RS, .RS { /* Serbisch (Serbien) */
+	background-image: url("../images/rs.png") !important;
+}
+
+.sk, .SK, .sk_SK { /* Slowakisch, Slowakisch (Slowakei) */
+	background-image: url("../images/sk.png") !important;
+}
+.sl, .SI, .sl_SI { /* Slowenisch, Slowenisch (Slowenien) */
+	background-image: url("../images/si.png") !important;
+}
+
+.es, .ES, .es_ES { /* Spanisch, Spanisch (Spanien) */
+	background-image: url("../images/es.png") !important;
+}
+.es_AR, .AR { /* Spanisch (Argentinien) */
+	background-image: url("../images/ar.png") !important;
+}
+.es_BO, .BO { /* Spanisch (Bolivien) */
+	background-image: url("../images/bo.png") !important;
+}
+.es_CL, .CL { /* Spanisch (Chile) */
+	background-image: url("../images/cl.png") !important;
+}
+.es_CR, .CR { /* Spanisch (Costa Rica) */
+	background-image: url("../images/cr.png") !important;
+}
+.es_DO, .DO { /* Spanisch (Dominikanische Republik) */
+	background-image: url("../images/do.png") !important;
+}
+.es_EC, .EC { /* Spanisch (Ecuador) */
+	background-image: url("../images/ec.png") !important;
+}
+.es_SV, .SV { /* Spanisch (El Salvador) */
+	background-image: url("../images/sv.png") !important;
+}
+.es_GT, .GT { /* Spanisch (Guatemala) */
+	background-image: url("../images/gt.png") !important;
+}
+.es_HN, .HN { /* Spanisch (Honduras) */
+	background-image: url("../images/hn.png") !important;
+}
+.es_CO, .CO { /* Spanisch (Kolumbien) */
+	background-image: url("../images/co.png") !important;
+}
+.es_MX, .MX { /* Spanisch (Mexiko) */
+	background-image: url("../images/mx.png") !important;
+}
+.es_NI, .NI { /* Spanisch (Nicaragua) */
+	background-image: url("../images/ni.png") !important;
+}
+.es_PA, .PA { /* Spanisch (Panama) */
+	background-image: url("../images/pa.png") !important;
+}
+.es_PY, .PY { /* Spanisch (Paraguay) */
+	background-image: url("../images/py.png") !important;
+}
+.es_PE, .PE { /* Spanisch (Peru) */
+	background-image: url("../images/pe.png") !important;
+}
+.es_PR, .PR { /* Spanisch (Puerto Rico) */
+	background-image: url("../images/pr.png") !important;
+}
+.es_UY, .UY { /* Spanisch (Uruguay) */
+	background-image: url("../images/uy.png") !important;
+}
+.es_VE, .VE { /* Spanisch (Venezuela) */
+	background-image: url("../images/ve.png") !important;
+}
+.es_AR, .AR { /* Spanisch (Argentinien) */
+	background-image: url("../images/ar.png") !important;
+}
+.es_US { /* Spanisch (Vereinigte Staaten von Amerika) */
+	background-image: url("../images/us.png") !important;
+}
+
+.th, .TH, .th_TH, .th_TH_TH { /* Thai, Thai (Thailand), Thai (Thailand,TH) */
+	background-image: url("../images/th.png") !important;
+}
+.cs, .CZ, .cs_CZ { /* Tschechisch, Tschechisch (Tschechische Republik) */
+	background-image: url("../images/cz.png") !important;
+}
+.tr, .TR, .tr_TR { /* Türkisch, Türkisch (Türkei) */
+	background-image: url("../images/tr.png") !important;
+}
+.uk, .UA, .uk_UA { /* Ukrainisch, Ukrainisch (Ukraine) */
+	background-image: url("../images/ua.png") !important;
+}
+.hu, .HU, .hu_HU { /* Ungarisch, Ungarisch (Ungarn) */
+	background-image: url("../images/hu.png") !important;
+}
+.vi, .VN, .vi_VN { /* Vietnamesisch, Vietnamesisch (Vietnam) */
+	background-image: url("../images/vn.png") !important;
+}
+
+select.flag {
+	background: none no-repeat scroll 3px 3px transparent;
+	padding-left: 30px;
+	padding-right: 2px;
+	padding-top: 2px;
+}
+
+select.flag option {
+	background: none no-repeat scroll 3px 3px transparent;
+	line-height: 18px;
+	padding-bottom: 2px;
+	padding-left: 30px;
+	padding-right: 2px;
+	padding-top: 2px;
+}

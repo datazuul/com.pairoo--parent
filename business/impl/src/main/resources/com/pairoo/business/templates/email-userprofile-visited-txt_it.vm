@@ -1,0 +1,11 @@
+Gentile ${visitedUser.userAccount.username}!
+
+${visitor.userAccount.username}Ha visitato il tuo profilo. È forse il partner dei tuoi sogni?
+Dai subito un'occhiata e clicca sul link ${actionUrl}
+
+
+ Il Team di Pairoo ti augura buona fortuna e successo e felicità nella ricerca del tuo partner.
+Sei ha domande o suggerimenti manda una mail a: support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH
+

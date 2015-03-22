@@ -1,0 +1,20 @@
+Hello ${user.userAccount.username} welcome to PAIROO!
+thanks for your successful registration at PAIROO, the innovative and international dating portal.
+
+You can start right away!
+Be creative and describe your profile and be inspiring to other members of PAIROO.
+
+For your data security we please you to confirm your email address.
+This confirmation make sure that nobody can use your account at PAIROO.
+
+To confirm your email address ${user.email} and activate your pairoo.com account click on the following link:
+
+${activationLink}
+
+Don't wait and start to find the partner of your dreams.
+
+The PAIROO support team wish you great success and good luck to find your love.
+
+If you have any question or recommendation email to support@pairoo.com.
+
+Copyright 2011-2014 PAIROO GmbH

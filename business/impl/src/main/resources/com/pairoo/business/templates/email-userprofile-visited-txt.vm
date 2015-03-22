@@ -1,0 +1,12 @@
+Hello ${visitedUser.userAccount.username}!
+
+${visitor.userAccount.username} visited your profile. Maybe be the partner of your dreams.
+
+Have a look now at your visitors here: ${actionUrl}
+
+
+The PAIROO support team wish you great success and good luck to find your love.
+
+If you have any question or recommendation email to support@pairoo.com.
+
+Copyright 2011-2014 PAIROO GmbH

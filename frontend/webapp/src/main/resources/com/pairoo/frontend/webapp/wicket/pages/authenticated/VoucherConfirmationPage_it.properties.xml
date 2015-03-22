@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title.login">Congratulazioni per aver attivato il tuo coupon</entry>
+	<entry key="title.registration">Congratulazione per l'iscrizione e l'attivazione del tuo coupon</entry>
+
+	<entry key="confirmation_mail_text">
+		&lt;p&gt;Per concludere Ti preghiamo di confermare ancora una volta il tuo indirizzo di posta elettronica. Ti preghiamo di confermare ancora una volta il tuo indirizzo di posta elettronica
+.&lt;br/&gt;
+		Ti abbiamo inviato una Email di conferma
+.
+		Con la tua conferma sarai registrato efficacemente su Pairoo.&lt;/p&gt;</entry>
+
+	<entry key="content1">
+		&lt;p&gt;Ancora um momento e grazia alla formula Premium avrai innumerevoli possiblitá di contatto e di flirt
+. Inizia ora la tua ricerca del partner ideale.&lt;/p&gt;
+
+		&lt;p&gt;Per maggiore informazione abbiamo riepilogato i tuoi dati di iscrizione.&lt;/p&gt; </entry>
+	<entry key="content2">
+		&lt;p&gt;Alla scadenza del coupon la tua formula Premium sará commutata automaticamente in una associazione a gratuita.&lt;/p&gt; </entry>
+	<entry key="nextAction">Come socio Premium puoi immediatamente contattare e flirtare.</entry>
+	<entry key="footer">&lt;p&gt;Il Team di PAIROO ti augura tanti contatti e flirt ricchi di succeso !&lt;/p&gt;
+
+		&lt;p&gt;Cordiali saluti&lt;/p&gt;
+
+		&lt;p&gt;Il tuo Team di Pairoo&lt;/p&gt;</entry>
+</properties>

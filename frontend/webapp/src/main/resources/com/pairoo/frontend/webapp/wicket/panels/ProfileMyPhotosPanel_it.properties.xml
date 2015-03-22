@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="image_of_total_images">Bild %d von %d</entry>
+	<entry key="instructions">
+		&lt;p&gt;Per caricare un'immagine premi il tasto  "nuova immagine"&lt;/p&gt;
+
+		&lt;p&gt;appena caricata l'immagine, puoi renderla visibile agli altri associati.&lt;br/&gt;
+		Inoltre puoi stabilire quale immagine pubblicare come foto di profilo. Per pubblicare una foto di profilo premi il tasto "foto di profilo". Puoi scegliere una solo foto di profilo.&lt;/p&gt; </entry>
+	<entry key="new_photo">Nuova immagine</entry>
+	<entry key="photo">Bild ${}</entry>
+</properties>

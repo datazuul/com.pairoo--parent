@@ -1,0 +1,2 @@
+alter table SEARCHPROFILE add column NUMBER_OF_KIDS_TYPE varchar(255);
+update SEARCHPROFILE set NUMBER_OF_KIDS_TYPE='ANY';

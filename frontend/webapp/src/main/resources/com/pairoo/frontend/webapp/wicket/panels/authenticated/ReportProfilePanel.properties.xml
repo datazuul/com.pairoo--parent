@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="dialog.text">
+        &lt;p&gt;You want to report the profile '&lt;b&gt;${userAccount.username}&lt;/b&gt;'
+        to our support because you feel bothered.
+        &lt;/p&gt;
+        &lt;p&gt;Please explain us the reasons why:&lt;/p&gt;
+    </entry>
+</properties>

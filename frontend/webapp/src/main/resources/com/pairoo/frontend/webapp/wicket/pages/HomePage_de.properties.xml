@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="four_reasons_for_pairoo.content">
+		&lt;ul class="hooks"&gt;
+		&lt;li&gt;PAIROO ist ein
+		werbefreies Portal&lt;/li&gt;
+		&lt;li&gt;Testen Sie PAIROO
+		kostenlos&lt;/li&gt;
+		&lt;li&gt;Kommunizieren Sie
+		international&lt;/li&gt;
+		&lt;li&gt;Sicherheit für Ihre persönlichen
+		Daten&lt;/li&gt;
+		&lt;/ul&gt; </entry>
+                <entry key="intro">50% aller Pairoo Mitglieder&lt;br/&gt;
+                &lt;em&gt;haben die Chance&lt;/em&gt;
+                Ihre Liebe innerhalb der ersten sechs Monate zu finden</entry>
+
+                <entry key="pairoo_quality.content">
+		Der Kunde ist bei PAIROO die Nummer 1.
+
+		&lt;p&gt;PAIROO
+		verpflichtet sich für
+		höchste Qualität und
+		Datensicherheit bei
+		der Online Partnersuche im
+		Internet.&lt;br/&gt;
+		Wir
+		stehen für
+		Transparenz und
+		verbraucherorientierte Angebote ohne
+		versteckte
+		Abonnementfunktion.&lt;br/&gt;
+		Widerruf und Kündigung der
+		PAIROO
+		Premium Mitgliedschaft können per Email oder
+		per Postzustellung
+		ausgesprochen werden.&lt;/p&gt;
+
+		&lt;p&gt;Das Online Portal PAIROO
+		orientiert sich an den S.P.I.N.-Kodex des
+		Bundesverbands Digitale
+		Wirtschaft e.V., siehe auch &lt;a href="http://www.spin-kodex.de/"
+		target="_blank"&gt;www.spin-kodex.de.&lt;/a&gt;.&lt;/p&gt;</entry>
+	<entry key="register_for_free">Jetzt kostenlos registrieren</entry>
+	<entry key="registration.title">Kostenlos Anmelden und die große Liebe finden</entry>
+</properties>

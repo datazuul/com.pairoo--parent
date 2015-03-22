@@ -1,0 +1,2 @@
+insert into ID_SEQUENCES (sequence_name, next_val) values ('com.pairoo.domain.geo.GeoLocation', 896000);
+insert into ID_SEQUENCES (sequence_name, next_val) values ('com.pairoo.domain.geo.Subdivision',  27400);

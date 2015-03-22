@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="and_search_for">e cerca</entry>
+	<entry key="born_on">data di nascita</entry>
+	<entry key="I_am">Io sono</entry>
+	<entry key="search_now">Cerca adesso</entry>
+	<entry key="search_world">cerca in tutto il mondo</entry>
+	<entry key="emailFieldLabel">Email</entry>
+	<entry key="passwordFieldLabel">Password</entry>
+	<entry key="living_in">vivo in</entry>
+	<entry key="searchProfileMaxAgeSelectionLabel">fino</entry>
+	<entry key="searchProfileMinAgeSelectionLabel">da</entry>
+	<entry key="searchProfilePartnerTypeSelectionLabel">Io cerco</entry>
+	<entry key="zipcode_area">in CAP</entry>
+	<entry key="termsAndConditionsValidationCheckLabel">Confermo di avere almeno 18 anni e accetto  ...</entry>
+	<entry key="termsAndConditionsCheckLabel">Sono maggiorenne e accetto ${termsLink}
+		e anche
+		${conditionsLink}.</entry>
+	<entry key="usernameFieldLabel">Pseudonimo</entry>
+	<entry key="userAccount.password.StringValidator.range">I dati nel campo devono essere almeno '${label}'   ${minimum}
+		e massimo ${maximum}.</entry>
+	<entry key="userProfilePartnerTypeSelectionLabel">Io sono</entry>
+
+	<entry key="error.email_not_unique">Questo indirizzo é giá utilizzato. Se hai dimenticato la tua password premi il tasto "Password dimenticata" oppure conttati la nostra assistenza telefonica.</entry>
+	<entry key="error.username_not_unique">Lo pseudonimo é giá utilizzato. Scegline un'altro.</entry>
+</properties>

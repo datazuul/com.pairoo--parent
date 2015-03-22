@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="introduction">
+		&lt;p&gt;
+		Was ist Ihnen in einer Beziehung wichtig?&lt;br/&gt;
+		Es kommt darauf an, dass Sie Ihre wichtigen Themen nennen.&lt;br/&gt;
+		Wählen Sie zwischen
+		&lt;ul&gt;
+		&lt;li&gt;nicht so wichtig, d.h. es ist Ihnen beinahe egal, wenn Ihr Partner diese diese Eigenschaft nicht hat&lt;/li&gt;
+		&lt;li&gt;wichtig, d.h. diese Eigenschaft ist wünschenswert&lt;/li&gt;
+		&lt;li&gt;sehr wichtig, d.h. absolut erforderlich in Ihrer Beziehung&lt;/li&gt;
+		&lt;/ul&gt;
+		Die nachfolgenden Angaben werden bei der Suche "Persönliche Werte" verwendet, um passende Partner zu finden.&lt;/p&gt;
+	</entry>
+</properties>

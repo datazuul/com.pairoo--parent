@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<display-name>pairoo.com Portal</display-name>
+
+	<description>pairoo.com</description>
+
+	<!-- The web application needs environment variables to work properly: - 
+		"env" = "DEMO" or "PROD" - "sysEnv.pairoo.payoneMode" = "test" or "live" 
+		- "sysEnv.pairoo.logfilename" = e.g. pairoo.log - "sysEnv.pairoo.exception.receiver" 
+		= [email-address] -->
+
+
+	<!-- #################### CONTEXT-PARAMS #################### -->
+	<!-- Spring -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:/com/pairoo/frontend/webapp/admin/springBeans.xml</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>version</param-name>
+		<param-value>${VERSION_NUMBER}</param-value>
+	</context-param>
+
+	<!-- #################### FILTER #################### -->
+	<!-- Spring -->
+	<filter>
+		<filter-name>com.pairoo.frontend.webapp</filter-name>
+		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+		<init-param>
+			<param-name>applicationFactoryClassName</param-name>
+			<param-value>org.apache.wicket.spring.SpringWebApplicationFactory</param-value>
+		</init-param>
+		<!-- <init-param> <param-name>filterMappingUrlPattern</param-name> <param-value>/*</param-value> 
+			</init-param> <init-param> <param-name>ignorePaths</param-name> <param-value>/css,/js,/images,/icons,/style1,/niceforms,/jQ,/jQM</param-value> 
+			</init-param> -->
+		<init-param>
+			<param-name>applicationBean</param-name>
+			<param-value>wicketWebApplication</param-value>
+		</init-param>
+		<init-param>
+			<param-name>configuration</param-name>
+			<param-value>deployment</param-value>
+		</init-param>
+		<!-- available log levels: ALL, FINE, FINER, FINEST, INFO, OFF, SEVERE, 
+			WARNING, CONFIG -->
+		<init-param>
+			<param-name>logLevel</param-name>
+			<param-value>ALL</param-value>
+		</init-param>
+		<init-param>
+			<param-name>logDir</param-name>
+			<param-value>/var/log</param-value>
+		</init-param>
+	</filter>
+
+	<!-- Hibernate -->
+	<filter>
+		<filter-name>hibernate.osv</filter-name>
+		<filter-class>com.datazuul.framework.webapp.filter.ConditionalFilter</filter-class>
+		<init-param>
+			<param-name>condition</param-name>
+			<param-value>env=DEMO|env=PROD</param-value>
+		</init-param>
+		<init-param>
+			<param-name>wrapped-class</param-name>
+			<param-value>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</param-value>
+		</init-param>
+	</filter>
+	<!-- <filter> <filter-name>hibernate.osv</filter-name> <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class> 
+		</filter> -->
+
+	<!-- Request timer -->
+	<!-- <filter> <filter-name>Timer</filter-name> <description> This filter 
+		times the execution of the request after the filter itself, and prints the 
+		execution time to the standard output. </description> <filter-class>de.pixotec.framework.servlet.filter.TimerFilter</filter-class> 
+		</filter> -->
+
+	<!-- #################### FILTER-MAPPING #################### -->
+	<!-- <filter-mapping> <filter-name>Timer</filter-name> <url-pattern>/*</url-pattern> 
+		</filter-mapping> -->
+	<filter-mapping>
+		<filter-name>hibernate.osv</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>com.pairoo.frontend.webapp</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- #################### LISTENER #################### -->
+	<!-- Spring -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- #################### SERVLETS #################### -->
+	<!-- <servlet> <servlet-name>ssi</servlet-name> <servlet-class> org.apache.catalina.ssi.SSIServlet 
+		</servlet-class> <init-param> <param-name>buffered</param-name> <param-value>0</param-value> 
+		</init-param> <init-param> <param-name>debug</param-name> <param-value>1</param-value> 
+		</init-param> <init-param> <param-name>expires</param-name> <param-value>666</param-value> 
+		</init-param> <init-param> <param-name>isVirtualWebappRelative</param-name> 
+		<param-value>0</param-value> </init-param> <load-on-startup>4</load-on-startup> 
+		</servlet> <servlet-mapping> <servlet-name>ssi</servlet-name> <url-pattern>*.html</url-pattern> 
+		</servlet-mapping> -->
+
+	<session-config>
+		<!-- minutes -->
+		<session-timeout>120</session-timeout>
+	</session-config>
+</web-app>

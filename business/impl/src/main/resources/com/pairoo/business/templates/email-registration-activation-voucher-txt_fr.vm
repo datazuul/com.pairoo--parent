@@ -1,0 +1,28 @@
+Bonjour ${user.userAccount.username} Bienvenue sur PAIROO!
+
+Nous te remercions de t'être enregistré(e) sur notre portail novateur de rencontre par internet et te félicitons pour l'activation de ton bon d'achat.
+ 
+Tu peux commencer dès maintenant et, en tant que membre Premium Pairoo, flirter et entrer en contact de facon illimitée.
+Commence maintenant la recherche du partenaire de tes rêves.
+ 
+Pour des raisons de sécurité, nous te demandons de confirmer ton adresse e-mail.
+Nous garantissons ainsi que personne n'entretient de contacts en ton nom sur Pairoo.
+
+Ton adresse e-mail: ${user.email}.
+
+Confirme ton adresse e-mail en cliquant sur le lien suivant :
+${activationLink}
+
+Pour ton information, voici le détail de ton adhésion :
+ 
+Statut de membre :  		${productRole} bis ${endDate}
+Fonctionalité de l'abonnement :	${subscriptionFunctionality}
+Coûts :				sans (payé avec bon d'achat)
+
+Après expiration de la validité du bon d'achat, ton abonnement Premium se transforme en abonnement gratuit.
+
+L'équipe Pairoo te souhaite beaucoup de succès et de bonheur en amour.
+
+Pour toute question ou suggestion, contacte nous par e-mail : support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

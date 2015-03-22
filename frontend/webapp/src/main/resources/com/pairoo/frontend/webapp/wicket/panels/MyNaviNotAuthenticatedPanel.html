@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><wicket:message key="login">Sign in</wicket:message></a>
+            <div class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="left:auto; right: 0px;">
+                <form method="post" action="MyHomePage.html" wicket:id="form" style="margin:10px;">
+                    <input type="text" wicket:id="userAccount.username" />
+                    <input type="password" wicket:id="userAccount.password" />
+                    <a href="#" wicket:id="lnkPasswordForgotten"><wicket:message key="password_forgotten">Passwort vergessen?</wicket:message></a>
+
+                    <input type="submit" class="btn btn-small btn-primary" wicket:message="value:login" />
+                </form>
+            </div>
+        </wicket:panel>
+    </body>
+</html>

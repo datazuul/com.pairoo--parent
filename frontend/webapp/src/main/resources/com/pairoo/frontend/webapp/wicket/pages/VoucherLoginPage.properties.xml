@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="activate_voucher">activate voucher</entry>
+	<entry key="loginIntro">Please login with your pseudonym and your password to
+		encash the voucher.</entry>
+	<entry key="loginForm.title">Already a member of Pairoo</entry>
+	<entry key="register_and_activate_voucher">register and activate voucher</entry>
+	<entry key="registrationForm.title">New to Pairoo</entry>
+</properties>

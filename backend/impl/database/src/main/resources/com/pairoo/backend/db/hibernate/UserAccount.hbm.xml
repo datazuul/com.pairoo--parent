@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pairoo.domain.UserAccount" table="USERACCOUNT">
+        <id name="id" column="ID" type="java.lang.Long">
+            <generator class="org.hibernate.id.enhanced.TableGenerator">
+                <param name="table_name">ID_SEQUENCES</param>
+                <!-- <param name="value_column_name">next_val</param> -->
+                <!-- <param name="segment_column_name">sequence_name</param> -->
+                <param name="segment_value">com.pairoo.domain.UserAccount</param>
+                <!-- <param name="segment_value_length">255</param> -->
+                <!-- <param name="initial_value">1</param> -->
+                <param name="increment_size">10</param>
+                <param name="optimizer">pooled</param>
+            </generator>
+        </id>
+        <version column="VERSION_ID" name="version" type="java.lang.Integer"
+                 unsaved-value="null" />
+        <property name="uuid" type="java.lang.String">
+            <column name="UUID" />
+        </property>
+
+        <component name="Roles"
+                   class="com.datazuul.framework.domain.authorization.Roles">
+            <property name="roles" type="java.lang.String">
+                <column name="ROLES" not-null="false" />
+            </property>
+        </component>
+        <bag name="contactEvent" table="USERACCOUNT_CONTACTEVENTS"
+             cascade="all" fetch="subselect" lazy="false">
+            <key column="USERACCOUNT_ID" />
+            <one-to-many class="com.pairoo.domain.ContactEvent" />
+        </bag>
+        <property name="lastLogin" type="java.util.Date">
+            <column name="LASTLOGIN" />
+        </property>
+        <property name="online" type="boolean">
+            <column name="ONLINE" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="passwordSalt" type="java.lang.String">
+            <column name="PASSWORD_SALT" />
+        </property>
+        <property name="preferredLanguage">
+            <column name="PREFERRED_LANGUAGE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">com.datazuul.framework.domain.Language</param>
+            </type>
+        </property>
+        <property name="premiumEndDate" type="java.util.Date">
+            <column name="PREMIUM_END_DATE" />
+        </property>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+
+        <many-to-one name="notificationSettings" class="com.pairoo.domain.NotificationSettings"
+                     not-null="false" cascade="all" unique="true" lazy="false" fetch="join">
+            <column name="NOTIFICATIONSETTINGS" />
+        </many-to-one>
+        <many-to-one name="user" class="com.pairoo.domain.User" fetch="join" lazy="false" cascade="none">
+            <column name="USER_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

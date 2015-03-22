@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="dialog.text">
+        &lt;p&gt;Le profil ${userAccount.username} va être bloqué.&lt;/p&gt;
+
+        &lt;p&gt;${userAccount.username} ne peut plus communiquer avec toi et 
+        ${userAccount.username} ne peut plus accéder à ton profil.&lt;br/&gt;
+        Le blocage est irrévocable.&lt;/p&gt;
+    </entry>
+</properties>

@@ -1,0 +1,23 @@
+Hola ${user.userAccount.username} bienvenido a PAIROO, 
+
+
+Queremos felicitarlo por su exitosa inscripcion en PAIROO, la bolsa internacional innovativa de contactos.
+
+Podemos enpezar ahora mismo!
+Sea usted creativo y diseño su perfil asi, que sea interesante para otros socios.
+ 
+Para su seguridad queremos pedirle, que confirme su direccion de E-Mail.
+Asi se garantiza, que nadie efectue contactos en su nombre en PAIROO.
+
+su direccion de E-Mail-es ${user.email}.
+
+confirme usted ahora su E-Mail y oprima el siguiente Link:
+${activationLink}
+
+Ahora puede usted encontrar el compañero de sus sueño.
+
+El equipo de Pairoo le desea mucho exito y suerte en el amor.
+
+en caso de preguntas o ideas envienos usted un E-Mail a support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

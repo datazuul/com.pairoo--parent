@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="activate_voucher">activar cupon</entry>
+	<entry key="loginIntro">por favor registrese con su 
+		seudonimo y su contrasena, para activar el cupon
+		.</entry>
+	<entry key="loginForm.title">miembro de Pairoo?</entry>
+	<entry key="register_and_activate_voucher">registrar y activar cupon</entry>
+	<entry key="registrationForm.title">encuentre usted ahora su gran amor</entry>
+</properties>

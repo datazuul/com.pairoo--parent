@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <head>
+    </head>
+    <body>
+        <wicket:extend>
+            <div class="navigator" wicket:id="navigator" align="center"></div>
+
+            <div wicket:id="found.profiles">Wir haben 245 Mitglieder Profile gefunden</div>
+
+            <div id="results">
+                <table class="table table-striped">
+                    <thead></thead>
+                    <tbody>
+                        <tr wicket:id="users">
+                            <span wicket:id="resultPanel" />
+                            <td class="itemActions">
+                                <button type="button" class="btn btn-primary" wicket:id="detailAction" wicket:message="title:visit_profile" title="Profil besuchen"><i class="icon-search icon-white"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </wicket:extend>
+    </body>
+</html>

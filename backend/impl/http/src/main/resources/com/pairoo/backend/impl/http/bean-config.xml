@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-http="http://www.springframework.org/schema/integration/http"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+	http://www.springframework.org/schema/integration/http http://www.springframework.org/schema/integration/http/spring-integration-http.xsd">
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:/com/pairoo/backend/impl/http/springBeans-${env}.properties
+			</value>
+		</property>
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+	</bean>
+
+	<bean id="payOneSao" class="com.pairoo.backend.impl.http.payment.PayOneSaoImpl">
+		<constructor-arg ref="requestGatewayPayment" />
+	</bean>
+
+	<int:gateway id="requestGatewayPayment"
+		service-interface="com.pairoo.backend.impl.http.payment.PayOneSaoGateway"
+		default-request-channel="requestChannelPayment" default-reply-channel="responseChannelPayment" />
+
+	<!-- outbound/request -->
+	<int:channel id="requestChannelPayment" />
+
+	<int:transformer input-channel="requestChannelPayment"
+		output-channel="requestChannelHttpPost">
+		<bean class="com.pairoo.backend.impl.http.payment.ObjectsToHttpPostBodyTransformer">
+		</bean>
+	</int:transformer>
+
+	<int:channel id="requestChannelHttpPost" />
+
+	<int-http:outbound-gateway  url="${payone.server-api.url}"
+		http-method="POST" expected-response-type="java.lang.String"
+		request-channel="requestChannelHttpPost" reply-channel="responseChannelHttpPost">
+	</int-http:outbound-gateway>
+
+	<!-- inbound/response -->
+	<int:channel id="responseChannelHttpPost" />
+
+	<int:transformer input-channel="responseChannelHttpPost"
+		output-channel="responseChannelPayment" method="transform">
+		<bean class="com.pairoo.backend.impl.http.payment.HttpResponseToObjectTransformer">
+		</bean>
+	</int:transformer>
+
+	<int:channel id="responseChannelPayment" />
+</beans>

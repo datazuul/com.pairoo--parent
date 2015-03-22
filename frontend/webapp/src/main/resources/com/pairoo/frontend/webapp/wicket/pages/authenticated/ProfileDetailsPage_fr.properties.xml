@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="who.am.i">Qui je suis ?</entry>
+    <entry key="the.way.i.live">Comment je vis</entry>
+    <entry key="i.am.looking.for">Je cherche</entry>
+    <entry key="your.lifestyle">Ton style de vie</entry>
+
+    <entry key="as_favorite">Favori</entry>
+    <entry key="block_profile">Bloquer le profil</entry>
+    <entry key="my_photos">Ma photo</entry>
+    <entry key="report_profile">Signaler un abus</entry>
+    <entry key="write_me">Ecris moi</entry>
+
+    <entry key="added_profile_to_favorites">Le profil a été ajouté à tes favoris.</entry>
+    <entry key="favorite_already_exists">Le profil est déjà un favori.</entry>
+
+    <entry key="blockProfileDialog.title">Bloquer profil</entry>
+    <entry key="reportProfileDialog.title">Signaler un abus</entry>
+</properties>

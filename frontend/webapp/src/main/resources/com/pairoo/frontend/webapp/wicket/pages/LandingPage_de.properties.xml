@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="activate_account_message">Ihr Benutzerkonto ist nun aktiviert.</entry>
+	<entry key="continue">weiter</entry>
+	<entry key="new_visits_message">Sie haben neue Besucher!</entry>
+</properties>

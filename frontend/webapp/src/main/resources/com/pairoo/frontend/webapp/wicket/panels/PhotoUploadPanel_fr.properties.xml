@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="instructions">&lt;h3&gt;Sélectionne la photo et télécharge la&lt;/h3&gt;
+		&lt;p&gt;Une photo en dit plus que 1000 mots&lt;/p&gt;</entry>
+
+	<entry key="legend">Sélectionne la photo et télécharge la</entry>
+	<entry key="step1">Etape 1</entry>
+	<entry key="step1.text">Sélectionne le fichier photo sur ton ordinateur.</entry>
+	<entry key="step2">Etape 2</entry>
+	<entry key="step2.text">Tu as sélectionné le fichier photo &lt;b&gt;${}&lt;/b&gt;. Pour télécharger et éditer clique sur le bouton.</entry>
+	<entry key="upload.maxSize">Le fichier ne doit pas dépasser 3 MB.</entry>
+	<entry key="upload.onlyImages">Les fichiers de types PNG, JP(E)G et GIF
+		peuvent être sauvegardés.</entry>
+</properties>

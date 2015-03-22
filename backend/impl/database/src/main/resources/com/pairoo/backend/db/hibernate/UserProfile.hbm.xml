@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.pairoo.domain.UserProfile" table="USERPROFILE">
+		<id name="id" column="ID" type="java.lang.Long">
+			<generator class="org.hibernate.id.enhanced.TableGenerator">
+				<param name="table_name">ID_SEQUENCES</param>
+				<!-- <param name="value_column_name">next_val</param> -->
+				<!-- <param name="segment_column_name">sequence_name</param> -->
+				<param name="segment_value">com.pairoo.domain.UserProfile</param>
+				<!-- <param name="segment_value_length">255</param> -->
+				<!-- <param name="initial_value">1</param> -->
+				<param name="increment_size">10</param>
+				<param name="optimizer">pooled</param>
+			</generator>
+		</id>
+		<version column="VERSION_ID" name="version" type="java.lang.Integer"
+			unsaved-value="null" />
+		<property name="uuid" type="java.lang.String">
+			<column name="UUID" />
+		</property>
+
+		<property name="birthdate" type="java.util.Date">
+			<column name="BIRTHDATE" />
+		</property>
+		<property name="education">
+			<column name="EDUCATION" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.EducationType</param>
+			</type>
+		</property>
+		<property name="familyStatus">
+			<column name="FAMILYSTATUS" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.FamilyStatusType</param>
+			</type>
+		</property>
+		<property name="householdType">
+			<column name="HOUSEHOLDTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.HouseholdType</param>
+			</type>
+		</property>
+		<list name="imageEntries" table="IMAGEENTRIES" fetch="join"
+			cascade="all" lazy="false">
+			<key column="USERPROFILE_ID" />
+			<index column="idx" />
+			<one-to-many class="com.pairoo.domain.ImageEntry" />
+		</list>
+		<property name="incomeType">
+			<column name="INCOMETYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.IncomeType</param>
+			</type>
+		</property>
+		<bag name="languages" table="USERPROFILE_LANGUAGES" fetch="subselect"
+			cascade="all" lazy="false">
+			<key column="USERPROFILE_ID" />
+			<element>
+				<column name="LANGUAGE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.datazuul.framework.domain.Language</param>
+				</type>
+			</element>
+		</bag>
+		<property name="motherLanguage">
+			<column name="MOTHERLANGUAGE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.datazuul.framework.domain.Language</param>
+			</type>
+		</property>
+		<property name="motto" type="java.lang.String">
+			<column name="MOTTO" />
+		</property>
+		<property name="numberOfKidsType">
+			<column name="NUMBEROFKIDS" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.NumberOfKidsType</param>
+			</type>
+		</property>
+		<property name="occupationType">
+			<column name="OCCUPATIONTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.OccupationType</param>
+			</type>
+		</property>
+		<property name="partnerType">
+			<column name="PARTNERTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.PartnerType</param>
+			</type>
+		</property>
+		<property name="profession" type="java.lang.String">
+			<column name="PROFESSION" />
+		</property>
+		<property name="religion">
+			<column name="RELIGION" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.Religion</param>
+			</type>
+		</property>
+		<property name="wantMoreChildrenType">
+			<column name="WANT_MORE_CHILDREN_TYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.WantMoreChildrenType</param>
+			</type>
+		</property>
+
+		<many-to-one name="appearance" class="com.pairoo.domain.Appearance"
+			fetch="join" cascade="all" lazy="false">
+			<column name="APPEARANCE" />
+		</many-to-one>
+		<many-to-one name="personalValues" class="com.pairoo.domain.PersonalValues"
+			fetch="join" cascade="all" lazy="false">
+			<column name="PERSONALVALUES" />
+		</many-to-one>
+		<many-to-one name="lifeStyle" class="com.pairoo.domain.LifeStyle"
+			fetch="join" cascade="all" lazy="false">
+			<column name="LIFESTYLE" />
+		</many-to-one>
+		<!-- read only geolocations -->
+		<many-to-one name="geoLocation"
+			class="com.datazuul.framework.domain.geo.GeoLocation" fetch="join"
+			cascade="none" lazy="false">
+			<column name="GEOLOCATION_ID" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

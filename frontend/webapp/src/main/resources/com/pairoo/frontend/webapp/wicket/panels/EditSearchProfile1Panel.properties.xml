@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="country">living in</entry>
+	<entry key="in_the_age_from">in the age from</entry>
+	<entry key="searchFor_PartnerType.FEMALE">a woman</entry>
+	<entry key="searchFor_PartnerType.MALE">a man</entry>
+	<entry key="searchFor_PartnerType.ANY">any</entry>
+	<entry key="searchProfileFamilyStatusTypeSelectionLabel">family status</entry>
+	<entry key="searchProfileLanguagesSelectionLabel">other spoken languages</entry>
+	<entry key="searchProfileHouseholdTypeSelectionLabel">own household</entry>
+	<entry key="searchProfilePartnershipTypeSelectionLabel">for</entry>
+
+	<entry key="title1">I am looking for</entry>
+	<entry key="title2">Which family status should my partner have?</entry>
+	<entry key="title4">Which languages shall my partner speak?</entry>
+	<entry key="title5">Which ethnicity shall my partner have?</entry>
+</properties>

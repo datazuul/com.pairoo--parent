@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<joined-subclass name="com.pairoo.domain.payment.CreditCardAccount"
+		extends="com.pairoo.domain.payment.PaymentChannel" table="CREDITCARDACCOUNT"
+		lazy="false">
+		<key>
+			<column name="ID" />
+		</key>
+		<property name="pseudopan" type="java.lang.String">
+			<column name="PSEUDOPAN" />
+		</property>
+		<property name="holderName" type="java.lang.String">
+			<column name="HOLDERNAME" />
+		</property>
+		<property name="truncatedPan" type="java.lang.String">
+			<column name="TRUNCATED_PAN" />
+		</property>
+		<property name="validThru" type="java.util.Date">
+			<column name="VALIDTHRU" />
+		</property>
+	</joined-subclass>
+</hibernate-mapping>

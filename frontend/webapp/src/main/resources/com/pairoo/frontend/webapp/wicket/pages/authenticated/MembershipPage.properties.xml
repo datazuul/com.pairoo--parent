@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="step1.title">Step 1 of 3: Choose Membership</entry>
+	<entry key="next">continue with step 2</entry>
+	<entry key="choose_paymentChannel">Choose Payment Method</entry>
+	<entry key="confirmation">Confirmation</entry>
+	<entry key="membership_comparison">Membership Comparison</entry>
+</properties>

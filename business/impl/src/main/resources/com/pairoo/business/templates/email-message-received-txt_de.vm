@@ -1,0 +1,14 @@
+Hallo ${user.userAccount.username}, 
+
+${visitor.userAccount.username} findet Sie sehr interessant und hat Ihnen eine Nachricht geschickt.
+
+Schauen Sie am Besten gleich nach.
+Klicken Sie auf den Link und Sie gelangen direkt zu Ihrem Postfach
+
+${activationLink}
+
+Das Pairoo Team wünscht Ihnen viel Erfolg und Glück um Ihren Traumpartner und die Liebe zu finden.
+
+Bei Fragen und Anregungen senden Sie uns eine E-Mail an support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

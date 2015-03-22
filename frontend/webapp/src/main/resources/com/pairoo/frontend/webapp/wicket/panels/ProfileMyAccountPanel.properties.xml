@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="buy_premium_membership">buy Premium membership</entry>
+	<entry key="cancel_membership">cancel membership</entry>
+	<entry key="change_password">change password</entry>
+	<entry key="delete_profile">delete profile from Pairoo</entry>
+	<entry key="I_want_emails">I want to get the following emails</entry>
+	<entry key="I_want_notifications">I want to be notified</entry>
+	<entry key="last_login">Last Login</entry>
+	<entry key="my_membership">My Membership</entry>
+	<entry key="newsletterLabel">Pairoo-Newsletter</entry>
+	<entry key="onNewMessageLabel">when receiving a message</entry>
+	<entry key="onNewSuggestionsLabel">on new partner suggestions</entry>
+	<entry key="onVisitLabel">when my profile has been visited</entry>
+	<entry key="paid_until">paid until</entry>
+	<entry key="weekendSuggestionsLabel">Partner suggestions for the weekend</entry>
+	<entry key="weeklyStatisticLabel">weekly flirt statistic</entry>
+</properties>

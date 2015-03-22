@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <div class="row-fluid">
+                <div class="span6">
+                    <fieldset class="form-horizontal">
+                        <legend><wicket:message key="titleBodyType">Welche Figur soll mein Partner haben?</wicket:message></legend>
+                        <div class="control-group">
+                            <span wicket:id="searchProfile.bodyTypes"></span>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="span6">
+                    <fieldset class="form-inline">
+                        <legend><wicket:message key="titleHeight">Welche Größe?</wicket:message></legend>
+
+                        <div class="control-group">
+                            <label wicket:id="searchProfileMinHeightSelectionLabel">from</label>
+                            <select class="input-small" wicket:id="searchProfile.minHeightCm" size="1" aria-required="true">
+                                <option value="150">150 cm</option>
+                                <option value="180">180 cm</option>
+                                <option value="220">220 cm</option>
+                            </select>
+                            <label wicket:id="searchProfileMaxHeightSelectionLabel">bis</label>
+                            <select class="input-small" wicket:id="searchProfile.maxHeightCm" size="1" aria-required="true">
+                                <option value="150">150 cm</option>
+                                <option value="180">180 cm</option>
+                                <option value="220">220 cm</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <fieldset class="form-horizontal">
+                    <legend><wicket:message key="titleHairColor">Welche Haarfarbe soll mein Partner haben?</wicket:message></legend>
+
+                    <div class="control-group">
+                        <span wicket:id="searchProfile.hairColors"></span>
+                    </div>
+                </fieldset>
+            </div>
+        </wicket:panel>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title">Herzlichen Glückwunsch zur Registrierung</entry>
+	<entry key="become_a_premium_member">Premium Mitglied werden</entry>
+	<entry key="content">&lt;p&gt;Willkommen bei der internationalen
+		Partnerbörse Pairoo.&lt;/p&gt;
+		&lt;p&gt;&lt;b&gt;Bitte bestätigen Sie noch Ihre Email-Adresse&lt;/b&gt;. So können Sie sicher sein, dass sich niemand mit Ihrer Email bei Pairoo angemeldet hat. &lt;b&gt;Wir haben Ihnen schon eine Bestätigungs-Email gesendet&lt;/b&gt;.&lt;/p&gt;
+		&lt;p&gt;Wenn Sie jetzt bestätigen, sind Sie erfolgreich bei Pairoo registriert.&lt;/p&gt;
+		</entry>
+	<entry key="nextActionIntro">&lt;h2&gt;Jetzt kann es losgehen - Sie haben die Wahl&lt;/h2&gt;
+	&lt;p&gt;Premium Mitglied werden und alle Funktionen sofort nützen&lt;br/&gt;
+	oder&lt;br/&gt;
+	unsere Partner-Vorschläge anschauen.&lt;/p&gt;</entry>
+	<entry key="partner_suggestions">Partner-Vorschläge</entry>
+	<entry key="upload_title">Bilder hochladen</entry>
+</properties>

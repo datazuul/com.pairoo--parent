@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!--============================================= -->
+<!-- E N G L I S H text strings for enumerations -->
+<!-- ============================================ -->
+<properties>
+	<entry key="BodyType.FEW_EXTRA_POUNDS">few extra pounds</entry>
+	<entry key="EducationType.ANY">any</entry>
+	<entry key="EducationType.PRIMARY_SCHOOL">primary school</entry>
+	<entry key="EducationType.MIDDLE_SCHOOL">middle school</entry>
+	<entry key="EducationType.HIGH_SCHOOL">high school</entry>
+	<entry key="EducationType.VOCATIONAL_COLLEGE">vocational college</entry>
+	<entry key="EducationType.UNIVERSITY">University</entry>
+	<entry key="EducationType.PHD_OR_DOCTORATE">PhD or Doctorate</entry>
+	<entry key="EducationType.DONT_SAY">don't say</entry>
+	<entry key="IncomeType.ANY">any</entry>
+	<entry key="IncomeType.OVER_15000_EUR">more than USD 18.000</entry> <!-- 1,00 Euro ≈ 1,23 Dollar -->
+	<entry key="IncomeType.OVER_25000_EUR">more than USD 30.000</entry>
+	<entry key="IncomeType.OVER_50000_EUR">more than USD 60.000</entry>
+	<entry key="IncomeType.OVER_75000_EUR">more than USD 92.000</entry>
+	<entry key="IncomeType.OVER_100000_EUR">more than USD 120.000</entry>
+	<entry key="IncomeType.DONT_SAY">don't say</entry>
+	<entry key="MaxDistance.ANY">any</entry>
+	<entry key="MaxDistance.UNITS_20">up to 20 miles</entry>
+	<entry key="MaxDistance.UNITS_50">up to 50 miles</entry>
+	<entry key="MaxDistance.UNITS_100">up to 100 miles</entry>
+	<entry key="MaxDistance.UNITS_250">up to 250 miles</entry>
+</properties>

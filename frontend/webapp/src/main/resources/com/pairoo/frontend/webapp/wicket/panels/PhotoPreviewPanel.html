@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <div class="well">
+                <wicket:message key="instructions">
+                    <h3>Bildausschnitt speichern</h3>
+                    <p>
+                        Bestätigen Sie den Bildausschnitt und klicken Sie auf den Button
+                        "Bildausschnitt speichern".<br /> Wenn Sie den Bildausschnitt
+                        nicht speichern wollen, klicken Sie den Button "zurück zum Bild
+                        zuschneiden".
+                    </p>
+                </wicket:message>
+            </div>
+
+            <center>
+                <div>
+                    <img wicket:id="previewImage" src="the_cropped_image.jpg" />
+                </div>
+            </center>
+
+            <div class="clear"></div>
+
+            <div class="form-actions">
+                <button type="button" class="btn" wicket:id="back">
+                    <wicket:message key="back">zurück zum Bild zuschneiden</wicket:message>
+                </button>
+
+                <button type="button" class="btn btn-primary" wicket:id="save">
+                    <wicket:message key="save">Bildausschnitt speichern"</wicket:message>
+                </button>
+            </div>
+        </wicket:panel>
+    </body>
+</html>

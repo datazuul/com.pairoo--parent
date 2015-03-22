@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="password_forgotten">Forgot Your Password?</entry>
+	<entry key="usernamePlaceholderText">Your Pseudonym</entry>
+
+	<entry key="password.StringValidator.range">Input of field '${label}' is not between ${minimum}
+		and ${maximum} characters long.</entry>
+</properties>

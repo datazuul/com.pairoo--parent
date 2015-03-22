@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <div id="login">
+                <table width="100%">
+                    <tr>
+                        <td width="90%"></td>
+                        <td width="10%" align="right"><button class="toggle" wicket:id="toggleLogin" href=# " style="position: relative;">Login für Mitglieder</button>
+                            <div wicket:id="loginContainer" class="layeredPanel" style="position: relative;">
+                                <form wicket:id="loginForm" method="post" action="RegistrationPage2.html" role="application">
+                                    <table>
+                                        <tr>
+                                            <td><input wicket:id="username" id="username" type="text" name="username" class="text" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input wicket:id="password" id="pass" type="password" name="password" class="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a rel="nofollow" href="#">Passwort vergessen?</a></td>
+                                        </tr>
+                                        <tr wicket:id="rememberMeRow">
+                                            <td><input wicket:id="rememberMe" type="checkbox" name="persistent" id="persistent" value="1" class="inputcheckbox"> <label for="persistent" id="label_persistent">Angemeldet
+                                                        bleiben</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><input type="submit" class="submit" id="submit" name="submit" value="Einloggen" /></td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </wicket:panel>
+    </body>
+</html>

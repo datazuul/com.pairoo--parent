@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <fieldset class="form-horizontal">
+                <legend><wicket:message key="title1">Wer bin ich?</wicket:message></legend>
+                <div class="row-fluid" wicket:id="credentials">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label"><wicket:message key="username">Pseudonym</wicket:message></label>
+                            <div class="controls" style="margin-top:5px;">
+                                <span wicket:id="userAccount.username">Hottie2000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label"><wicket:message key="email">Email</wicket:message></label>
+                            <div class="controls" style="margin-top:5px;">
+                                <span wicket:id="email">ralf.eichinger@pairoo.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfilePartnerTypeSelectionLabel">Ich bin</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.partnerType" size="1" class="input-medium">
+                                    <option>ein Mann</option>
+                                    <option>eine Frau</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileBirthdateSelectionLabel">geboren am</label>
+                            <div class="controls" style="white-space: nowrap;">
+                                <span wicket:id="userProfile.birthdate"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileCountrySelectionLabel">Wohnland</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.geoLocation.country" class="input-medium">
+                                    <option>any</option>
+                                    <option>Albania</option>
+                                    <option>Germany</option>
+                                    <option>Pitcairn Island</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileZipcodeFieldLabel">PLZ</label>
+                            <div class="controls">
+                                <input wicket:id="userProfile.geoLocation.zipcode" type="text" size="5" class="input-small" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileReligionSelectionLabel">Religion</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.religion" class="input-medium">
+                                    <option>keine</option>
+                                    <option>Katholisch</option>
+                                    <option>Evangelisch</option>
+                                    <option>Jüdisch</option>
+                                    <option>Islam</option>
+                                    <option>sage ich nicht</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileEthnicitySelectionLabel">Aussehen</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.appearance.ethnicity" class="input-medium">
+                                    <option>europäisch/weiß</option>
+                                    <option>afrikanisch</option>
+                                    <option>asiatisch</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileFamilyStatusTypeSelectionLabel">Familienstand</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.familyStatus" class="input-medium">
+                                    <option>single</option>
+                                    <option>getrennt</option>
+                                    <option>geschieden</option>
+                                    <option>verheiratet</option>
+                                    <option>gebunden</option>
+                                    <option>sag ich nicht</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileNumberOfKidsTypeSelectionLabel">Kinder</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.numberOfKidsType" class="input-medium">
+                                    <option>keine</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>mehr als 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6"></div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileWantMoreChildrenTypeSelectionLabel">Kinderwunsch</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.wantMoreChildrenType" class="input-medium">
+                                    <option>ja</option>
+                                    <option>nein</option>
+                                    <option>weiß nicht</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-horizontal">
+                <legend><wicket:message key="title2">Wie sehe ich aus?</wicket:message></legend>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileHeightSelectionLabel">Größe</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.appearance.height" class="input-small">
+                                    <option>175 cm</option>
+                                    <option>180 cm</option>
+                                    <option>185 cm</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileBodyTypeSelectionLabel">Figur</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.appearance.bodyType" class="input-medium">
+                                    <option>schlank</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileEyeColorSelectionLabel">Augenfarbe</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.appearance.eyeColor" class="input-medium">
+                                    <option>blau</option>
+                                    <option>braun</option>
+                                    <option>grün</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileHairColorSelectionLabel">Haarfarbe</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.appearance.hairColor" class="input-medium">
+                                    <option>blond</option>
+                                    <option>braun</option>
+                                    <option>schwarz</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-horizontal">
+                <legend><wicket:message key="title3">Bildung</wicket:message></legend>
+                <div class="row-fluid">
+                    <div class="control-group span6">
+                        <label class="control-label" wicket:id="userProfileEducationTypeSelectionLabel">Abschluß</label>
+                        <div class="controls">
+                            <select wicket:id="userProfile.education" class="input-medium">
+                                <option>Hauptschule</option>
+                                <option>Realschule</option>
+                                <option>Abitur</option>
+                                <option>Studium</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="control-group span6">
+                        <label class="control-label" wicket:id="userProfileOccupationTypeSelectionLabel">Berufsgruppe</label>
+                        <div class="controls">
+                            <select wicket:id="userProfile.occupationType" class="input-medium">
+                                <option>Angestellter</option>
+                                <option>Beamter</option>
+                                <option>Unternehmer</option>
+                                <option>Freischaffender</option>
+                                <option>Sonstige</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group span6">
+                        <label class="control-label" wicket:id="userProfileIncomeTypeSelectionLabel">Jahresverdienst</label>
+                        <div class="controls">
+                            <select wicket:id="userProfile.incomeType" class="input-medium">
+                                <option>ab 15.000 Euro</option>
+                                <option>ab 25.000 Euro</option>
+                                <option>ab 50.000 Euro</option>
+                                <option>ab 75.000 Euro</option>
+                                <option>mehr als 75.000 Euro</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-horizontal">
+                <legend><wicket:message key="title4">Ich spreche folgende Sprachen</wicket:message></legend>
+
+                <div class="control-group">
+                    <label class="control-label" wicket:id="userProfileMotherLanguageSelectionLabel">Muttersprache</label>
+                    <div class="controls">
+                        <select wicket:id="userProfile.motherLanguage" class="input-medium">
+                            <option>Deutsch</option>
+                            <option>Englisch</option>
+                            <option>Französisch</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" wicket:id="userProfileLanguagesSelectionLabel">weitere gesprochene Sprachen</label>
+                    <div class="controls">
+                        <span wicket:id="userProfile.languages"></span>
+                    </div>
+                </div>
+            </fieldset>
+        </wicket:panel>
+    </body>
+</html>

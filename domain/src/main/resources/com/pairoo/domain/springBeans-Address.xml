@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="Address_new" class="com.pairoo.domain.Address" scope="prototype">
+	</bean>
+	<bean id="Address_saved" class="com.pairoo.domain.Address" scope="prototype">
+		<property name="id" value="1"></property>
+		<property name="zipcode" value="81245"></property>
+		<property name="street" value="Herzog-Johann-Str."></property>
+		<property name="housenr" value="14"></property>
+		<property name="city" value="München"></property>
+		<property name="country" value="GERMANY"></property>
+	</bean>
+	<bean id="Address_unsaved" class="com.pairoo.domain.Address" scope="prototype">
+		<property name="zipcode" value="81245"></property>
+		<property name="street" value="Herzog-Johann-Str."></property>
+		<property name="housenr" value="14"></property>
+		<property name="city" value="München"></property>
+		<property name="country" value="GERMANY"></property>
+	</bean>
+</beans>

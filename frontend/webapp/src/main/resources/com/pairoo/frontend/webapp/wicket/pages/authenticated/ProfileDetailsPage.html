@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <wicket:head>
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    </wicket:head>
+    <body>
+        <wicket:extend>
+            <div class="row">
+                <div class="span12">
+                    <a wicket:id="lnkBack" href="javascript:history.back();">&laquo;
+                        <wicket:message key="back">zurück</wicket:message>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span3">
+                    <h4>
+                        <span wicket:id="userAccount.username">Supergirl</span>
+                        <small wicket:id="lblAge">32</small>
+                        <span wicket:id="premiumContainer" class="pill">Premium</span>
+                        <span wicket:id="onlineLabel" class="pill">Online</span>
+                    </h4>
+
+                    <div class="flexslider" wicket:id="gallery">
+                        <ul class="slides">
+                            <li data-thumb="images/kitchen_adventurer_cheesecake_brownie.jpg" wicket:id="images">
+                                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" wicket:id="image"/>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="text-align: center; margin: 20px;">
+                        <img src="#" wicket:id="noProfileImage" class="img-polaroid"/>
+                    </div>
+
+                    <div style="text-align:center; margin: 0 30px;">
+                        <p>
+                            <button class="btn btn-block btn-primary" wicket:id="showSendMessage">
+                                <i class="icon-pencil icon-white"></i>
+                                <wicket:message key="write_me">Schreib mir</wicket:message>
+                            </button>
+
+                            <button class="btn btn-block btn-primary" wicket:id="lnkTwinkle">
+                                <i class="icon-eye-open icon-white"></i>
+                                <wicket:message key="twinkle">Zwinkern</wicket:message>
+                            </button>
+
+                            <button class="btn btn-block btn-primary" wicket:id="lnkAddFavorite">
+                                <i class="icon-star icon-white"></i>
+                                <wicket:message key="as_favorite">Als Favorit</wicket:message>
+                            </button>
+                        </p>
+
+                        <p>
+                            <button class="btn btn-block btn-warning" wicket:id="lnkReportProfile">
+                                <i class="icon-exclamation-sign icon-white"></i>
+                                <wicket:message key="report_profile">Profil melden</wicket:message>
+                            </button>
+                            <button class="btn btn-block btn-warning" wicket:id="lnkBlockProfile">
+                                <i class="icon-ban-circle icon-white"></i>
+                                <wicket:message key="block_profile">Profil sperren</wicket:message>
+                            </button>
+                        </p>
+                    </div>
+
+                    <div wicket:id="reportProfileDialog"></div>
+                    <div wicket:id="blockProfileDialog"></div>
+                </div>
+
+                <div class="span9">
+                    <div wicket:id="tabs" class="tabpanel innerRight">[tabbed panel
+                        will be here]</div>
+                </div>
+            </div>
+
+            <!-- FlexSlider -->
+            <script defer src="js/vendor/jquery.flexslider-2.1-min.js"></script>
+            <script type="text/javascript">
+                $(window).load(function() {
+                    $('.flexslider').flexslider({
+                        animation: "slide",
+                        controlNav: "thumbnails",
+                        start: function(slider) {
+                            $('body').removeClass('loading');
+                        }
+                    });
+                });
+            </script>
+
+        </wicket:extend>
+    </body>
+</html>

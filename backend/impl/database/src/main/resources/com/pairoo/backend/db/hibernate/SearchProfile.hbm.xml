@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.pairoo.domain.SearchProfile" table="SEARCHPROFILE">
+		<id name="id" column="ID" type="java.lang.Long">
+			<generator class="org.hibernate.id.enhanced.TableGenerator">
+				<param name="table_name">ID_SEQUENCES</param>
+				<!-- <param name="value_column_name">next_val</param> -->
+				<!-- <param name="segment_column_name">sequence_name</param> -->
+				<param name="segment_value">com.pairoo.domain.SearchProfile</param>
+				<!-- <param name="segment_value_length">255</param> -->
+				<!-- <param name="initial_value">1</param> -->
+				<param name="increment_size">10</param>
+				<param name="optimizer">pooled</param>
+			</generator>
+		</id>
+		<version column="VERSION_ID" name="version" type="java.lang.Integer"
+			unsaved-value="null" />
+		<property name="uuid" type="java.lang.String">
+			<column name="UUID" />
+		</property>
+
+		<property name="incomeType">
+			<column name="INCOMETYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.IncomeType</param>
+			</type>
+		</property>
+		<property name="occupationType">
+			<column name="OCCUPATIONTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.OccupationType</param>
+			</type>
+		</property>
+		<property name="partnerType">
+			<column name="PARTNERTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.PartnerType</param>
+			</type>
+		</property>
+		<property name="profilePictureType">
+			<column name="PROFILE_PICTURE_TYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.ProfilePictureType</param>
+			</type>
+		</property>
+		<property name="minAge" type="java.lang.Integer">
+			<column name="MINAGE" />
+		</property>
+		<property name="maxAge" type="java.lang.Integer">
+			<column name="MAXAGE" />
+		</property>
+		<property name="numberOfKidsType">
+			<column name="NUMBER_OF_KIDS_TYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.NumberOfKidsType</param>
+			</type>
+		</property>
+		<property name="wantMoreChildrenType">
+			<column name="WANT_MORE_CHILDREN_TYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.WantMoreChildrenType</param>
+			</type>
+		</property>
+		<property name="partnershipType">
+			<column name="PARTNERSHIPTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.PartnershipType</param>
+			</type>
+		</property>
+		<property name="motherLanguage">
+			<column name="MOTHERLANGUAGE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.datazuul.framework.domain.Language</param>
+			</type>
+		</property>
+		<property name="householdType">
+			<column name="HOUSEHOLDTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.HouseholdType</param>
+			</type>
+		</property>
+		<property name="minHeightCm" type="java.lang.Integer">
+			<column name="MINHEIGHTCM" />
+		</property>
+		<property name="maxHeightCm" type="java.lang.Integer">
+			<column name="MAXHEIGHTCM" />
+		</property>
+		<property name="smokeType">
+			<column name="SMOKETYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.SmokeType</param>
+			</type>
+		</property>
+		<bag name="familyStatusTypes" table="SEARCHPROFILE_FAMILYSTATUSTYPES"
+			lazy="false" cascade="all" fetch="subselect">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="FAMILYSTATUSTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.FamilyStatusType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="appearanceStyles" table="SEARCHPROFILE_APPEARANCESTYLES"
+			lazy="false" cascade="all" fetch="subselect">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="APPEARANCESTYLE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.AppearanceStyle</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="ethnicities" table="SEARCHPROFILE_ETHNICITIES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="ETHNICITY" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.Ethnicity</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="bodyTypes" table="SEARCHPROFILE_BODYTYPES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="BODYTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.BodyType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="eyeColors" table="SEARCHPROFILE_EYECOLORS" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="EYECOLOR" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.EyeColor</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="hairColors" table="SEARCHPROFILE_HAIRCOLORS" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="HAIRCOLOR" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.HairColor</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="religions" table="SEARCHPROFILE_RELIGIONS" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="RELIGION" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.Religion</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="educationTypes" table="SEARCHPROFILE_EDUCATIONTYPES"
+			lazy="false" cascade="all" fetch="subselect">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="EDUCATIONTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.EducationType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="hobbyTypes" table="SEARCHPROFILE_HOBBYTYPES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="HOBBYTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.HobbyType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="sportTypes" table="SEARCHPROFILE_SPORTTYPES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="SPORTTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.SportType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="languages" table="SEARCHPROFILE_LANGUAGES" fetch="subselect"
+			cascade="all" lazy="false">
+			<key column="SEARCHPROFILE_ID" />
+			<element>
+				<column name="LANGUAGE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.datazuul.framework.domain.Language</param>
+				</type>
+			</element>
+		</bag>
+		<many-to-one name="geoArea" class="com.pairoo.domain.geo.GeoArea"
+			fetch="join" lazy="false" cascade="all">
+			<column name="GEOAREA_ID" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

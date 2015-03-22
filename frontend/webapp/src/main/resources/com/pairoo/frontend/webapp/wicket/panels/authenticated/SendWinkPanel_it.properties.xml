@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="to">A</entry>
+	<entry key="send_twinkle">Invia occhiolino</entry>
+	<entry key="wink_message">Messaggio occhiolino</entry>
+</properties>

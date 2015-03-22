@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title">Felisitaciones por su Registro</entry>
+	<entry key="become_a_premium_member">Afiliacion especial</entry>
+	<entry key="content">&lt;p&gt;bienvenido a los internacionales
+		Bolsa de afiliados Pairoo.&lt;/p&gt;
+		&lt;p&gt;&lt;b&gt;Por favor confirme su direccion de E-mail&lt;/b&gt;. Asi podra usted estar seguro, que ninguno ha  entrado a Pairoo sin su concentimiento. &lt;b&gt;Ya le hemos enviado un E-mail para confirmar&lt;/b&gt;.&lt;/p&gt;
+		&lt;p&gt;Si usted confirma ahora, Se ha registrado usted con exito en Pairoo .&lt;/p&gt;
+		</entry>
+	<entry key="nextActionIntro">&lt;h2&gt;Ahora puede empezar - Usted tiene la eleccionl&lt;/h2&gt;
+	&lt;p&gt;Afiliese como miembro especial y utilice inmediatamente todas las funciones&lt;br/&gt;
+	oder&lt;br/&gt;
+	Ver nuestra propuesta de afiliados.&lt;/p&gt;</entry>
+	<entry key="partner_suggestions">Propuestas de afiliados</entry>
+	<entry key="upload_title">Subir fotos</entry>
+</properties>

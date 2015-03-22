@@ -1,0 +1,4 @@
+Hello PAIROO!
+
+We have a new member!
+${user.userAccount.username}, ${partnerType}, ${age}

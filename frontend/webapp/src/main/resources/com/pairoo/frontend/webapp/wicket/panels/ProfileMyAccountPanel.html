@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <div class="row">
+                <div class="span6">
+                    <fieldset>
+                        <legend><wicket:message key="my_membership">Meine Mitgliedschaft</wicket:message></legend>
+                        <table>
+                            <tr>
+                                <th><wicket:message key="username">Pseudonym</wicket:message></th>
+                                <td wicket:id="userAccount.username">Hottie2000</td>
+                            </tr>
+                            <tr>
+                                <th><wicket:message key="emailAddress">Email</wicket:message></th>
+                                <td wicket:id="email">ralf.eichinger@pairoo.com</td>
+                            </tr>
+                            <tr>
+                                <th><wicket:message key="member">Mitglied</wicket:message></th>
+                                <td><wicket:message key="since">seit</wicket:message> <span
+                                        wicket:id="membership.startDate">28.3.2012 24:00</span></td>
+                            </tr>
+                            <tr>
+                                <th><wicket:message key="status">Status</wicket:message></th>
+                                <td><span wicket:id="membership.product.role">Premium</span> <wicket:message
+                                        key="membership">Mitgliedschaft</wicket:message></td>
+                            </tr>
+                            <tr wicket:id="paidUntilContainer">
+                                <th><wicket:message key="membership">Mitgliedschaft</wicket:message></th>
+                                <td><wicket:message key="paid_until">bezahlt bis</wicket:message>
+                                    <span wicket:id="membership.paidUntil">28.3.2012 24:00</span></td>
+                            </tr>
+                            <tr>
+                                <th><wicket:message key="last_login">letzter Login</wicket:message></th>
+                                <td wicket:id="lastLogin">28.3.2012 24:00</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <ul class="linkList">
+                                        <li><a href="#" wicket:id="lnkChangePasswordPage"><wicket:message
+                                                    key="change_password">Passwort ändern</wicket:message> </a></li>
+                                        <li><a href="#" wicket:id="lnkMembershipPage"><wicket:message
+                                                    key="buy_premium_membership">Premium Mitgliedschaft kaufen</wicket:message>
+                                            </a></li>
+                                        <li><a href="#" wicket:id="lnkVoucher"><wicket:message
+                                                    key="encash_voucher">Gutschein einlösen</wicket:message>
+                                            </a></li>
+                                        <li><a href="#" wicket:id="lnkResignMembershipPage"><wicket:message
+                                                    key="cancel_membership">Mitgliedschaft kündigen</wicket:message>
+                                            </a></li>
+                                        <li><a href="#" wicket:id="lnkDeleteProfilePage"><wicket:message
+                                                    key="delete_profile">Profil bei Pairoo löschen</wicket:message>
+                                            </a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </div>
+
+                <div class="span6">
+                    <form wicket:id="form">
+                        <fieldset>
+                            <legend><wicket:message key="I_want_notifications">Ich möchte benachrichtigt werden</wicket:message></legend>
+                            <table class="formLayout">
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"
+                                                                wicket:id="userAccount.notificationSettings.onNewMessage" /> <label
+                                                                wicket:id="onNewMessageLabel">wenn eine Nachricht
+                                            eingegangen ist</label></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"
+                                                                wicket:id="userAccount.notificationSettings.onVisit" /> <label
+                                                                wicket:id="onVisitLabel">wenn mein Profil besucht wurde</label></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"
+                                                                wicket:id="userAccount.notificationSettings.onNewSuggestions" />
+                                        <label wicket:id="onNewSuggestionsLabel">bei neuen
+                                            Partnervorschlägen</label></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><wicket:message key="I_want_emails">Ich möchte folgende Emails erhalten</wicket:message></legend>
+                            <table class="formLayout">
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"
+                                                                wicket:id="userAccount.notificationSettings.weeklyStatistic" />
+                                        <label wicket:id="weeklyStatisticLabel">wöchentliche
+                                            Flirtstatistik</label></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"
+                                                                wicket:id="userAccount.notificationSettings.weekendSuggestions" />
+                                        <label wicket:id="weekendSuggestionsLabel">Kontaktvorschläge
+                                            zum Wochenende</label></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox"><input type="checkbox"
+                                                                wicket:id="userAccount.notificationSettings.newsletter" /> <label
+                                                                wicket:id="newsletterLabel">Pairoo-Newsletter</label></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <input class="btn btn-primary" type="submit" wicket:message="value:save" value="speichern" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </wicket:panel>
+    </body>
+</html>

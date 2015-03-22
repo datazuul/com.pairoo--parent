@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="crop_photo">recortar foto</entry>
+	<entry key="discard_photo">descartar foto</entry>
+	<entry key="instructions">&lt;h3&gt;recortar foto&lt;/h3&gt;
+		&lt;p&gt;elija
+		el recorte y oprima el boton recortar foto
+		.&lt;br/&gt;
+		si usted no desea subir la foto,
+		oprima el boton descartar foto
+		".&lt;/p&gt;</entry>
+</properties>

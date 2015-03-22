@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="activate_voucher">Gutschein aktivieren</entry>
+	<entry key="loginIntro">Bitte melden Sie sich mit
+		Ihrem Pseudonym und Ihrem Passwort an, um den Gutschein
+		einzulösen.</entry>
+	<entry key="loginForm.title">Bereits Mitglied bei Pairoo</entry>
+	<entry key="register_and_activate_voucher">Registrieren und Gutschein aktivieren</entry>
+	<entry key="registrationForm.title">Neu bei Pairoo?</entry>
+</properties>

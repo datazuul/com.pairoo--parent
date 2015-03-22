@@ -1,0 +1,12 @@
+Hallo ${receiverEmail}!
+
+'${reporterUsername}' meldet einen Missbrauch durch den Benutzer '${profileUsername}' mit dem folgenden Kommentar:
+
+---
+${text}
+---
+
+Pairoo wird sich innerhalb von 72 Stunden melden
+
+
+Copyright 2011-2014 PAIROO GmbH

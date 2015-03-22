@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <head>
+    </head>
+    <body>
+        <wicket:extend>
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="box">
+                            <h2 class="heading" wicket:id="title">Herzlichen Glückwunsch zur Registrierung</h2>
+                            <div class="main">
+                                <div wicket:id="confirmationMailText" class="highlighted" style="margin-top:10px;">Bitte bestätigen Sie noch Ihre Email-Adresse...</div>
+
+                                <div>
+                                    <wicket:message key="content1">Jetzt kann es gleich losgehen...</wicket:message>
+                                </div>
+
+                                <div>
+                                    <table class="formLayout" style="width: none !important;">
+                                        <tr>
+                                            <th><wicket:message key="membership_status">Mitgliedstatus</wicket:message>:</th>
+                                            <td><span wicket:id="product.role">Premium</span> <wicket:message
+                                                    key="until">bis</wicket:message> <span wicket:id="endDate">31.12.2012</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th><wicket:message key="subscription_functionality">Abofunktion</wicket:message>:</th>
+                                            <td><span wicket:id="subscription.status">nicht
+                                                    aktiviert</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th><wicket:message key="charges">Kosten</wicket:message>:</th>
+                                            <td><wicket:message key="paid_with_voucher">bezahlt mit Gutschein</wicket:message></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div>
+                                    <wicket:message key="content2">Nach Ablauf des Gutscheins...</wicket:message>
+                                </div>
+
+                                <div style="text-align: center;">
+                                    <button wicket:id="lnkNextPage" class="btn btn-primary">
+                                        <wicket:message key="nextAction">Jetzt als Premium Mitglied flirten und kontakten</wicket:message>
+                                    </button>
+                                </div>
+
+                                <div style="margin-top: 20px;">
+                                    <wicket:message key="footer">Das PAIROO Team wünscht Ihnen...</wicket:message>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </wicket:extend>
+    </body>
+</html>

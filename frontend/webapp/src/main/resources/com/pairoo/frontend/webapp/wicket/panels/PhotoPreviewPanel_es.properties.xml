@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="back">regreso a recortar foto</entry>
+	<entry key="save">guardar recorte de foto</entry>
+	<entry key="instructions">&lt;h3&gt;guardar recorte de foto&lt;/h3&gt;
+		&lt;p&gt;confirme usted el recorte y oprima el boton guardar recorte de foto".&lt;br/&gt;
+si usted no desea guardar el recorte,oprima usted el boton volver a recorte de foto.&lt;/p&gt;</entry>
+</properties>

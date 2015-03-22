@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title1">Mis costumbres</entry>
+	<entry key="title2">Mis intereses</entry>
+	<entry key="title3">Mis actividades deportivas</entry>
+	<entry key="title4">Mi comida preferida</entry>
+	<entry key="title5">Me visto asi</entry>
+
+	<entry key="userProfileAppearanceStylesSelectionLabel">Estilo de vestir</entry>
+	<entry key="userProfileHobbyTypesSelectionLabel">Intereses</entry>
+	<entry key="userProfileKitchenTypesSelectionLabel">Cocina preferida</entry>
+	<entry key="userProfileMottoFieldLabel">Mi lema</entry>
+	<entry key="userProfileSmokeTypeSelectionLabel">Fumar</entry>
+	<entry key="userProfileSportTypesSelectionLabel">Actividades deportivas</entry>
+</properties>

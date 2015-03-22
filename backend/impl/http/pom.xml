@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.pairoo.backend.impl</groupId>
+		<artifactId>pairoo-backend-impl</artifactId>
+		<version>${VERSION_NUMBER}</version>
+	</parent>
+
+	<artifactId>pairoo-backend-http</artifactId>
+	<name>${project.groupId}--${project.artifactId} (pairoo.com - Backend HTTP Layer)</name>
+	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.datazuul.framework</groupId>
+			<artifactId>datazuul-fwk-i18n</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.datazuul.framework</groupId>
+			<artifactId>datazuul-fwk-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.datazuul.framework</groupId>
+			<artifactId>datazuul-fwk-util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.pairoo.backend</groupId>
+			<artifactId>pairoo-backend-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-http</artifactId>
+		</dependency>
+	 <dependency>
+	  <groupId>junit</groupId>
+	  <artifactId>junit</artifactId>
+	  <version>4.10</version>
+	  <scope>test</scope>
+	 </dependency>
+	</dependencies>
+</project>

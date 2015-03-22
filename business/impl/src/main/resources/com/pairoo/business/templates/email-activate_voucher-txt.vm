@@ -1,0 +1,17 @@
+<b>Dear ${user.userAccount.username},</b>
+Congratulations that you have a membership in PAIROO - you have done everything right. 
+PAIROO your international dating portal offers you many opportunities to find the partner for your life.
+ 
+We have a special offer for you:
+You can use PAIROO as a Premium member with all available features for exactly 3 days. 
+ 
+Just click on the link and you can immediately flirt and date as you like.
+
+									${activationLink}
+
+
+The PAIROO support team wish you great success and good luck to find your love.
+
+If you have any question or recommendation email to support@pairoo.com.
+
+Copyright 2011-2014PAIROO GmbH

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <fieldset>
+                <div class="well">
+                    <wicket:message key="instructions">
+                        <h3>Bild zuschneiden</h3>
+                        <p>
+                            Wählen Sie den Bildausschnitt und drücken Sie den Button "Bild
+                            zuschneiden".<br /> Wenn Sie das Bild nicht hochladen wollen,
+                            drücken Sie den Button "Bild verwerfen".
+                        </p>
+                    </wicket:message>
+                </div>
+
+                <center>
+                    <table>
+                        <tr>
+                            <td><img wicket:id="jcropImage" /></td>
+                            <td><div id="preview"></div></td>
+                        </tr>
+                    </table>
+                </center>
+
+                <div class="clear" wicket:id="info"></div>
+
+                <form wicket:id="form">
+                    <div class="form-actions">
+                        <input class="btn" type="submit" wicket:id="discard" wicket:message="value:discard_photo" value="zurück" />
+                        <input class="btn btn-primary" type="submit" wicket:id="crop" wicket:message="value:crop_photo" value="zuschneiden" />
+                    </div>
+                </form>
+            </fieldset>
+        </wicket:panel>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+Hola ${visitedUser.userAccount.username}!
+
+${visitor.userAccount.username} ha visitado su perfil. Quizas el  compañero de sus sueño
+mire usted ahora mismo, quien le ha visitado y oprima el ${actionUrl}
+
+
+El equipo de Pairoo le desea exito y suerte en la busqueda de su amor.
+
+en caso de preguntas o ideas envienos un E-Mail a support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

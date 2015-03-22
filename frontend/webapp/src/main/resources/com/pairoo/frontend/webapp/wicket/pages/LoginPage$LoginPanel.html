@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <form class="form-horizontal" method="post" action="MyHomePage.html" wicket:id="form" style="margin:10px;">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label"><wicket:message key="label.username">Pseudonym</wicket:message></label>
+                            <div class="controls"><input type="text" wicket:id="userAccount.username" /></div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"><wicket:message key="label.password">Passwort</wicket:message></label>
+                            <div class="controls"><input type="password" wicket:id="userAccount.password" /></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls"><a href="#" wicket:id="lnkPasswordForgotten"><wicket:message key="password_forgotten">Passwort vergessen?</wicket:message></a></div>
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="submit" class="btn btn-small btn-primary" wicket:message="value:login" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </wicket:panel>
+    </body>
+</html>

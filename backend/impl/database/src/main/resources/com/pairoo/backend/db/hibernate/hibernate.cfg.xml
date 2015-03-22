@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<!-- a SessionFactory instance listed as /jndi/name -->
+	<session-factory>
+		<!-- mapping files -->
+		<mapping resource="com/pairoo/backend/db/hibernate/Address.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/Appearance.hbm.xml" />
+        <mapping resource="com/pairoo/backend/db/hibernate/BlockedUser.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/ContactEvent.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/Favorite.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/GeoArea.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/GeoLocation.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/ImageEntry.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/LandingPageAction.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/LifeStyle.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/Membership.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/Message.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/NotificationSettings.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/PersonalValues.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/Product.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/SearchProfile.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/Subdivision.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/User.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/UserAccount.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/UserProfile.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/Visit.hbm.xml" />
+
+		<mapping resource="com/pairoo/backend/db/hibernate/marketing/Promotion.hbm.xml" />
+
+		<mapping resource="com/pairoo/backend/db/hibernate/payment/BankAccount.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/payment/CreditCardAccount.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/payment/PaymentChannel.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/payment/Transaction.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/payment/VoucherPayment.hbm.xml" />
+		<mapping resource="com/pairoo/backend/db/hibernate/payment/WalletAccount.hbm.xml" />
+		
+		<mapping resource="com/pairoo/backend/db/hibernate/payment/payone/PayOneTransaction.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

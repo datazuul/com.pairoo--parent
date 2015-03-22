@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="image_of_total_images">Photo %d de %d</entry>
+	<entry key="instructions">
+		&lt;p&gt;Pour télécharger une photo, clique sur le bouton "nouvelle photo"&lt;/p&gt;
+
+		&lt;p&gt;Une fois que tu as téléchargé une photo, tu peux la partager avec les autres membres.&lt;br/&gt;
+		Tu peux, en outre, décider quelle photo sera la photo de ton profil. Pour afficher une photo comme photo du profil, clique sur le bouton
+		"Photo du profil". Tu  ne peux sélectionner qu'une seule photo comme photo du profil.&lt;/p&gt; </entry>
+	<entry key="new_photo">nouvelle photo</entry>
+	<entry key="photo">Photo ${}</entry>
+</properties>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="step4.title">Step 4: Confirmation</entry>
+	<entry key="confirmation.text">Thank you for joining Pairoo as Premium Member!</entry>
+</properties>

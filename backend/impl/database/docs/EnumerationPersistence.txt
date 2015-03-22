@@ -1,0 +1,228 @@
+Solution 1 (?)
+==============
+https://forum.hibernate.org/viewtopic.php?p=2377095
+
+<property name="myfield" length="30">
+<type name="org.hibernate.type.EnumType">
+<param name="enumClass">org.judge.myenum</param>
+<param name="type">12</param>
+</type>
+</property>
+
+Solution 2 (?)
+==============
+http://community.jboss.org/wiki/Java5EnumUserType
+
+Solution 3 (?)
+==============
+<property name='suit'>
+    <type name="EnumUserType">
+      <param name="enumClassName">com.company.project.Suit</param>
+    </type>
+  </property>
+  
+  
+import java.io.Serializable;
+import java.lang.reflect.Method;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Properties;
+ 
+import org.hibernate.HibernateException;
+import org.hibernate.type.NullableType;
+import org.hibernate.type.TypeFactory;
+import org.hibernate.usertype.ParameterizedType;
+import org.hibernate.usertype.UserType;
+ 
+ 
+public class GenericEnumUserType implements UserType, ParameterizedType {
+    private static final String DEFAULT_IDENTIFIER_METHOD_NAME = "name";
+    private static final String DEFAULT_VALUE_OF_METHOD_NAME = "valueOf";
+ 
+    private Class<? extends Enum> enumClass;
+    private Class<?> identifierType;
+    private Method identifierMethod;
+    private Method valueOfMethod;
+    private NullableType type;
+    private int[] sqlTypes;
+ 
+    public void setParameterValues(Properties parameters) {
+        String enumClassName = parameters.getProperty("enumClass");
+        try {
+            enumClass = Class.forName(enumClassName).asSubclass(Enum.class);
+        } catch (ClassNotFoundException cfne) {
+            throw new HibernateException("Enum class not found", cfne);
+        }
+ 
+        String identifierMethodName = parameters.getProperty("identifierMethod", DEFAULT_IDENTIFIER_METHOD_NAME);
+ 
+        try {
+            identifierMethod = enumClass.getMethod(identifierMethodName, new Class[0]);
+            identifierType = identifierMethod.getReturnType();
+        } catch (Exception e) {
+            throw new HibernateException("Failed to obtain identifier method", e);
+        }
+ 
+        type = (NullableType) TypeFactory.basic(identifierType.getName());
+ 
+        if (type == null)
+            throw new HibernateException("Unsupported identifier type " + identifierType.getName());
+ 
+        sqlTypes = new int[] { type.sqlType() };
+ 
+        String valueOfMethodName = parameters.getProperty("valueOfMethod", DEFAULT_VALUE_OF_METHOD_NAME);
+ 
+        try {
+            valueOfMethod = enumClass.getMethod(valueOfMethodName, new Class[] { identifierType });
+        } catch (Exception e) {
+            throw new HibernateException("Failed to obtain valueOf method", e);
+        }
+    }
+ 
+    public Class returnedClass() {
+        return enumClass;
+    }
+ 
+    public Object nullSafeGet(ResultSet rs, String[] names, Object owner) throws HibernateException, SQLException {  
+        Object identifier = type.get(rs, names[0]);
+        if (rs.wasNull()) {
+            return null;
+        }
+        
+        try {
+            return valueOfMethod.invoke(enumClass, new Object[] { identifier });
+        } catch (Exception e) {
+            throw new HibernateException("Exception while invoking valueOf method '" + valueOfMethod.getName() + "' of " +
+                    "enumeration class '" + enumClass + "'", e);
+        }
+    }
+ 
+    public void nullSafeSet(PreparedStatement st, Object value, int index) throws HibernateException, SQLException {
+        try {
+            if (value == null) {
+                st.setNull(index, type.sqlType());
+            } else {
+                Object identifier = identifierMethod.invoke(value, new Object[0]);
+                type.set(st, identifier, index);
+            }
+        } catch (Exception e) {
+            throw new HibernateException("Exception while invoking identifierMethod '" + identifierMethod.getName() + "' of " +
+                    "enumeration class '" + enumClass + "'", e);
+        }
+    }
+ 
+    public int[] sqlTypes() {
+        return sqlTypes;
+    }
+ 
+    public Object assemble(Serializable cached, Object owner) throws HibernateException {
+        return cached;
+    }
+ 
+    public Object deepCopy(Object value) throws HibernateException {
+        return value;
+    }
+ 
+    public Serializable disassemble(Object value) throws HibernateException {
+        return (Serializable) value;
+    }
+ 
+    public boolean equals(Object x, Object y) throws HibernateException {
+        return x == y;
+    }
+ 
+    public int hashCode(Object x) throws HibernateException {
+        return x.hashCode();
+    }
+ 
+    public boolean isMutable() {
+        return false;
+    }
+ 
+    public Object replace(Object original, Object target, Object owner) throws HibernateException {
+        return original;
+    }
+}
+
+
+Solution 4 (?)
+==============
+
+puclic class Person {
+	@Enumerated(EnumType=String)
+	public GenderType getGenderType() {}
+	public void setGenderType(GenderType type) {}
+	
+	private String getGenderTypeStr() {}
+	private void setGenderTypeStr(String type) {}
+}
+
+
+
+org.hibernate.MappingException:
+===============================
+Foreign key (FK27E3CB2B6D84C4:USER [PROFILE])) must have same number of columns as the referenced primary key (USERPROFILE [ID,idx])
+ 
+mapping of a composite key with a foreign key in another table. 
+
+In both the mapping files, I mentioned both column names and it did resolve the issue. Data is getting into the database fine
+and there is no error regarding any composite key mappings. 
+
+I will explain in context of your example 
+You are using in 
+------------------------ 
+product.hbm.xml 
+
+<set name="clients" table="CLIENT" > 
+<key> 
+<column name="CR_NBR" /> 
+</key> 
+<one-to-many class="com.abc.entities.Client"/> 
+</set> 
+------------------------ 
+
+and in 
+------------------------ 
+client.hbm.xml 
+
+<many-to-one 
+name="product" 
+class="com.abc.entities.Product" 
+not-null="true" 
+update="false" 
+insert="false"> 
+<column name="CR_NBR"/> 
+</many-to-one> 
+------------------------- 
+
+Change your mapping files to simply specify both the column in both the mapping files as below 
+
+------------------------ 
+product.hbm.xml 
+
+<set name="clients" table="CLIENT" > 
+<key> 
+<column name="CR_NBR" /> 
+<column name="PCODE" /> 
+</key> 
+<one-to-many class="com.abc.entities.Client"/> 
+</set> 
+------------------------ 
+and 
+------------------------ 
+client.hbm.xml 
+
+<many-to-one 
+name="product" 
+class="com.abc.entities.Product" 
+not-null="true" 
+update="false" 
+insert="false"> 
+<column name="CR_NBR"/> 
+<column name="PCODE" /> 
+</many-to-one> 
+------------------------- 
+
+Remember I see data being inserted in the database according to the sequence in which the composite key is defined.
+May be I am wrong here and have not explored it much, you can try, but this worked for me...

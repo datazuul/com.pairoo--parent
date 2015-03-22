@@ -1,0 +1,15 @@
+<b>Bonjour ${user.userAccount.username},</b>
+augmente tes chances de flirt de 50% en complétant ton profil.
+
+Tu deviens ainsi plus attractif(ve) pour tes visiteurs et tu obtiens plus de demandes de contact.
+ 
+Complète ton profil de préférence auhourd'hui en cliquant sur le lien suivant:
+
+									${activationLink}
+
+
+L'équipe PAIROO te souhaite beaucoup de succès et de bonheur en amour.
+ 
+Pour toute question ou suggestion contacte nous par e-mail: support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

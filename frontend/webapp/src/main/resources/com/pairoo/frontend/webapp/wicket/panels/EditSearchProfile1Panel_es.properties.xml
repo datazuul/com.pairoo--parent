@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="country">living in</entry> <!-- TODO translate -->
+	<entry key="in_the_age_from">en edad de</entry>
+	<entry key="searchFor_PartnerType.ANY">igual</entry>
+	<entry key="searchFor_PartnerType.FEMALE">una mujer</entry>
+	<entry key="searchFor_PartnerType.MALE">un hombre</entry>
+	<!-- <entry key="searchFor_PartnerType.PAIR">una pareja</entry> -->
+	<entry key="searchProfileFamilyStatusTypeSelectionLabel">estado civil</entry>
+	<entry key="searchProfileHouseholdTypeSelectionLabel">hogar propio</entry>
+	<entry key="searchProfileLanguagesSelectionLabel">otros idiomas hablados</entry>
+	<entry key="searchProfilePartnershipTypeSelectionLabel">para</entry>
+
+	<entry key="title1">yo busco</entry>
+	<entry key="title2">como debe ser el estado civil de mi pareja?</entry>
+	<entry key="title4">Que idiomas debe hablar mi pareja?</entry>
+	<entry key="title5">Que origen debe tener mi pareja?</entry>
+</properties>

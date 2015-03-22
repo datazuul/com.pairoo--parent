@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pairoo.domain.payment.Transaction" table="TRANSACTION">
+        <id name="id" column="ID" type="java.lang.Long">
+            <generator class="org.hibernate.id.enhanced.TableGenerator">
+                <param name="table_name">ID_SEQUENCES</param>
+                <!-- <param name="value_column_name">next_val</param> -->
+                <!-- <param name="segment_column_name">sequence_name</param> -->
+                <param name="segment_value">com.pairoo.domain.payment.Transaction</param>
+                <!-- <param name="segment_value_length">255</param> -->
+                <!-- <param name="initial_value">1</param> -->
+                <param name="increment_size">10</param>
+                <param name="optimizer">pooled</param>
+            </generator>
+        </id>
+        <version column="VERSION_ID" name="version" type="java.lang.Integer"
+                 unsaved-value="null" />
+        <property name="uuid" type="java.lang.String">
+            <column name="UUID" />
+        </property>
+
+        <property name="timeStamp" type="java.util.Date">
+            <column name="TIME_STAMP" />
+        </property>
+        <property name="clearingType">
+            <column name="CLEARINGTYPE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">com.pairoo.domain.payment.enums.ClearingType</param>
+            </type>
+        </property>
+        <property name="status">
+            <column name="STATUS" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">com.pairoo.domain.payment.enums.StatusType</param>
+            </type>
+        </property>
+        <property name="amount" type="int">
+            <column name="AMOUNT" />
+        </property>
+        <property name="currencyCode" type="java.lang.String">
+            <column name="CURRENCY" />
+        </property>
+        <property name="narrativeText" type="java.lang.String">
+            <column name="NARRATIVETEXT" />
+        </property>
+
+        <many-to-one name="userAccount" class="com.pairoo.domain.UserAccount"
+                     lazy="false" fetch="join" cascade="none">
+            <column name="USERACCOUNT_ID" />
+        </many-to-one>
+        <many-to-one name="paymentChannel"
+                     class="com.pairoo.domain.payment.PaymentChannel" fetch="join"
+                     cascade="save-update" lazy="false">
+            <column name="PAYMENTCHANNEL" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

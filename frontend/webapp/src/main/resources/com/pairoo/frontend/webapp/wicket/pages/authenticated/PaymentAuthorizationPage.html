@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <head>
+    </head>
+    <body>
+        <wicket:extend>
+            <div class="row">
+                <div class="span12">
+                    <div class="box">
+                        <h2 class="heading"><wicket:message key="membership_title">In 30 Sekunden Premium Mitglied werden</wicket:message></h2>
+
+                        <div class="main">
+                            <form wicket:id="form">
+                                <fieldset>
+                                    <legend><wicket:message key="step3.title">Schritt 3 von 3: Mitgliedschaft bestätigen</wicket:message></legend>
+                                    <table class="table-condensed">
+                                        <tr valign="middle">
+                                            <td><img src="images/icons/yes.gif"/></td>
+                                            <td><wicket:message key="you_have_chosen">Sie haben ausgewählt</wicket:message>:</td>
+                                            <td><span wicket:id="product.duration">3 Monate</span> <span wicket:id="product.role">Premium</span> <wicket:message key="for_rate">zu</wicket:message> <span wicket:id="amount">59,90</span> <span wicket:id="amountUnit">€</span></td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <td><img src="images/icons/yes.gif"/></td>
+                                            <td><wicket:message key="you_are_paying_with">Sie bezahlen mit</wicket:message>:</td>
+                                            <td><img wicket:id="paymentChannelLogo" src="images/logos/visa-88x60.png" height="21" align="absbottom"/></td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                <div class="form-actions" style="text-align: right;">
+                                    <input class="btn" wicket:id="back" type="submit" value="zurück" wicket:message="value:back" />
+                                    <input class="btn btn-primary" wicket:id="save" type="submit" value="Premium Mitgliedschaft jetzt kaufen" wicket:message="value:save" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </wicket:extend>
+    </body>
+</html>

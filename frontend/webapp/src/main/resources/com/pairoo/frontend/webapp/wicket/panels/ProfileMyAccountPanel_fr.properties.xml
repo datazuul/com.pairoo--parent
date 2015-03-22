@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="buy_premium_membership">Devenir membre premium</entry>
+	<entry key="cancel_membership">Résilier mon abonnement</entry>
+	<entry key="change_password">Changer mon mot de passe</entry>
+	<entry key="delete_profile">Supprimer mon profil sur Pairoo</entry>
+	<entry key="I_want_emails">Je souhaite recevoir les e-mails suivants</entry>
+	<entry key="I_want_notifications">Je souhaite être informé(e)</entry>
+	<entry key="last_login">Dernière connexion</entry>
+	<entry key="my_membership">Mon adhésion</entry>
+	<entry key="newsletterLabel">Newsletter Pairoo</entry>
+	<entry key="onNewMessageLabel">Quand j'ai reçu un message</entry>
+	<entry key="onNewSuggestionsLabel">Dans le cas de nouvelles propositions de partenaires</entry>
+	<entry key="onVisitLabel">Quand mon profil a été consulté</entry>
+	<entry key="paid_until">payé jusqu'au</entry>
+	<entry key="weekendSuggestionsLabel">Propositions de contacts pour le week-end</entry>
+	<entry key="weeklyStatisticLabel">Statistique Flirt hebdomadaire</entry>
+</properties>

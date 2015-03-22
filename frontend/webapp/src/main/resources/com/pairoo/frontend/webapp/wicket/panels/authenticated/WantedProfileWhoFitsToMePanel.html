@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <wicket:panel>
+            <table class="table table-striped table-condensed">
+                <colgroup>
+                    <col width="200" />
+                </colgroup>
+                <tr>
+                    <th><wicket:message key="interests">Interessen</wicket:message>:</th>
+                    <td><wicket:container wicket:id="hobbiesList">
+                            <span wicket:id="lblItemModel">Literatur</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="sportTypes">Sportliche Aktivitäten</wicket:message>:</th>
+                    <td><wicket:container wicket:id="sportTypesList">
+                            <span wicket:id="lblItemModel">Wandern</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="spacer"></td>
+                </tr>
+
+                <tr>
+                    <th><wicket:message
+                            key="userProfile.personalValues.showingEmotions">Gefühle zeigen</wicket:message>:</th>
+                    <td><span wicket:id="lblShowingEmotions">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="userProfile.personalValues.romance">Romantik</wicket:message>:</th>
+                    <td><span wicket:id="lblRomance">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="userProfile.personalValues.tenderness">Zärtlichkeit</wicket:message>:</th>
+                    <td><span wicket:id="lblTenderness">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message
+                            key="userProfile.personalValues.longRelationship">Langfristige Beziehung</wicket:message>:</th>
+                    <td><span wicket:id="lblLongRelationship">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message
+                            key="userProfile.personalValues.shortRelationship">Kurzfristige Beziehung</wicket:message>:</th>
+                    <td><span wicket:id="lblShortRelationship">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="userProfile.personalValues.freedom">Freiräume</wicket:message>:</th>
+                    <td><span wicket:id="lblFreedom">wichtig</span></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="spacer"></td>
+                </tr>
+
+                <tr>
+                    <th><wicket:message
+                            key="userProfile.personalValues.faithfulness">Treue</wicket:message>:</th>
+                    <td><span wicket:id="lblFaithfulness">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="userProfile.personalValues.honesty">Ehrlichkeit</wicket:message>:</th>
+                    <td><span wicket:id="lblHonesty">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="userProfile.personalValues.confidence">Vertrauen</wicket:message>:</th>
+                    <td><span wicket:id="lblConfidence">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="userProfile.personalValues.respect">Respekt</wicket:message>:</th>
+                    <td><span wicket:id="lblRespect">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="userProfile.personalValues.security">Sicherheit</wicket:message>:</th>
+                    <td><span wicket:id="lblSecurity">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="userProfile.personalValues.charm">Charme</wicket:message>:</th>
+                    <td><span wicket:id="lblCharm">wichtig</span></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="spacer"></td>
+                </tr>
+
+                <tr>
+                    <th><wicket:message key="userProfile.personalValues.sexuality">Sexualität</wicket:message>:</th>
+                    <td><span wicket:id="lblSexuality">wichtig</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message
+                            key="userProfile.personalValues.differentPartners">Verschiedene Partner</wicket:message>:</th>
+                    <td><span wicket:id="lblDifferentPartners">wichtig</span></td>
+                </tr>
+            </table>
+        </wicket:panel>
+    </body>
+</html>

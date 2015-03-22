@@ -1,0 +1,15 @@
+<b>Hola ${user.userAccount.username},</b>
+aumente usted el Chance de su Flirt en um 50 porciento con un perfil completo.
+
+asi sera usted de mas interes para sus visitantes y recibira mas peticiones de contacto.
+ 
+complete usted su perfil preferiblemente hoy mismo y oprima el siguiente Link
+
+									${activationLink}
+
+
+El equipo de PAIROO le desea mucha suerte y exito en su busqueda.
+ 
+en caso de preguntas o ideas envienos usted un E-Mail a support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

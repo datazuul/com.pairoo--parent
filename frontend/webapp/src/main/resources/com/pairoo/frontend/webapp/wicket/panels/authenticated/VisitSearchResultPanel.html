@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <span class="wrimg">
+                <div wicket:id="premiumContainer" class="left" style="position:absolute"><img height="50" src="images/premium-vertical.png"></div>
+                <img src="images/female-gender-sign.jpg" wicket:id="profileImage" />
+            </span>
+            <div wicket:id="onlineLabel">online</div>
+            <span class="caption">
+                <span wicket:id="username">Zauberin</span> (<span wicket:id="age">38</span>)<br />
+                <span wicket:id="familyStatusType">geschieden</span><br/>
+                <wicket:message key="zipcode">PLZ</wicket:message> <span wicket:id="geoLocation.zipcode">8</span>
+            </span>
+        </wicket:panel>
+    </body>
+</html>

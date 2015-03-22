@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <head></head>
+
+    <body>
+        <wicket:panel>
+            <div class="geoAreaFormComponent">
+
+                <label wicket:id="countryLabel">Land</label> <select
+                    wicket:id="country">
+                    <option>any</option>
+                    <option>Albania</option>
+                    <option>Germany</option>
+                    <option>Pitcairn Island</option>
+                </select>
+
+                <label wicket:id="zipcodeStartsWithLabel">PLZ</label> <input
+                    wicket:id="zipcodeStartsWith" type="text" size="5" class="input-small"/>
+
+                <label wicket:id="maxDistanceLabel" style="margin-top:10px;">im Umkreis von</label> <select
+                    wicket:id="maxDistance" class="input-large">
+                    <option>bis 20km</option>
+                    <option>bis 50km</option>
+                    <option>bis 100km</option>
+                    <option>bis 250km</option>
+                </select>
+            </div>
+        </wicket:panel>
+    </body>
+</html>

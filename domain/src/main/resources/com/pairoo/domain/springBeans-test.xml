@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="springBeans-Address.xml" />
+    <import resource="springBeans-Appearance.xml" />
+    <import resource="springBeans-GeoLocation.xml" />
+    <import resource="springBeans-LifeStyle.xml" />
+    <import resource="springBeans-User.xml" />
+    <import resource="springBeans-UserAccount.xml" />
+    <import resource="springBeans-UserProfile.xml" />
+</beans>

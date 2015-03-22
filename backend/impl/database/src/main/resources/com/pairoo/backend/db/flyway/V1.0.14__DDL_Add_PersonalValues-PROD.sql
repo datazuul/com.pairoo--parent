@@ -1,0 +1,3 @@
+create table PERSONALVALUES (ID int8 not null, SHOWINGEMOTIONS varchar(255), ROMANCE varchar(255), TENDERNESS varchar(255), LONGRELATIONSHIP varchar(255), SHORTRELATIONSHIP varchar(255), FREEDOM varchar(255), SEXUALITY varchar(255), DIFFERENTPARTNERS varchar(255), FAITHFULNESS varchar(255), RESPECT varchar(255), HONESTY varchar(255), SECURITY varchar(255), CONFIDENCE varchar(255), CHARM varchar(255), primary key (ID));
+alter table USERPROFILE add column PERSONALVALUES int8;
+alter table USERPROFILE add constraint FKF8AB675E8E020E07 foreign key (PERSONALVALUES) references PERSONALVALUES;

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="crop_photo">Bild zuschneiden</entry>
+	<entry key="discard_photo">Bild verwerfen</entry>
+	<entry key="instructions">&lt;h3&gt;Bild zuschneiden&lt;/h3&gt;
+		&lt;p&gt;Wählen
+		Sie den Bildausschnitt und drücken Sie den Button "Bild
+		zuschneiden".&lt;br/&gt;
+		Wenn Sie das Bild nicht hochladen wollen,
+		drücken Sie den Button "Bild
+		verwerfen".&lt;/p&gt;</entry>
+</properties>

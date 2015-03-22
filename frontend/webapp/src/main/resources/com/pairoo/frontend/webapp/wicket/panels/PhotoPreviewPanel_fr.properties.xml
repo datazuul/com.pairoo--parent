@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="back">retour à découper la photo</entry>
+	<entry key="save">sauvergarder la section de photo</entry>
+	<entry key="instructions">&lt;h3&gt;Sauvegarder la section de photo&lt;/h3&gt;
+		&lt;p&gt;Confirme la section de photo et clique sur le bouton "Sauvegarder la section de photo".&lt;br/&gt;
+Si tu ne veux pas sauvegarder la section de photo, clique sur le bouton "retour à découper la photo".&lt;/p&gt;</entry>
+</properties>
+

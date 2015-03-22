@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title.login">felicidades por activar su cupon
+		</entry>
+	<entry key="title.registration">felicidades por registrarse y
+		activar su cupon</entry>
+
+	<entry key="confirmation_mail_text">
+		&lt;p&gt;Por favor confirme usted su direccion de E-mail
+		para 
+		finalizar su registro. asi podra estar seguro que nadie podra utilizar su direccion de E-mail para registrarse en Pairoo
+		
+		hat.&lt;br/&gt;
+		nosotros ya
+		le hemos enviado un E-mail con la confirmacion
+		si confirma ahora se ha  registrado usted con exito a Pairoo
+		.&lt;/p&gt;</entry>
+
+	<entry key="content1">
+		&lt;p&gt;ahora mismo puede usted empesar,como miembro especial de pairoo podra usted flirtear y contactar sin timpo limite 
+		empiese usted
+		ahora la busca de la pareja deseada.&lt;/p&gt;
+
+		&lt;p&gt;para
+		mas informacion aqui otra vez sus datos de asociacion
+		.&lt;/p&gt; </entry>
+	<entry key="content2">
+		&lt;p&gt;al vencer el cupon su filiacion premio 
+		se convertira automaticamente en una
+		 filiacion gratuita.&lt;/p&gt; </entry>
+	<entry key="nextAction">ahora como miembro premio flirtear y contactar </entry>
+	<entry key="footer">&lt;p&gt;el equipo de Pairoo le desea mucha suerte para flirtear
+		
+		y contactar.&lt;/p&gt;
+
+		&lt;p&gt;un saludo especial&lt;/p&gt;
+
+		&lt;p&gt;tu equipo de ayuda de Pairoo&lt;/p&gt;</entry>
+</properties>

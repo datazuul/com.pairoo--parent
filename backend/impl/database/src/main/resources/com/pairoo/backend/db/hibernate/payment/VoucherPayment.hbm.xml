@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<joined-subclass name="com.pairoo.domain.payment.VoucherPayment"
+		extends="com.pairoo.domain.payment.PaymentChannel" table="VOUCHER_PAYMENT"
+		lazy="false">
+		<key>
+			<column name="ID" />
+		</key>
+		<property name="promotionCode" type="java.lang.String">
+			<column name="PROMOTION_CODE" />
+		</property>
+	</joined-subclass>
+</hibernate-mapping>

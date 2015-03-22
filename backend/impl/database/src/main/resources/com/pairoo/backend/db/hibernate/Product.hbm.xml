@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.pairoo.domain.Product" table="PRODUCT">
+		<id name="id" column="ID" type="java.lang.Long">
+			<generator class="org.hibernate.id.enhanced.TableGenerator">
+				<param name="table_name">ID_SEQUENCES</param>
+				<!-- <param name="value_column_name">next_val</param> -->
+				<!-- <param name="segment_column_name">sequence_name</param> -->
+				<param name="segment_value">com.pairoo.domain.Product</param>
+				<!-- <param name="segment_value_length">255</param> -->
+                <!-- <param name="initial_value">1</param> -->
+				<param name="increment_size">10</param>
+				<param name="optimizer">pooled</param>
+			</generator>
+		</id>
+		<version column="VERSION_ID" name="version" type="java.lang.Integer"
+			unsaved-value="null" />
+		<property name="uuid" type="java.lang.String">
+			<column name="UUID" />
+		</property>
+
+		<property name="startDate" type="java.util.Date">
+			<column name="STARTDATE" />
+		</property>
+		<property name="endDate" type="java.util.Date">
+			<column name="ENDDATE" />
+		</property>
+		<property name="duration">
+			<column name="DURATION" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.ProductDurationType</param>
+			</type>
+		</property>
+		<property name="monthlyRate" type="java.lang.Float">
+			<column name="MONTHLYRATE" />
+		</property>
+		<property generated="never" lazy="false" name="abo"
+			type="java.lang.Boolean">
+			<column name="ABO" />
+		</property>
+		<property generated="never" lazy="false" name="role">
+			<column name="ROLE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.Role</param>
+			</type>
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title.login">Herzlichen Glückwunsch zur Aktivierung Ihres
+		Gutscheins</entry>
+	<entry key="title.registration">Herzlichen Glückwunsch zur Registrierung und
+		Aktivierung Ihres Gutscheins</entry>
+
+	<entry key="confirmation_mail_text">
+		&lt;p&gt;Bitte bestätigen Sie noch Ihre Email-Adresse
+		um ihre
+		Registrierung abzuschließen. So können Sie sicher sein, dass
+		sich niemand mit Ihrer
+		Email Adresse bei Pairoo angemeldet
+		hat.&lt;br/&gt;
+		Wir haben Ihnen
+		schon eine Bestätigungs- Email
+		gesendet.
+		Wenn Sie jetzt
+		bestätigen sind Sie erfolgreich bei
+		Pairoo
+		registriert.&lt;/p&gt;</entry>
+
+	<entry key="content1">
+		&lt;p&gt;Jetzt kann es gleich losgehen und Sie können
+		als
+		PAIROO Premium Mitglied unbegrenzt kontakten und flirten. Beginnen
+		Sie
+		jetzt Ihre Suche nach Ihrem Wunschpartner.&lt;/p&gt;
+
+		&lt;p&gt;Zur
+		Information haben wir Ihre Mitgliedsdaten nochmals für Sie
+		aufgeführt.&lt;/p&gt; </entry>
+	<entry key="content2">
+		&lt;p&gt;Nach Ablauf des Gutscheins wird Ihre Premium
+		Mitgliedschaft in eine
+		kostenlose Mitgliedschaft umgewandelt.&lt;/p&gt; </entry>
+	<entry key="nextAction">Jetzt als Premium Mitglied flirten und kontakten</entry>
+	<entry key="footer">&lt;p&gt;Das PAIROO Team wünscht Ihnen viel Erfolg
+		beim Flirten
+		und Kontakten.&lt;/p&gt;
+
+		&lt;p&gt;Liebe Grüße&lt;/p&gt;
+
+		&lt;p&gt;Ihr Pairoo Team&lt;/p&gt;</entry>
+</properties>

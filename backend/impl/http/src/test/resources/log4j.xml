@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "./log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <!--
+        c - The calling class name, if giving without precision is the fully qualified name returned.
+        C - The fully qualified class name.
+        d - The date of the logging request, can be formatted with java.text.SimpleDateFormat, i.e. %d{yyyy-MM-dd}
+        F - The name of the calling File.
+        l - The location information, same as %C%M(%F:%L). This can be slow.
+        L - The calling class line number
+        m - The logging message.
+        M - The calling class method.
+        n - The platform dependent line separator.
+        p - The logging Level.
+        r - The relative date in millisecond since application start.
+        t - The invoking thread.
+        [x|X] - the Message Diagnostic (MDC) information.
+    -->
+    <!-- standard output (no warnings errors): this goes e.g. to catalina.out -->
+    <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{ISO8601}] %-5p %c %m %n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="DEBUG" />
+            <param name="LevelMax" value="INFO" />
+        </filter>
+    </appender>
+
+    <!-- standard error output (just warnings and errors): this goes e.g. to
+    catalina.out (?) -->
+    <appender name="STDERR" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.err" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{ISO8601}] %-5p %c %m %n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="WARN" />
+            <param name="LevelMax" value="FATAL" />
+        </filter>
+    </appender>
+
+    <!-- setup log4j's root logger -->
+    <root>
+        <priority value="debug" />
+        <!-- <level value="all" /> -->
+
+        <appender-ref ref="STDOUT" /> 
+        <appender-ref ref="STDERR" /> 
+    </root>
+</log4j:configuration>

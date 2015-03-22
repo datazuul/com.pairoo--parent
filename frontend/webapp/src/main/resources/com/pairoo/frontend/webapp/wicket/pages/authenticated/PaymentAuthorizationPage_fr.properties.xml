@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="for_rate">vers</entry>
+	<entry key="step3.title">Etape 3 de 3 : Confirmation d'adhésion</entry>
+	<entry key="save">Deviens membre Premium</entry>
+	<entry key="you_are_paying_with">Tu paies par</entry>
+	<entry key="you_have_chosen">Tu as sélectionné</entry>
+</properties>

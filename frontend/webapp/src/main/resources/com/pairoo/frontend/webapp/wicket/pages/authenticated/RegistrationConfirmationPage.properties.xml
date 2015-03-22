@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title">Congratulations to your registration</entry>
+	<entry key="become_a_premium_member">become a Premium Member</entry>
+	<entry key="content">&lt;p&gt;Welcome to the international Dating site Pairoo.&lt;/p&gt;
+		&lt;p&gt;&lt;b&gt;Please confirm your email address&lt;/b&gt;. Doing so ensures that no one else has registered with your email address. &lt;b&gt;We already sent you a confirmation email&lt;/b&gt;.&lt;/p&gt;
+		&lt;p&gt;If you confirm it now your registration at Pairoo will be successfully completed.&lt;/p&gt;
+		</entry>
+	<entry key="nextActionIntro">&lt;h2&gt;Ready to go - make your choice&lt;/h2&gt;
+	&lt;p&gt;Become a Premium member and use all features right now&lt;br/&gt;
+	or&lt;br/&gt;
+	have a look at the partners we found for you.&lt;/p&gt;</entry>
+	<entry key="partner_suggestions">Partner Suggestions</entry>
+	<entry key="upload_title">Upload Photos</entry>
+</properties>

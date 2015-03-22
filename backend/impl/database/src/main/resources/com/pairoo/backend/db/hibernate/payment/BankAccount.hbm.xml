@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<joined-subclass name="com.pairoo.domain.payment.BankAccount"
+		extends="com.pairoo.domain.payment.PaymentChannel" table="BANKACCOUNT"
+		lazy="false">
+		<key>
+			<column name="ID" />
+		</key>
+		<property name="bankCountry">
+			<column name="BANKCOUNTRY" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.payment.enums.ELVCountry</param>
+			</type>
+		</property>
+		<property name="bankAccount" type="java.lang.String">
+			<column name="BANKACCOUNT" />
+		</property>
+		<property name="bankCode" type="int">
+			<column name="BANKCODE" />
+		</property>
+		<property name="bankAccountHolder" type="java.lang.String">
+			<column name="BANKACCOUNTHOLDER" />
+		</property>
+	</joined-subclass>
+</hibernate-mapping>

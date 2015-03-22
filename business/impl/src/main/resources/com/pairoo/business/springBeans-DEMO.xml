@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- demonstration data: setup data generator that will add some data when 
+		the app starts (and database access is initialized) -->
+	<bean id="dataGenerator" class="com.pairoo.business.DemoDataGenerator"
+		depends-on="sessionFactory"> <!--  init-method="init" called through listener, now -->
+		<property name="favoriteService" ref="favoriteService" />
+		<property name="geoLocationService" ref="geoLocationService" />
+		<property name="imageService" ref="imageService" />
+		<property name="membershipService" ref="membershipService" />
+		<property name="messageService" ref="messageService" />
+		<property name="productService" ref="productService" />
+		<property name="promotionService" ref="promotionService" />
+		<property name="userProfileService" ref="userProfileService" />
+		<property name="userService" ref="userService" />
+		<property name="visitService" ref="visitService" />
+		<property name="voucherPaymentService" ref="voucherPaymentService" />
+		
+		<property name="addImages"><value>true</value></property>
+		<property name="count" value="10" />
+	</bean>
+</beans>

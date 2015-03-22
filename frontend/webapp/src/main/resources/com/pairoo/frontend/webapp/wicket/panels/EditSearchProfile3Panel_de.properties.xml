@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="searchProfileEducationTypeSelectionLabel">Bildung</entry>
+	<entry key="searchProfileHobbyTypeSelectionLabel">Interessen</entry>
+	<entry key="searchProfileIncomeTypeSelectionLabel">Welcher Jahresverdienst?</entry>
+	<entry key="searchProfileOccupationTypeSelectionLabel">Berufsgruppe?</entry>
+	<entry key="searchProfileSmokeTypeSelectionLabel">Rauchertyp</entry>
+	<entry key="searchProfileSportTypeSelectionLabel">Sportarten</entry>
+
+	<entry key="titleEducationType">Welche Bildung soll mein Partner haben?</entry>
+	<entry key="titleInterests">Welche Interessen soll mein Partner haben?</entry>
+	<entry key="titleSmokeType">Soll mein Partner rauchen?</entry>
+	<entry key="titleSportTypes">Mein Partner sollte sportlich sein</entry>
+	<entry key="titleAppearanceStyle">So soll sich mein Partner kleiden!</entry>
+</properties>

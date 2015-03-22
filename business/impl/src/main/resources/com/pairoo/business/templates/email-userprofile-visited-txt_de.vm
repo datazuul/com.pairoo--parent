@@ -1,0 +1,12 @@
+Hallo ${visitedUser.userAccount.username}!
+
+${visitor.userAccount.username} hat Ihr Profil besucht. Vielleicht der Partner Ihrer Träume
+
+Schauen Sie gleich nach, wer Sie besucht hat und klicken Sie auf ${actionUrl}
+
+
+Das Pairoo Team wünscht Ihnen viel Erfolg und Glück, damit Sie Ihre Liebe finden.
+
+Bei Fragen und Anregungen senden Sie uns eine E-Mail an support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

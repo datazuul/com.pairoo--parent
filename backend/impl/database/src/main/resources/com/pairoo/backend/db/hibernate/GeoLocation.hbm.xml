@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.datazuul.framework.domain.geo.GeoLocation"
+		table="GEOLOCATION" mutable="false">
+		<id name="id" column="ID" type="java.lang.Long">
+			<generator class="org.hibernate.id.enhanced.TableGenerator">
+				<param name="table_name">ID_SEQUENCES</param>
+				<!-- <param name="value_column_name">next_val</param> -->
+				<!-- <param name="segment_column_name">sequence_name</param> -->
+				<param name="segment_value">com.datazuul.framework.domain.geo.GeoLocation</param>
+				<!-- <param name="segment_value_length">255</param> -->
+				<!-- <param name="initial_value">1</param> -->
+				<param name="increment_size">10</param>
+				<param name="optimizer">pooled</param>
+			</generator>
+		</id>
+		<version column="VERSION_ID" name="version" type="java.lang.Integer"
+			unsaved-value="null" />
+		<property name="uuid" type="java.lang.String">
+			<column name="UUID" />
+		</property>
+
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="zipcode" type="java.lang.String">
+			<column name="ZIPCODE" />
+		</property>
+		<property name="latitude" type="java.lang.Double">
+			<column name="LATITUDE" />
+		</property>
+		<property name="longitude" type="java.lang.Double">
+			<column name="LONGITUDE" />
+		</property>
+		<property name="population" type="java.lang.Integer">
+			<column name="POPULATION" />
+		</property>
+		<property name="country">
+			<column name="COUNTRY" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.datazuul.framework.domain.geo.Country</param>
+			</type>
+		</property>
+		<property name="continent">
+			<column name="CONTINENT" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.datazuul.framework.domain.geo.Continent</param>
+			</type>
+		</property>
+
+		<many-to-one name="subdivision_biggest"
+			class="com.datazuul.framework.domain.geo.Subdivision" fetch="join"
+			lazy="false" cascade="none">
+			<column name="SUBDIVISION_BIGGEST_ID" />
+		</many-to-one>
+		<many-to-one name="subdivision_smallest"
+			class="com.datazuul.framework.domain.geo.Subdivision" fetch="join"
+			lazy="false" cascade="none">
+			<column name="SUBDIVISION_SMALLEST_ID" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

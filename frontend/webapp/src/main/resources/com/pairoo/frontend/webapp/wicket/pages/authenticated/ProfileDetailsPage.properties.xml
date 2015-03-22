@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="who.am.i">Who am I?</entry>
+    <entry key="the.way.i.live">The way I live</entry>
+    <entry key="i.am.looking.for">I am looking for</entry>
+    <entry key="your.lifestyle">Your lifestyle</entry>
+
+    <entry key="as_favorite">As favorite</entry>
+    <entry key="block_profile">Block profile</entry>
+    <entry key="my_photos">My photos</entry>
+    <entry key="report_profile">Report profile</entry>
+    <entry key="write_me">Write me</entry>
+
+    <entry key="added_profile_to_favorites">'${userAccount.username}' added to your favorites.</entry>
+    <entry key="favorite_already_exists">Profile is already a favorite.</entry>
+
+    <entry key="blockProfileDialog.title">Block Profile</entry>
+    <entry key="reportProfileDialog.title">Report Profile</entry>
+</properties>

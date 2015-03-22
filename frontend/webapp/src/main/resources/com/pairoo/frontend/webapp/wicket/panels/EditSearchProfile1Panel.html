@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <body>
+        <wicket:panel>
+            <div class="row-fluid">
+                <fieldset class="form-inline">
+                    <legend><wicket:message key="title1">Ich suche</wicket:message></legend>
+
+                    <div class="control-group">
+                        <select class="input-medium" wicket:id="searchProfile.partnerType" size="1" aria-required="true">
+                            <option value="0">einen Mann</option>
+                            <option value="1" selected="selected">eine Frau</option>
+                            <option value="2">ein Paar</option>
+                        </select>
+
+                        <label wicket:id="searchProfilePartnershipTypeSelectionLabel">für</label>
+
+                        <select class="input-xlarge" wicket:id="searchProfile.partnershipType">
+                            <option>eine feste Beziehung</option>
+                            <option>eine spätere Heirat</option>
+                            <option>eine Freundschaft</option>
+                            <option>ein unverbindliches Abenteuer</option>
+                        </select>
+
+                        <label wicket:id="searchProfileMinAgeLabel">im Alter von</label>
+
+                        <select class="input-mini" wicket:id="searchProfile.minAge" size="1" aria-required="true">
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="90">90</option>
+                        </select>
+                        <label wicket:id="searchProfileMaxAgeLabel">bis</label>
+                        <select class="input-mini"  wicket:id="searchProfile.maxAge" size="1" aria-required="true">
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="90">90</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <span wicket:id="geoArea">[GeoArea fields]</span>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <fieldset class="form-horizontal">
+                        <legend><wicket:message key="title2">Wie soll der Familienstand meines Partners sein?</wicket:message></legend>
+                        <div class="control-group">
+                            <span wicket:id="searchProfile.familyStatusTypes"></span>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="span6">
+                    <fieldset class="form-horizontal">
+                        <legend><wicket:message key="children">Kinder</wicket:message></legend>
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="searchProfileNumberOfKidsTypeSelectionLabel">hat Kinder</label>
+                            <div class="controls">
+                                <select class="input-medium" wicket:id="searchProfile.numberOfKidsType">
+                                    <option>egal</option>
+                                    <option>ja</option>
+                                    <option>nein</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="searchProfileWantMoreChildrenTypeSelectionLabel">will (mehr) Kinder</label>
+                            <div class="controls">
+                                <select class="input-medium" wicket:id="searchProfile.wantMoreChildrenType">
+                                    <option>egal</option>
+                                    <option>ja</option>
+                                    <option>nein</option>
+                                    <option>nicht sicher</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <fieldset class="form-horizontal">
+                    <legend><wicket:message key="title4">Welche Sprachen soll mein Partner sprechen?</wicket:message></legend>
+
+                    <div class="control-group">
+                        <label class="control-label" wicket:id="searchProfileMotherLanguageSelectionLabel">Muttersprache</label>
+                        <div class="controls">
+                            <select wicket:id="searchProfile.motherLanguage" class="input-medium">
+                                <option>Deutsch</option>
+                                <option>Englisch</option>
+                                <option>Französisch</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" wicket:id="searchProfileLanguagesSelectionLabel">weitere gesprochene Sprachen</label>
+                        <div class="controls">
+                            <span wicket:id="searchProfile.languages"></span>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="row-fluid">
+                <fieldset class="form-horizontal">
+                    <legend><wicket:message key="title5">Welcher Herkunft soll mein Partner sein?</wicket:message></legend>
+
+                    <div class="control-group">
+                        <span wicket:id="searchProfile.ethnicities"></span>
+                    </div>
+                </fieldset>
+            </div>
+        </wicket:panel>
+    </body>
+</html>

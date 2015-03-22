@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="crop_photo">Ritaglia immagine</entry>
+	<entry key="discard_photo">Elimina immagine</entry>
+	<entry key="instructions">&lt;h3&gt;Ritaglia immagine&lt;/h3&gt;
+		&lt;p&gt;Scegli		l'immagine ritagliata e premi il tasto "Ritaglia immagine".&lt;br/&gt;
+		Se non vuoi caricare l'immagine,
+		premi il tasto "Elimina immagine".&lt;/p&gt;</entry>
+</properties>

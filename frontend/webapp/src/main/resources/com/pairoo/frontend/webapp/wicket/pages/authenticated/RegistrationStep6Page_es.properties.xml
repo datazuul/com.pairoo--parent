@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="step6.title">paso 6 de 6: Describa usted sus cualidades personales</entry>
+	<entry key="btnSave">conlcluir afiliacion</entry>
+	<entry key="personalValues.intro">
+		&lt;p&gt;Que es importante para usted en una relacion?&lt;/p&gt;
+	&lt;p&gt;
+		depende, nombre usted temas que para usted son importantes.
+		&lt;br /&gt;
+		elija usted entre
+		&lt;ul&gt;
+			&lt;li&gt;"no es muy importante", d.h. a usted le da igual, Si su pareja no tiene estas cualidades
+				&lt;/li&gt;
+			&lt;li&gt;"importante", d.h. significa que esta cualidad es deseable&lt;/li&gt;
+			&lt;li&gt;"muy importante", d.h. absolutamente necesaria en su 
+				relacion&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/p&gt;
+	&lt;p&gt;las siguientes preguntas se utilizaran en la busqueda de cualidades  "Personales
+		Cualidades" utilizada, para encontrar la pareja adecuada, .&lt;/p&gt;
+	</entry>
+</properties>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:/com/pairoo/backend/impl/file/springBeans-${env}.properties</value>
+		</property>
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+	</bean>
+
+	<!-- setup daos -->
+	<bean id="imageDao" class="com.pairoo.backend.impl.file.ImageDaoImpl" scope="singleton">
+		<!-- singleton is default, but to clearly show this... -->
+		<constructor-arg value="${repositoryPath.images}" />
+<!--		<constructor-arg value="${java.io.tmpdir}/${tmpDir.subpath.images}" />-->
+<constructor-arg value="/tmp/${tmpDir.subpath.images}" />
+	</bean>
+</beans>

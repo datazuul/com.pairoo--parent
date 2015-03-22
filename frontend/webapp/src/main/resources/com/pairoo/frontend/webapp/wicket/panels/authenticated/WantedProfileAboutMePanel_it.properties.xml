@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="how_do_I_look_like">Che aspetto ho?</entry>
+	<entry key="living.city">Città</entry>
+	<entry key="living.country">Stato</entry>
+	
+	<entry key="HouseholdType.OWN_HOUSEHOLD">si</entry>
+	<entry key="HouseholdType.NO_OWN_HOUSEHOLD">no</entry>
+	<entry key="PartnerType.FEMALE">Donna</entry>
+	<entry key="PartnerType.MALE">Uomo</entry>
+</properties>

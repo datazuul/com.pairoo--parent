@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <head>
+    </head>
+    <body>
+        <wicket:extend>
+            <div class="row">
+                <div class="span12">
+                    <div class="box">
+                        <h2 class="heading"><wicket:message key="title">Herzlichen Glückwunsch zur Registrierung</wicket:message></h2>
+
+                        <div class="main">
+                            <div style="font-size:16px;"><wicket:message key="content">Willkomen bei der internationalen Partnerbörse...</wicket:message></div>
+
+                            <div class="highlighted" style="text-align:center;">
+                                <wicket:message key="nextActionIntro">Jetzt kann es losgehen...</wicket:message>
+                            </div>
+
+                            <div style="text-align:center;">
+                                <button wicket:id="lnkMembershipPage" class="btn btn-primary"><wicket:message key="become_a_premium_member">Premium Mitglied werden</wicket:message></button>
+                                &nbsp;<wicket:message key="or">oder</wicket:message>&nbsp;
+                                <button wicket:id="lnkSuggestionsPage" class="btn btn-primary"><wicket:message key="partner_suggestions">Partner-Vorschläge</wicket:message></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </wicket:extend>
+    </body>
+</html>

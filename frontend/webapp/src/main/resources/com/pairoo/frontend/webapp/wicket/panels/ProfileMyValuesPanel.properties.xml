@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="introduction">
+		&lt;p&gt;
+		What is important for you in a relationship?&lt;br/&gt;
+		It is essential that you name your important subjects.&lt;br/&gt;
+		Choose between
+		&lt;ul&gt;
+		&lt;li&gt;not so important, i.e. you rather don't care if your partner does not have this characteristic&lt;/li&gt;
+		&lt;li&gt;important, i.e. this characteristic is desirable&lt;/li&gt;
+		&lt;li&gt;very important, i.e. absolutely required in your relationship&lt;/li&gt;
+		&lt;/ul&gt;
+		The following informations will be used for the search "Personal Values" to find matching partners..&lt;/p&gt;
+	</entry>
+</properties>

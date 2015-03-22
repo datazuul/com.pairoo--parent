@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="step6.title">Passo 6 di 6: Descrivi i valori in cui credi</entry>
+	<entry key="btnSave">Concludi iscrizione</entry>
+	<entry key="personalValues.intro">
+		&lt;p&gt;Che cos'é per te importante in una relazione?&lt;/p&gt;
+	&lt;p&gt;
+		È importante indicare gli aspetti che piú ti stanno a cuore.
+		&lt;br /&gt;
+		Scegli tra
+		&lt;ul&gt;
+			&lt;li&gt;"non é importante", vuol dire che ti é praticamente indifferente, se
+				il tuo partner non ha questa caratteristica&lt;/li&gt;
+			&lt;li&gt;"Importante", Vuol dire che desideri questa caratteristica&lt;/li&gt;
+			&lt;li&gt;"Molto importante", vuol dire caratteristica assolutamente necessaria 
+				nel tuo rapporto&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/p&gt;
+	&lt;p&gt;I seguenti aspetti saranno utilizzati nella ricerca dei "Valori personali", per identificare un partner adeguato.&lt;/p&gt;
+	</entry>
+</properties>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="password_forgotten">olvido usted su contraseña?</entry>
+	<entry key="usernamePlaceholderText">Su seudónimo</entry>
+
+	<entry key="password.StringValidator.range">La peticion en la casilla '${label}' tiene que contener un ${Minimo de}
+		y ${maximo} significados.</entry>
+</properties>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <fieldset class="form-horizontal">
+                <legend><wicket:message key="title1">Beziehungstyp</wicket:message></legend>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="showingEmotionsSelectionLabel">Gefühle zeigen</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.showingEmotions">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="longRelationshipSelectionLabel">Langfristige Beziehung</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.longRelationship">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="romanceSelectionLabel">Romantik</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.romance">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="shortRelationshipSelectionLabel">Kurzfristige Beziehung</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.shortRelationship">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="tendernessSelectionLabel">Zärtlichkeit</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.tenderness">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="freedomSelectionLabel">Freiräume</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.freedom">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-horizontal">
+                <legend><wicket:message key="title2">Sexualität</wicket:message></legend>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="sexualitySelectionLabel">Sexualität</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.sexuality">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-horizontal">
+                <legend><wicket:message key="title3">Traditionelle Werte</wicket:message></legend>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="faithfulnessSelectionLabel">Treue</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.faithfulness">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="respectSelectionLabel">Respekt</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.respect">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="honestySelectionLabel">Ehrlichkeit</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.honesty">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="securitySelectionLabel">Sicherheit</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.security">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="confidenceSelectionLabel">Vertrauen</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.confidence">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="charmSelectionLabel">Charme</label>
+                            <div class="controls">
+                                <select class="input-block-level" wicket:id="userProfile.personalValues.charm">
+                                    <option>nicht so wichtig</option>
+                                    <option>wichtig</option>
+                                    <option>sehr wichtig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </wicket:panel>
+    </body>
+</html>

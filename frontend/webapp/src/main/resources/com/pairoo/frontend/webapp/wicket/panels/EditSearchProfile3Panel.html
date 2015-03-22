@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <fieldset class="form-inline">
+                <legend><wicket:message key="titleSmokeType">Soll mein Partner rauchen?</wicket:message></legend>
+
+                <div class="control-group">
+                    <select class="input-medium" wicket:id="searchProfile.smokeType" size="1" aria-required="true">
+                        <option>egal</option>
+                        <option>nie</option>
+                        <option>gelegentlich</option>
+                        <option>regelmäßig</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><wicket:message key="titleEducationType">Welche Bildung soll mein Partner haben?</wicket:message></legend>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <span wicket:id="searchProfile.educationTypes"></span>
+                        </div>
+                    </div>
+
+                    <div class="span6 form-inline">
+                        <div class="control-group">
+                            <label wicket:id="searchProfileIncomeTypeSelectionLabel" class="control-label" style="white-space: nowrap;">Welcher Jahresverdienst?</label>
+                            <div class="controls">
+                                <select class="input-medium" wicket:id="searchProfile.incomeType" size="1" aria-required="true">
+                                    <option>egal</option>
+                                    <option>ab 15.000 Euro</option>
+                                    <option>ab 25.000 Euro</option>
+                                    <option>ab 50.000 Euro</option>
+                                    <option>ab 75.000 Euro</option>
+                                    <option>mehr als 75.000 Euro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label wicket:id="searchProfileOccupationTypeSelectionLabel" class="control-label">Berufsgruppe?</label>
+                            <div class="controls">
+                                <select class="input-medium" wicket:id="searchProfile.occupationType" size="1" aria-required="true">
+                                    <option>Angestellter</option>
+                                    <option>Beamter</option>
+                                    <option>Unternehmer</option>
+                                    <option>Freischaffender</option>
+                                    <option>Sonstige</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><wicket:message key="titleInterests">Welche Interessen soll mein Partner haben?</wicket:message></legend>
+
+                <div class="control-group">
+                    <span wicket:id="searchProfile.hobbyTypes"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><wicket:message key="titleSportTypes">Mein Partner sollte sportlich sein</wicket:message></legend>
+
+                <div class="control-group">
+                    <span wicket:id="searchProfile.sportTypes"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><wicket:message key="titleAppearanceStyle">Wie soll sich mein Partner kleiden?</wicket:message></legend>
+
+                <div class="control-group">
+                    <span wicket:id="searchProfile.appearanceStyles"></span>
+                </div>
+            </fieldset>
+        </wicket:panel>
+    </body>
+</html>

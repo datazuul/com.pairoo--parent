@@ -1,0 +1,11 @@
+Hello ${receiverEmail}!
+
+'${reporterUsername}' reports an issue by the user '${profileUsername}' with the following comment:
+
+---
+${text}
+---
+
+Pairoo will feedback within 72 hours.
+
+Copyright 2011-2014 PAIROO GmbH

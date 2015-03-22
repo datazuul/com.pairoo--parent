@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <wicket:panel>
+            <table class="table table-striped table-condensed">
+                <colgroup>
+                    <col width="200" />
+                </colgroup>
+                <tr>
+                    <th><wicket:message key="gender">Geschlecht</wicket:message>:</th>
+                    <td><span wicket:id="lblPartnerType">Frauen</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="partnershipType">Beziehungstyp</wicket:message>:</th>
+                    <td><span wicket:id="lblPartnershipType">unverbindliches
+                            Abenteuer</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="age">Alter</wicket:message>:</th>
+                    <td><span wicket:id="searchProfile.minAge">35</span> <wicket:message
+                            key="to">bis</wicket:message> <span
+                            wicket:id="searchProfile.maxAge">55</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="living.city_and_country">Wohnort und -land</wicket:message>:</th>
+                    <td><span wicket:id="lblCity">Straubing</span>, <span
+                            wicket:id="lblCountry">Deutschland</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="familyStatus">Familienstand</wicket:message>:</th>
+                    <td><wicket:container wicket:id="familyStatusTypesList">
+                            <span wicket:id="lblItemModel">single</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+                <tr valign="top">
+                    <th><wicket:message key="children">Kinder</wicket:message>, <wicket:message
+                            key="want_more_children">Kinderwunsch</wicket:message>:</th>
+                    <td><span wicket:id="lblNumberOfKidsType">keine</span>, <span
+                            wicket:id="lblWantMoreChildrenType">ja</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="smoke">Rauchverhalten</wicket:message>:</th>
+                    <td><span wicket:id="lblSmokeType">gelegentlich</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="motherTongue">Muttersprache</wicket:message>:</th>
+                    <td><span wicket:id="lblMotherTongue">Deutsch</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="foreign_languages">Fremdsprachen</wicket:message>:</th>
+                    <td><wicket:container wicket:id="languagesList">
+                            <span wicket:id="lblItemModel">spanisch</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="spacer"></td>
+                </tr>
+
+                <tr>
+                    <th><wicket:message key="ethnicity">Herkunft</wicket:message>:</th>
+                    <td><wicket:container wicket:id="ethnicitiesList">
+                            <span wicket:id="lblItemModel">lateinamerikanisch</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="bodyStyle">Figur</wicket:message>:</th>
+                    <td><wicket:container wicket:id="bodyTypesList">
+                            <span wicket:id="lblItemModel">schlank</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="height">Größe</wicket:message>:</th>
+                    <td><span wicket:id="lblHeightFrom">175 cm</span> <wicket:message
+                            key="to">bis</wicket:message> <span wicket:id="lblHeightTo">195
+                            cm</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="hairColor">Haarfarbe</wicket:message>:</th>
+                    <td><wicket:container wicket:id="hairColorsList">
+                            <span wicket:id="lblItemModel">grau</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="dress_style">Kleidungsstil</wicket:message>:</th>
+                    <td><wicket:container wicket:id="appearanceStylesList">
+                            <span wicket:id="lblItemModel">sportlich</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="spacer"></td>
+                </tr>
+
+                <tr>
+                    <th><wicket:message key="education">Bildung</wicket:message>:</th>
+                    <td><wicket:container wicket:id="educationTypesList">
+                            <span wicket:id="lblItemModel">Abitur</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="occupation_type">Berufsgruppe</wicket:message>:</th>
+                    <td><span wicket:id="lblOccupationType">Angestellter</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="yearly_income">Jahresverdienst</wicket:message>:</th>
+                    <td><span wicket:id="lblYearlyIncome">egal</span></td>
+                </tr>
+            </table>
+        </wicket:panel>
+    </body>
+</html>

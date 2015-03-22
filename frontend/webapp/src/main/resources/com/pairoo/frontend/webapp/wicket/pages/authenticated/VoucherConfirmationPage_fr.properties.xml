@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title.login">Félicitations pour l'activation de ton bon cadeau</entry>
+	<entry key="title.registration">Félicitations pour ton enregistrement et l'activation de ton bon cadeau</entry>
+
+	<entry key="confirmation_mail_text">
+		&lt;p&gt;Merci de ton confirmer ton adresse e-mail pour terminer ton enregistrement. Tu peux ainsi être sûr que personne n'est connecté aveec ton adresse e-mail sur Pairoo.&lt;br/&gt;
+		Nous avons déjà envoyé une e-mail de confirmation. Dès que tu confirme, tu t'es inscrit(e) avec succès sur Pairoo.&lt;/p&gt;</entry>
+
+	<entry key="content1">
+		&lt;p&gt;Tu peux commencer dès maintenant et, en tant que Pairoo Premium, contacter et flirter de facon illimitée. Commence dès maintenant la recherche du partenaire désiré.&lt;/p&gt;
+
+		&lt;p&gt;Pour information, nous avons résumé les détails de ton adhésion.&lt;/p&gt; </entry>
+	<entry key="content2">
+		&lt;p&gt;Après expiration de ton bon d'achat, ton adhésion se transforme en abonnement gratuit.&lt;/p&gt; </entry>
+	<entry key="nextAction">Flirter et contacter comme Membre Premium maintenant</entry>
+	<entry key="footer">&lt;p&gt;L'équipe Pairoo te souhaite beaucoup de succès dans tes flirts et contacts.&lt;/p&gt;
+
+		&lt;p&gt;Cordialement&lt;/p&gt;
+
+		&lt;p&gt;Ton équipe Pairoo&lt;/p&gt;</entry>
+</properties>

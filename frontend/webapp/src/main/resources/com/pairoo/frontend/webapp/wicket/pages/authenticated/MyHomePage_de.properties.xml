@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="favorites.online">Favoriten online (${})</entry>
+	<entry key="members.online">Mitglieder online (${})</entry>
+	<entry key="new.messages">Neue Nachrichten (${})</entry>
+	<entry key="new.visits">Neue Besuche seit dem letzten Login (${})</entry>
+	<entry key="welcome.text">Hallo ${userAccount.username} - Herzlich Willkommen</entry>
+</properties>

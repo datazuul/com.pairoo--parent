@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="dialog.text">
+        &lt;p&gt;Desideri segnalare il seguente profilo'&lt;b&gt;${userAccount.username}&lt;/b&gt;'
+            perché ti senti molestato.
+        &lt;/p&gt;
+        &lt;p&gt;Ti peghiamo di descriverci brevemente il motivo:&lt;/p&gt;
+    </entry>
+</properties>

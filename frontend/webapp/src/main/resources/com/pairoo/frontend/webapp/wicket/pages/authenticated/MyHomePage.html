@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <head>
+    </head>
+    <body>
+        <wicket:extend>
+            <div class="row">
+                <div class="span12">
+                    <h1 wicket:id="welcome.text">Hallo [username] - Herzlich Willkommen</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div wicket:id="searchPanel" class="span6">[BasicSearchPanel]</div>
+                <div class="span6">
+                    <div>
+                        <div wicket:id="members.online">Mitglieder online (52317)</div>
+                    </div>
+                    <div>
+                        <a href="#" wicket:id="lnkMessagesPage"><span wicket:id="new.messages">Neue Nachrichten (4)</span> </a>
+                    </div>
+                    <div>
+                        <a href="#" wicket:id="lnkFavoritesPage"><span wicket:id="favorites.online">Favoriten online (0)</span> </a>
+                    </div>
+                    <div>
+                        <a href="#" wicket:id="lnkVisitsPage"><span wicket:id="new.visits">Neue Besuche seit dem letzten Login (4)</span> </a>
+                        <ul class="gallery undecorated">
+                            <li wicket:id="images">
+                                <a href="#" wicket:id="lnkDetails"><div class="left" wicket:id="premiumContainer"><img src="images/premium-vertical.png"/></div><img src="#" wicket:id="profileImage" class="img-polaroid" /><br/>
+                                    <div wicket:id="onlineLabel">online</div></a>
+                            </li>
+                        </ul>
+                        <a href="#" wicket:id="lnkMore"><span wicket:id="lblMore">mehr</span> </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </wicket:extend>
+    </body>
+</html>

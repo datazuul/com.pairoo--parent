@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="step1.title">Etape 1 de 3 : Sélectionner l'abonnement</entry>
+	<entry key="next">Passer à l'étape 2</entry>
+	<entry key="choose_paymentChannel">Sélectionner le mode de paiement</entry>
+	<entry key="confirmation">Confirmation</entry>
+	<entry key="membership_comparison">Comparer les abonnements</entry>
+</properties>

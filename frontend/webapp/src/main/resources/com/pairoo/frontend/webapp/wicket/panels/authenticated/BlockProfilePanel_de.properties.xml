@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="dialog.text">
+        &lt;p&gt;Das Profil ${userAccount.username} wird gesperrt.&lt;/p&gt;
+
+        &lt;p&gt;Damit ist keine weitere Kommunikation von ${userAccount.username} zu Ihnen möglich
+        und ${userAccount.username} kann Ihr Profil nicht mehr aufrufen.&lt;br/&gt;
+        Die Sperre kann nicht widerrufen werden.&lt;/p&gt;
+    </entry>
+</properties>

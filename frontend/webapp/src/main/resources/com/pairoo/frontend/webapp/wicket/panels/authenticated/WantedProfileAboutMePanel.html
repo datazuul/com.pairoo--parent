@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <wicket:panel>
+            <table class="table table-striped table-condensed">
+                <colgroup>
+                    <col width="200" />
+                </colgroup>
+                <tr>
+                    <th><wicket:message key="gender">Geschlecht</wicket:message>, <wicket:message
+                            key="age">Alter</wicket:message>:</th>
+                    <td><span wicket:id="userProfile.partnerType">Frau</span>, <span
+                            wicket:id="lblAge">38</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="starsign">Sternzeichen</wicket:message>:</th>
+                    <td><span wicket:id="lblStarsign">Widder</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="living.city_and_country">Wohnort und -land</wicket:message>:</th>
+                    <td><span wicket:id="userProfile.geoLocation.name">Straubing</span>, <span
+                            wicket:id="userProfile.geoLocation.country">Deutschland</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="religion">Religion</wicket:message>:</th>
+                    <td><span wicket:id="userProfile.religion">katholisch</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="familyStatus">Familienstand</wicket:message>:</th>
+                    <td><span wicket:id="lblFamilyStatus">single</span></td>
+                </tr>
+                <tr valign="top">
+                    <th><wicket:message key="children">Kinder</wicket:message>, <wicket:message
+                            key="wants_more_children">Kinderwunsch</wicket:message>:</th>
+                    <td><span wicket:id="lblNumberOfKidsType">keine</span>, <span
+                            wicket:id="lblWantMoreChildrenType">ja</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="smoke">Rauchverhalten</wicket:message>:</th>
+                    <td><span wicket:id="lblSmokeType">gelegentlich</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="motherTongue">Muttersprache</wicket:message>:</th>
+                    <td><span wicket:id="lblMotherTongue">Deutsch</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="foreign_languages">Fremdsprachen</wicket:message>:</th>
+                    <td><wicket:container wicket:id="languagesList">
+                            <span wicket:id="lblItemModel">spanisch</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="spacer"></td>
+                </tr>
+
+                <tr>
+                    <th><wicket:message key="motto">Motto</wicket:message>:</th>
+                    <td><span wicket:id="lblMotto">Warum auch nicht, so doof
+                            kannst Du gar nicht sein...</span></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="spacer"></td>
+                </tr>
+
+                <tr>
+                    <th><wicket:message key="ethnicity">Herkunft</wicket:message>:</th>
+                    <td><span wicket:id="lblEthnicity">afrikanisch</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="bodyStyle">Figur</wicket:message>:</th>
+                    <td><span wicket:id="lblBodyType">normal</span></td>
+                </tr>
+
+                <tr>
+                    <th><wicket:message key="height">Größe</wicket:message>:</th>
+                    <td><span wicket:id="lblHeight">180 cm</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="eyeColor">Augenfarbe</wicket:message>:</th>
+                    <td><span wicket:id="lblEyeColor">blau</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="hairColor">Haarfarbe</wicket:message>:</th>
+                    <td><span wicket:id="lblHairColor">schwarz</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="dress_style">Kleidungsstil</wicket:message>:</th>
+                    <td><wicket:container wicket:id="appearanceStylesList">
+                            <span wicket:id="lblItemModel">sportlich</span>
+                            <span wicket:id="separator">, </span>
+                        </wicket:container></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="spacer"></td>
+                </tr>
+
+                <tr>
+                    <th><wicket:message key="education">Bildung</wicket:message>:</th>
+                    <td><span wicket:id="lblEducation">Abitur</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="occupation_type">Berufsgruppe</wicket:message>:</th>
+                    <td><span wicket:id="lblOccupationType">Angestellter</span></td>
+                </tr>
+                <tr>
+                    <th><wicket:message key="yearly_income">Jahresverdienst</wicket:message>:</th>
+                    <td><span wicket:id="lblYearlyIncome">sag ich nicht</span></td>
+                </tr>
+            </table>
+        </wicket:panel>
+    </body>
+</html>

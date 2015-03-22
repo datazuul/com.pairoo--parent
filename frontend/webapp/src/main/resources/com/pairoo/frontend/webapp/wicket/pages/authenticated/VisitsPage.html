@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <head>
+        <!--[if lt IE 8]><style>
+        .imageGalleryBig li {
+          width: 140px;
+          w\idth: 138px;
+          display: inline;
+        }
+        .imageGalleryBig {
+          _height: 0;
+          zoom: 1;
+          display: inline;
+        }
+        .imageGalleryBig li .wrimg {
+          display: block;
+          width: auto;
+          height: auto;
+        }
+        .imageGalleryBig .wrimg span {
+          vertical-align: middle;
+          height: 140px;
+          zoom: 1;
+        }
+        </style><![endif]-->
+    </head>
+    <body>
+        <wicket:extend>
+            <div class="navigator" wicket:id="navigator" align="center"></div>
+
+            <div id="results">
+                <ul class="imageGalleryBig">
+                    <li wicket:id="users">
+                        <div>
+                            <a href="ProfileDetailsPage.html" wicket:id="detailAction">
+                                <span wicket:id="resultPanel"></span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </wicket:extend>
+    </body>
+</html>

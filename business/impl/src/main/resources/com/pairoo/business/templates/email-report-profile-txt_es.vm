@@ -1,0 +1,10 @@
+Hola ${receiverEmail}!
+
+'${reporterUsername}' informa sobre un caso de abuso a travez del usuario'${profileUsername}' con el siguiente comentario:
+
+---
+${text}
+---
+
+
+Copyright 2011-2014 PAIROO GmbH

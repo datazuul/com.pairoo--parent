@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="image_of_total_images">Bild %d von %d</entry>
+	<entry key="instructions">
+		&lt;p&gt;Zum Hochladen eines Bildes klicken Sie auf
+		den Button "neues Bild"&lt;/p&gt;
+
+		&lt;p&gt;Nachdem Sie ein Bild hochgeladen haben, können Sie das Bild für andere
+		Mitglieder freigeben.&lt;br/&gt;
+		Zusätzlich bestimmen Sie welches Bild in Ihrem Profil als Profilbild angezeigt
+		wird. Um ein Bild als Profilbild anzuzeigen, klicken Sie auf den
+		Button "als Profilbild". Sie können nur ein	Bild als Profilbild auswählen.&lt;/p&gt; </entry>
+	<entry key="new_photo">neues Bild</entry>
+	<entry key="photo">Bild ${}</entry>
+</properties>

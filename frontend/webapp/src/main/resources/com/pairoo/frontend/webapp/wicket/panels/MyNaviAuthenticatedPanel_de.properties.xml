@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="logged_in_as">Eingeloggt als</entry>
+	<entry key="logout">Abmelden</entry>
+</properties>

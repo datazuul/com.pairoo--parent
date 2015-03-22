@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="searchProfileBodyTypeSelectionLabel">Figur</entry>
+	<entry key="searchProfileEyeColorSelectionLabel">Augenfarbe</entry>
+	<entry key="searchProfileHairColorSelectionLabel">Haarfarbe</entry>
+	<entry key="searchProfileMinHeightSelectionLabel">von</entry>
+	<entry key="searchProfileMaxHeightSelectionLabel">bis</entry>
+	<entry key="searchProfileAppearanceStyleSelectionLabel">Aussehen</entry>
+
+	<entry key="titleHeight">Größe?</entry>
+	<entry key="titleBodyType">Welche Figur soll mein Partner haben?</entry>
+	<entry key="titleEyeColor">Welche Augenfarbe soll mein Partner haben?</entry>
+	<entry key="titleHairColor">Welche Haarfarbe soll mein Partner haben?</entry>
+</properties>

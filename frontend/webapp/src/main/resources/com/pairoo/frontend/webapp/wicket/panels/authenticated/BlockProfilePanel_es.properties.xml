@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="dialog.text">
+        &lt;p&gt;el Profil ${userAccount.nombre del usuario} sera bloqueado.&lt;/p&gt;
+
+        &lt;p&gt;para evitar que continue la comunicacion con ${userAccount.username} usted
+        y ${userAccount.username} la apertura de su profil en la ventana de comandos.&lt;br/&gt;
+        el bloqueo no podra ser deshecho.&lt;/p&gt;
+    </entry>
+</properties>

@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.pairoo.business</groupId>
+		<artifactId>pairoo-business</artifactId>
+		<version>${VERSION_NUMBER}</version>
+	</parent>
+
+	<artifactId>pairoo-business-api</artifactId>
+	<name>${project.groupId}--${project.artifactId} (pairoo.com - Business API Layer)</name>
+	<packaging>jar</packaging>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.datazuul.framework</groupId>
+			<artifactId>datazuul-fwk-business</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.pairoo</groupId>
+			<artifactId>pairoo-domain</artifactId>
+		</dependency>
+	</dependencies>
+</project>

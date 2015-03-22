@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="demoDataRepository" class="com.pairoo.business.services.impl.DataRepository">
+		<property name="count" value="5" />
+	</bean>
+	
+    <bean id="favoriteService" class="com.pairoo.business.services.impl.demo.FavoriteServiceImpl" />
+    <bean id="imageEntryService" class="com.pairoo.business.services.impl.demo.ImageEntryServiceImpl" />
+    <bean id="imageService" class="com.pairoo.business.services.impl.demo.ImageServiceImpl" />
+    <bean id="messageService" class="com.pairoo.business.services.impl.demo.MessageServiceImpl">
+    	<constructor-arg ref="demoDataRepository" />
+    </bean>
+    <bean id="subdivisionService" class="com.pairoo.business.services.impl.demo.SubdivisionServiceImpl"/>
+    <bean id="userAccountService" class="com.pairoo.business.services.impl.demo.UserAccountServiceImpl">
+    	<constructor-arg ref="demoDataRepository" />
+    </bean>
+    <bean id="userProfileService" class="com.pairoo.business.services.impl.demo.UserProfileServiceImpl"/>
+    <bean id="userService" class="com.pairoo.business.services.impl.demo.UserServiceImpl"/>
+    <bean id="visitService" class="com.pairoo.business.services.impl.demo.VisitServiceImpl">
+    	<constructor-arg ref="demoDataRepository" />
+    </bean>
+</beans>

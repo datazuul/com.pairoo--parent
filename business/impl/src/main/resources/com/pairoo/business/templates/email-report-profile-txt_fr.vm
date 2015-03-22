@@ -1,0 +1,12 @@
+Bonjour ${receiverEmail}!
+
+'${reporterUsername}' signale un abus de la part de l'utilisateur '${profileUsername}' avec le commentaire suivant:
+
+---
+${text}
+---
+
+Pairoo te contactera dans les 72 heures.
+
+
+Copyright 2011-2014 PAIROO GmbH

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="my_education">Ma formation</entry>
+	<entry key="my_interests">Mes centres d'intérêts</entry>
+</properties>

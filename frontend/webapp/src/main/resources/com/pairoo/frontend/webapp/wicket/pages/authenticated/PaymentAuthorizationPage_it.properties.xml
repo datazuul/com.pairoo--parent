@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="for_rate">Chiudi</entry>
+	<entry key="step3.title">Passo 3 di 3: Conferma iscrizione</entry>
+	<entry key="save">Acquista ora la formula Premium</entry>
+	<entry key="you_are_paying_with">Pagamento con</entry>
+	<entry key="you_have_chosen">Hai scelto</entry>
+</properties>

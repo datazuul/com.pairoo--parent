@@ -1,0 +1,28 @@
+Hello ${user.userAccount.username} welcome to PAIROO!
+
+Thanks for your successful registration at PAIROO, the innovative and international dating portal
+and congratulations for activating your voucher.
+
+You can start right away! As PAIROO Premium member you can unlimited make contacts and flirt. 
+Start your search for the partner of your dreams, now.
+
+For your data security we please you to confirm your email address.
+This confirmation make sure that nobody can use your account at PAIROO.
+
+To confirm your email address ${user.email} and activate your pairoo.com account click on the following link:
+
+${activationLink}
+
+For your information we summarize your membership facts again.
+ 
+Membership status:          ${productRole} until ${endDate}
+Subscription functionality: ${subscriptionFunctionality}
+Charges:                    none (paid with voucher)
+
+When your voucher period expires your Premium membership will be converted into a free membership.
+
+The PAIROO support team wish you great success and good luck to find your love.
+
+If you have any question or recommendation email to support@pairoo.com.
+
+Copyright 2011-2014 PAIROO GmbH

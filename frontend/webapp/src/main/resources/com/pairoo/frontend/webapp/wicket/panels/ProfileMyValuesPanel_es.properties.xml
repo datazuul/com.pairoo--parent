@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="introduction">
+		&lt;p&gt;
+		que es importante para usted en una relacion?&lt;br/&gt;
+		se trata de que usted nombre sus temas mas importantes.&lt;br/&gt;
+		elija entre
+		&lt;ul&gt;
+		&lt;li&gt;no es muy importante, significa que,a usted le es igual si sucompanero no posee esta cualidad&lt;/li&gt;
+		&lt;li&gt;importante, significa que esta cualidad es deseada&lt;/li&gt;
+		&lt;li&gt;muy importante, significa que es absolutamente necesario en su relacion&lt;/li&gt;
+		&lt;/ul&gt;
+		los siguientes datos seran utilizados en la busqueda de "valores personales"para asi encotrar la pareja adecuada.&lt;/p&gt;
+	</entry>
+</properties>

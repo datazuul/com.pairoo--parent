@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <head></head>
+    <body>
+        <wicket:panel>
+            <form method="post" wicket:id="form" class="form-horizontal">
+                <fieldset>
+                    <legend><wicket:message key="basicSearchPanel.title">Finden Sie Ihren Traumpartner</wicket:message></legend>
+
+                    <div class="control-group">
+                        <label class="control-label" wicket:id="searchProfile.partnerType.label">Ich suche</label>
+                        <div class="controls">
+                            <div class="row-fluid form-inline">
+                                <select wicket:id="partnerType" size="1"
+                                        aria-required="true" class="input-medium">
+                                    <option value="0">Frauen</option>
+                                    <option value="1" selected="selected">Männer</option>
+                                    <option value="2">egal</option>
+                                </select> <label wicket:id="searchProfile.minAge.label">von</label><select
+                                    wicket:id="minAge" size="1" aria-required="true" class="input-mini">
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="90">90</option>
+                                </select> <label wicket:id="searchProfile.maxAge.label">bis</label> <select
+                                    wicket:id="maxAge" size="1" aria-required="true" class="input-mini">
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="90">90</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" wicket:id="searchProfile.geoArea.label">in</label>
+                        <div class="controls">
+                            <div class="row-fluid form-inline">
+                                <span wicket:id="geoArea">[GeoArea fields]</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" wicket:id="searchProfile.profilePictureType.label">mit Bild</label>
+                        <div class="controls">
+                            <div class="row-fluid form-inline">
+                                <select wicket:id="profilePictureType" size="1" aria-required="true" class="input-small">
+                                    <option>egal</option>
+                                    <option>ja</option>
+                                    <option>nein</option>
+                                </select>
+                                <label wicket:id="searchProfile.smokeType.label">Rauchverhalten</label>
+                                <select wicket:id="smokeType" size="1" aria-required="true" class="input-small">
+                                    <option>egal</option>
+                                    <option>nie</option>
+                                    <option>gelegentlich</option>
+                                    <option>regelmäßig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>
+                        <label wicket:id="searchProfile.ethnicities.label">Wie
+                            soll mein Partner aussehen?</label>
+                    </h3>
+                    <div wicket:id="ethnicities">[Ethnicity checkboxes]</div>
+
+                    <div class="form-actions">
+                        <input type="submit" wicket:message="value:search_now" value="search now" class="btn btn-primary"/>
+                    </div>
+                </fieldset>
+            </form>
+        </wicket:panel>
+    </body>
+</html>

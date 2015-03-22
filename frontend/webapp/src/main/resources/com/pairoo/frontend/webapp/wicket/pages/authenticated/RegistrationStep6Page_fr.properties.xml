@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="step6.title">Etaoe 6 de 6 : Décris tes valeurs personnelles</entry>
+	<entry key="btnSave">Terminer l'inscription</entry>
+	<entry key="personalValues.intro">
+		&lt;p&gt;Qu'est ce qui est important dans ta relation ?&lt;/p&gt;
+	&lt;p&gt;
+		Il est nécessaire de dire ce qui importe.
+		&lt;br /&gt;
+		Choisir entre
+		&lt;ul&gt;
+			&lt;li&gt;"pas vraiment important", c.-à-d. cela t'est presque égal, si ton partneaire n'a pas ce trait de caractère&lt;/li&gt;
+			&lt;li&gt;"important", c.-à-d. que ce trait de caractère est souhaitable&lt;/li&gt;
+			&lt;li&gt;"très important", c.-à-d. que c'est absolument nécessaire dans ta relation&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/p&gt;
+	&lt;p&gt;Les informations suivantes seront utilisées pour la recherche des "valeurs personnelles" pour trouver des partenaires appropriés.&lt;/p&gt;
+	</entry>
+</properties>

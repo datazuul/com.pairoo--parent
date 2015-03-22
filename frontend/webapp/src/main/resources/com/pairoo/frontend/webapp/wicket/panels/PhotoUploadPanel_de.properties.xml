@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="instructions">&lt;h3&gt;Wählen Sie das Foto aus und laden Sie es
+		hoch&lt;/h3&gt;
+		&lt;p&gt;Ein Bild sagt mehr als 1000 Worte&lt;/p&gt;</entry>
+
+	<entry key="legend">Wählen Sie das Foto aus und laden Sie es hoch</entry>
+	<entry key="step1">Schritt 1</entry>
+	<entry key="step1.text">Wählen Sie eine Bilddatei auf Ihrem Computer aus.</entry>
+	<entry key="step2">Schritt 2</entry>
+	<entry key="step2.text">Sie haben die Bilddatei &lt;b&gt;${}&lt;/b&gt; ausgewählt. Zum
+		Hochladen und Bearbeiten klicken Sie bitte auf den Button.</entry>
+	<entry key="upload.maxSize">Die Datei darf maximal 3 MB groß sein.</entry>
+	<entry key="upload.onlyImages">Es werden Bilder in den Formaten PNG, JP(E)G und GIF
+		unterstützt.</entry>
+</properties>

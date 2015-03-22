@@ -1,0 +1,1 @@
+create table ID_SEQUENCES ( sequence_name varchar(255) not null ,  next_val int8, primary key ( sequence_name ) ) ;

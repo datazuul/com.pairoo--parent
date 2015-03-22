@@ -1,0 +1,13 @@
+Gentile ${user.userAccount.username}, 
+
+${visitor.userAccount.username} ti trova interessante e ti ha inviato un messaggio.
+
+Controlla subito la tua posta. Clicca sul link e accedi alla tua casella.
+
+${activationLink}
+
+Il team PAIROO ti augura buona fortuna nella tua ricerca, successo in amore e felicitá.
+
+Per quesiti o suggerimenti invia una mail a:support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

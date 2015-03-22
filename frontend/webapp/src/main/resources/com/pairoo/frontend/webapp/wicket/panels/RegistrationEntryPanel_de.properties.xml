@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="and_search_for">und suche</entry>
+	<entry key="born_on">Geboren am</entry>
+	<entry key="I_am">Ich bin</entry>
+	<entry key="search_now">jetzt suchen</entry>
+	<entry key="search_world">Suche auf der ganzen Welt</entry>
+	<entry key="emailFieldLabel">Email</entry>
+	<entry key="passwordFieldLabel">Passwort</entry>
+	<entry key="living_in">wohne in</entry>
+	<entry key="searchProfileMaxAgeSelectionLabel">bis</entry>
+	<entry key="searchProfileMinAgeSelectionLabel">von</entry>
+	<entry key="searchProfilePartnerTypeSelectionLabel">Ich suche</entry>
+	<entry key="zipcode_area">in PLZ</entry>
+	<entry key="termsAndConditionsValidationCheckLabel">Ich bin mindestens 18 Jahre und mit ...</entry>
+	<entry key="termsAndConditionsCheckLabel">Ich bin mindestens 18 Jahre und mit den ${termsLink}
+		und den
+		${conditionsLink} einverstanden.</entry>
+	<entry key="usernameFieldLabel">Pseudonym</entry>
+	<entry key="userAccount.password.StringValidator.range">Die Eingabe im Feld '${label}' muß zwischen ${minimum}
+		und ${maximum} Zeichen lang sein.</entry>
+	<entry key="userProfilePartnerTypeSelectionLabel">Ich bin</entry>
+
+	<entry key="error.email_not_unique">Die Email wird bereits verwendet. Sollten Sie Ihr
+		Passwort vergessen haben, klicken Sie auf "Passwort vergessen" oder
+		kontaktieren Sie unseren Support.</entry>
+	<entry key="error.username_not_unique">Pseudonym ist bereits vergeben. Wählen Sie ein
+		anderes.</entry>
+</properties>

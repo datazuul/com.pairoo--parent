@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="and_search_for">et cherche</entry>
+	<entry key="born_on">Né(e) le</entry>
+	<entry key="I_am">Je suis</entry>
+	<entry key="search_now">Chercher maintenant</entry>
+	<entry key="search_world">Chercher dans le monde entier</entry>
+	<entry key="emailFieldLabel">Email</entry>
+	<entry key="passwordFieldLabel">Mot de passe</entry>
+	<entry key="living_in">domicilié(e)</entry>
+	<entry key="searchProfileMaxAgeSelectionLabel">jusque</entry>
+	<entry key="searchProfileMinAgeSelectionLabel">de</entry>
+	<entry key="searchProfilePartnerTypeSelectionLabel">Je cherche</entry>
+	<entry key="zipcode_area">code postal</entry>
+	<entry key="termsAndConditionsValidationCheckLabel">J'ai 18 ans et plus et...</entry>
+	<entry key="termsAndConditionsCheckLabel">J'ai 18 ans et plus et accepte les ${termsLink}
+		et les 
+		${conditionsLink}.</entry>
+	<entry key="usernameFieldLabel">Pseudonyme</entry>
+	<entry key="userAccount.password.StringValidator.range">Les données dans le champ '${label}' doivent avoir entre ${minimum}
+		et ${maximum} caractères.</entry>
+	<entry key="userProfilePartnerTypeSelectionLabel">Je suis</entry>
+
+	<entry key="error.email_not_unique">Cette adresse e-mail est déjà utilisée par un autre utilisateur. Si tu as oublié ton mot de passe, clique sur
+		"Mot de passe oublié" ou
+		contacte notre support.</entry>
+	<entry key="error.username_not_unique">Ce pseudonyme est déjà utilisé. Choisis en un autre.</entry>
+</properties>

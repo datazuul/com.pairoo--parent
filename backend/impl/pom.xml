@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.pairoo.backend</groupId>
+		<artifactId>pairoo-backend</artifactId>
+		<version>${VERSION_NUMBER}</version>
+	</parent>
+
+	<groupId>com.pairoo.backend.impl</groupId>
+	<artifactId>pairoo-backend-impl</artifactId>
+	<name>${project.groupId}--${project.artifactId} (pairoo.com - Backend IMPL Layer)</name>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>database</module>
+		<module>email</module>
+		<module>file</module>
+		<module>http</module>
+	</modules>
+</project>

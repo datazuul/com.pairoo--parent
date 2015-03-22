@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <fieldset>
+                <legend><wicket:message key="title1">Meine Gewohnheiten</wicket:message></legend>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileSmokeTypeSelectionLabel">Rauchen</label>
+                            <div class="controls">
+                                <select wicket:id="userProfile.lifeStyle.smokeType" class="input-medium">
+                                    <option>nie</option>
+                                    <option>gelegentlich</option>
+                                    <option>regelmäßig</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <label class="control-label" wicket:id="userProfileMottoFieldLabel">Mein Motto</label>
+                            <div class="controls">
+                                <input wicket:id="userProfile.motto" type="text" size="50" class="input-block-level" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <fieldset>
+                <legend><wicket:message key="title5">So kleide ich mich</wicket:message></legend>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <span wicket:id="userProfile.appearance.appearanceStyles"></span>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><wicket:message key="title2">Meine Interessen</wicket:message></legend>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <span wicket:id="userProfile.lifeStyle.hobbyTypes"></span>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><wicket:message key="title3">Meine sportlichen Aktivitäten</wicket:message></legend>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <span wicket:id="userProfile.lifeStyle.sportTypes"></span>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><wicket:message key="title4">Meine Lieblingsküche</wicket:message></legend>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <span wicket:id="userProfile.lifeStyle.kitchenTypes"></span>
+                    </div>
+                </div>
+            </fieldset>
+        </wicket:panel>
+    </body>
+</html>

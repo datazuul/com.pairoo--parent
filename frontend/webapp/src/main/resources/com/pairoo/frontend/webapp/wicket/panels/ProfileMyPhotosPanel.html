@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <wicket:head>
+        <style>
+            #left_side .mpart .tabpanel {
+                width: 747px !important;
+            }
+        </style>
+    </wicket:head>
+
+    <body>
+        <wicket:panel>
+            <div class="well">
+                <wicket:message key="instructions">
+                    <p>Zum Hochladen eines Bildes klicken Sie auf den Button "Bild
+                        auswählen"</p>
+                    <p>
+                        Nachdem Sie ein Bild hochgeladen haben, können Sie das Bild für
+                        andere Mitglieder freigeben.<br /> Zusätzlich bestimmen Sie
+                        welches Bild in Ihrem Profil als Profilbild angezeigt wird.<br />
+                        Um ein Bild als Profilbild anzuzeigen, klicken Sie auf den Button
+                        "Profilbild".<br /> Sie können nur ein Bild als Profilbild
+                        auswählen.
+                    </p>
+                </wicket:message>
+            </div>
+
+            <div class="row">
+                <div class="span2 gallery" wicket:id="images" style="text-align:center;border:1px solid #AAA;">
+                    <div wicket:id="imageTitle">Bild 2</div>
+                    <div>
+                        <!--                            <a href="#" xxxwicket:id="fancyboxLink">-->
+                        <img class="img-polaroid" src="images/female-gender-sign.jpg" wicket:id="image"/> <!--</a>-->
+                        <img class="img-polaroid" src="images/image-placeholder-173x173.png" wicket:id="noImage" />
+                    </div>
+                    <div wicket:id="lblPublished" class="pill" style="display:block;text-align:center;">nicht
+                        freigegeben</div>
+                    <div>
+                        <button class="btn btn-small btn-block" wicket:id="lnkUpload">
+                            <i class="icon-picture"></i>
+                            <wicket:message key="new_photo">neues Bild</wicket:message>
+                        </button>
+                        <button class="btn btn-small btn-block" wicket:id="lnkPublish">
+                            <i class="icon-eye-open"></i>
+                            <wicket:message key="publish">freigeben</wicket:message>
+                        </button>
+                        <button class="btn btn-small btn-block" wicket:id="lnkUnpublish">
+                            <i class="icon-eye-close"></i>
+                            <wicket:message key="unpublish">nicht freigeben</wicket:message>
+                        </button>
+                        <button class="btn btn-small btn-block" wicket:id="lnkDelete">
+                            <i class="icon-trash"></i>
+                            <wicket:message key="delete">löschen</wicket:message>
+                        </button>
+                        <button class="btn btn-small btn-block" wicket:id="lnkAsProfile">
+                            <i class="icon-user"></i>
+                            <wicket:message key="as_profile_photo">als Profilbild</wicket:message>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </wicket:panel>
+    </body>
+</html>

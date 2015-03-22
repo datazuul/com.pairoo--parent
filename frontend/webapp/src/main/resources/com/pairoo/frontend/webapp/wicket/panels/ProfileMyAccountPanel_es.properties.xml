@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="cancel_membership">Anular afiliacion</entry>
+	<entry key="change_password">Cambiar contraseña</entry>
+	<entry key="delete_profile">Borrar perfil</entry>
+	<entry key="I_want_emails">Deseo recibir los siguientes mensajes</entry>
+	<entry key="I_want_notifications">Deseo se me informe</entry>
+	<entry key="last_login">último login</entry>
+	<entry key="my_membership">Mi afiliacion</entry>
+	<entry key="newsletterLabel">Novedades de Pairoo</entry>
+	<entry key="onNewMessageLabel">Cuando entre un mensaje</entry>
+	<entry key="onNewSuggestionsLabel">Cuando haya nuevas propuestas</entry>
+	<entry key="onVisitLabel">Cuando mi perfil sea visitado</entry>
+	<entry key="paid_until">Pago hasta</entry>
+	<entry key="renew_membership">Renovar afiliacion/alargar</entry>
+	<entry key="weekendSuggestionsLabel">Propuestas de contacto el fin de semana</entry>
+	<entry key="weeklyStatisticLabel">Semanal Estadistica de ligue</entry>
+</properties>

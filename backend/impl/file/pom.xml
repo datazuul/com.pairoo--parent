@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.pairoo.backend.impl</groupId>
+		<artifactId>pairoo-backend-impl</artifactId>
+		<version>${VERSION_NUMBER}</version>
+	</parent>
+
+	<artifactId>pairoo-backend-file</artifactId>
+	<name>${project.groupId}--${project.artifactId} (pairoo.com - Backend Filesystem Layer)</name>
+	<packaging>jar</packaging>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.datazuul.framework</groupId>
+			<artifactId>datazuul-fwk-persistence</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.pairoo.backend</groupId>
+			<artifactId>pairoo-backend-api</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>*.csv</include>
+					<include>*.properties</include>
+					<include>*.sql</include>
+					<include>*.xml</include>
+					<include>**/*.csv</include>
+					<include>**/*.properties</include>
+					<include>**/*.sql</include>
+					<include>**/*.xml</include>
+				</includes>
+				<excludes></excludes>
+			</resource>
+		</resources>
+	</build>
+</project>

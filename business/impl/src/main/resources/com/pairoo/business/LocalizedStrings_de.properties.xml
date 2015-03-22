@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>This is a Java Property file used for translation by
+		LocalizedStrings class</comment>
+	<entry key="email_activate_voucher">Ein Gutschein für Sie</entry>
+	<entry key="email_address_pairoo">noreply@pairoo.com</entry>
+	<entry key="email_address_support">support@pairoo.com</entry>
+	<entry key="email_complete_profile">Vervollständigen Sie Ihr Profil</entry>
+	<entry key="email_load_picture">Laden Sie ein Foto von sich</entry>
+	<entry key="email_message_received">Sie haben eine Nachricht erhalten</entry>
+	<entry key="email_support_confirm">Ihre Anfrage</entry>
+	<entry key="email_twinkle_received">Es wurde Ihnen zugezwinkert</entry>
+	<entry key="email_userprofile_visited_subject">Ihr Profil wurde besucht</entry>
+	<entry key="registration_confirmation_subject">Bestätigung Mitgliedschaft</entry>
+	<entry key="reset_password_subject">Ihr neues Passwort</entry>
+	<entry key="Role.PREMIUM">Premium</entry>
+	<entry key="Role.STANDARD">kostenlos</entry>
+	<entry key="subject_report_profile">Profil-Meldung</entry>
+	<entry key="subscription.functionality.active">aktiv</entry>
+	<entry key="subscription.functionality.inactive">nicht aktiviert</entry>
+	<entry key="transaction_narrative_text">Dienstleistungsgebühr Pairoo GmbH</entry>
+</properties>

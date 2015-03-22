@@ -1,0 +1,16 @@
+<b>Hola ${user.userAccount.username},</b>
+que se halla usted afiliado a PAIROO - ha sido una buena decision. 
+PAIROO La bolsa internacional de contacto le ofrese a usted muchas posibilidades, de encontrar el compañero de su vida.
+ 
+Hoy queremos hacerle llegar una especial oferta:
+Utilice usted PAIROO tres dias continuos
+ 
+Oprima usted el Link y asi podra enpezar inmediatamente sin limites a flirtear y contactar.
+									${activationLink}
+
+
+El equipo de PAIROO le desea suerte y exito en su busqueda.
+ 
+en caso de preguntas o ideas envienos usted un E-Mail a: support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

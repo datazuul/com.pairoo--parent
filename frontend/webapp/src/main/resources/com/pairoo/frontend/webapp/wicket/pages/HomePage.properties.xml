@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="four_reasons_for_pairoo.content">
+		&lt;ul class="hooks"&gt;
+		&lt;li&gt;PAIROO is free of
+        ads&lt;/li&gt;
+		&lt;li&gt;Register and test for free&lt;/li&gt;
+		&lt;li&gt;Communicate internationally&lt;/li&gt;
+		&lt;li&gt;Your data
+        are secured&lt;/li&gt;
+		&lt;/ul&gt;</entry>
+    <entry key="intro">50% of all pairoo members find&lt;br/&gt;
+        &lt;em&gt;the one&lt;/em&gt; within six months of joining</entry>
+    <entry key="pairoo_quality.content">
+        The customer is number One at PAIROO.
+
+		&lt;p&gt;We are
+        committed to provide high quality
+        standards and data security for the
+        online dating Portal
+        PAIROO.&lt;br/&gt;
+        We are facing transparency and
+        customer satisfaction
+        in our proposals without hidden
+        subscriptions.&lt;br/&gt;
+        The PAIROO
+        membership can be terminated via
+        email or mail.&lt;/p&gt;
+
+		&lt;p&gt;The
+        security standard of the online
+        portal PAIROO is aligned to the German
+        Association of Digital
+        Economy.&lt;/p&gt;</entry>
+    <entry key="register_for_free">register now for free</entry>
+    <entry key="registration.title">Get started finding &lt;em&gt;the one&lt;/em&gt; today on pairoo</entry>
+</properties>

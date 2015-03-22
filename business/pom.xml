@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.pairoo</groupId>
+		<artifactId>parent</artifactId>
+		<version>${VERSION_NUMBER}</version>
+	</parent>
+
+	<groupId>com.pairoo.business</groupId>
+	<artifactId>pairoo-business</artifactId>
+	<name>${project.groupId}--${project.artifactId} (pairoo.com - Business Layer)</name>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>api</module>
+		<module>impl</module>
+	</modules>
+</project>

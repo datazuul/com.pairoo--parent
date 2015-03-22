@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="activate_voucher">Activer un bon d'achat</entry>
+	<entry key="loginIntro">Connecte toi avec ton pseudonyme et ton mot de passe pour valider le bon d'achat.</entry>
+	<entry key="loginForm.title">Déjà membre de Pairoo</entry>
+	<entry key="register_and_activate_voucher">Enregistrer et activer un bon d'achat</entry>
+	<entry key="registrationForm.title">Nouveau/nouvelle sur Pairoo ?</entry>
+</properties>

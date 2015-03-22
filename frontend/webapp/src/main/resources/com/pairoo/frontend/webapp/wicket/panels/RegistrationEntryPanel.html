@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <div class="control-group">
+                <label class="control-label" for="id9" wicket:id="searchProfilePartnerTypeSelectionLabel">I am looking for</label>
+                <div class="controls form-inline">
+                    <select id="id9" aria-required="true" size="1" wicket:id="searchProfile.partnerType" class="input-medium">
+                        <option value="" selected="selected">--</option>
+                        <option value="ANY">any</option>
+                        <option value="FEMALE">a woman</option>
+                        <option value="MALE">a man</option>
+                    </select>
+
+                    <label for="ida" wicket:id="searchProfileMinAgeSelectionLabel">from</label>
+                    <select id="ida" aria-required="true" size="1" wicket:id="searchProfile.minAge" class="input-mini">
+                        <option value="0" selected="selected">18</option>
+                        <option value="1">19</option>
+                        <option value="2">20</option>
+                        <option value="3">21</option>
+                        <option value="71">89</option>
+                        <option value="72">90</option>
+                    </select>
+
+                    <label for="idb" wicket:id="searchProfileMaxAgeSelectionLabel">to</label>
+                    <select id="idb" aria-required="true" size="1" wicket:id="searchProfile.maxAge" class="input-mini">
+                        <option value="0">18</option>
+                        <option value="1">19</option>
+                        <option value="2">20</option>
+                        <option value="3">21</option>
+                        <option value="4">22</option>
+                        <option value="71">89</option>
+                        <option value="72" selected="selected">90</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="idc" wicket:id="userProfilePartnerTypeSelectionLabel">I am</label>
+                <div class="controls form-inline">
+                    <select id="idc" size="1" wicket:id="userProfile.partnerType" class="input-medium">
+                        <option value="" selected="selected">--</option>
+                        <option value="FEMALE">a woman</option>
+                        <option value="MALE">a man</option>
+                    </select>
+
+                    <label for="idd" wicket:id="userProfileCountrySelectionLabel">living in</label>
+                    <select id="idd" style="width: 200px;" wicket:id="userProfile.geoLocation.country">
+                        <option value="AUSTRIA">Austria</option>
+                        <option value="CANADA">Canada</option>
+                        <option value="FRANCE">France</option>
+                        <option value="GERMANY" selected="selected">Germany</option>
+                        <option value="ITALY">Italy</option>
+                        <option value="SPAIN">Spain</option>
+                        <option value="SWITZERLAND">Switzerland</option>
+                        <option value="UNITED_KINGDOM">United Kingdom</option>
+                        <option value="UNITED_STATES">United States</option>
+                    </select>
+
+                    <label for="ide" wicket:id="userProfileZipcodeFieldLabel">in the zipcode area</label>
+                    <input type="text" class="input-small" size="5" maxlength="20" id="ide" value="" aria-required="true" wicket:id="userProfile.geoLocation.zipcode" />
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="idf" wicket:id="usernameFieldLabel">Pseudonym</label>
+                <div class="controls form-inline">
+                    <input type="text" maxlength="255" id="idf" value="" size="38" placeholder="" wicket:id="userAccount.username" />
+
+                    <label for="id10" wicket:id="passwordFieldLabel">Password</label>
+                    <input type="password" maxlength="12" id="id10" value="" aria-required="true" size="38" placeholder="" wicket:id="userAccount.password" />
+
+                    <label for="id11" wicket:id="emailFieldLabel">Email</label>
+                    <input type="text" maxlength="255" id="id11" value="" aria-required="true" size="38" placeholder="" wicket:id="email" />
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="id12"></label>
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" id="id12" wicket:id="acceptCheckbox" />  
+                        <label
+                            wicket:id="termsAndConditionsCheckLabel"> <wicket:message
+                                key="termsAndConditionsCheckLabel">Ich bin mindestens 18 Jahre alt und mit den
+                                <a href="#" wicket:id="termsLink" target="infoWindow"><span
+                                        wicket:id="termsText">AGB's</span></a> und den
+                                <a href="#" wicket:id="conditionsLink" target="infoWindow"><span
+                                        wicket:id="conditionsText">Datenschutzbestimmungen</span></a> einverstanden.</wicket:message>
+                        </label>
+                    </label>
+                </div>
+            </div>
+        </wicket:panel>
+    </body>
+</html>

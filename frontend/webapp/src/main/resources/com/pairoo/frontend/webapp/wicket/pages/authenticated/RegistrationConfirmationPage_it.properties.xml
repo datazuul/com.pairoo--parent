@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title">Congratulazioni per l'iscrizione</entry>
+	<entry key="become_a_premium_member">Diventare socio Premium</entry>
+	<entry key="content">&lt;p&gt;Benvenuto nella borsa internazionale degli incontri 		 Pairoo.&lt;/p&gt;
+		&lt;p&gt;&lt;b&gt;Ti preghiamo di confermare ancora una volta il tuo indirizzo di posta elettronica&lt;/b&gt;. Cosí puoi essere certo che nessuno si é iscritto a Pairoo con il tuo indirizzo Email. &lt;b&gt;Ti abbiamo inviato una Email di conferma&lt;/b&gt;.&lt;/p&gt;
+		&lt;p&gt;Con la tua conferma sarai registrato efficacemente su Pairoo.&lt;/p&gt;
+		</entry>
+	<entry key="nextActionIntro">&lt;h2&gt;Adesso iniziamo - scegli&lt;/h2&gt;
+	&lt;p&gt;I soci Premium possono untilizzare immediatamente tutte le funzioni.&lt;br/&gt;
+	oppure&lt;br/&gt;
+	visualizza i Partner che ti suggeriamo.&lt;/p&gt;</entry>
+	<entry key="partner_suggestions">Partner proposti</entry>
+	<entry key="upload_title">Carica immagini</entry>
+</properties>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="to">An</entry>
+	<entry key="send_twinkle">Envoyer un clin d'oeil</entry>
+	<entry key="wink_message">Message clin d'oeil</entry>
+</properties>

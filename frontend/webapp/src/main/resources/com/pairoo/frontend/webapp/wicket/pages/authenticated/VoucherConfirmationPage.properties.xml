@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title.login">Congratulations for activating your voucher</entry>
+	<entry key="title.registration">Congratulations for registering and activating your
+		voucher</entry>
+
+	<entry key="confirmation_mail_text">
+		&lt;p&gt;&lt;b&gt;Please confirm your email
+		address&lt;/b&gt;. Doing so ensures that no one else has registered
+		with your email address. &lt;b&gt;We already sent you a confirmation
+		email&lt;/b&gt;. If you confirm it now your registration at
+		Pairoo will
+		be successfully completed.&lt;/p&gt;</entry>
+
+	<entry key="content1">
+		&lt;p&gt;As PAIROO Premium Member you can start right
+		now with making contacts and flirting unlimited. Start your search for
+		the partner of your dreams - now.&lt;/p&gt;
+
+		&lt;p&gt;For your
+		information we summarize your membership facts again.&lt;/p&gt; </entry>
+	<entry key="content2">
+		&lt;p&gt;When your voucher period expires your Premium
+		membership will be converted into a free membership.&lt;/p&gt; </entry>
+	<entry key="nextAction">Start now making contacts and flirting as Premium
+		member</entry>
+	<entry key="footer">&lt;p&gt;The PAIROO Team wishes you good luck in
+		flirting and contacting.&lt;/p&gt;
+
+		&lt;p&gt;Kind regards&lt;/p&gt;
+
+		&lt;p&gt;Your Pairoo Team&lt;/p&gt;</entry>
+</properties>

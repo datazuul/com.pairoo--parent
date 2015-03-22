@@ -1,0 +1,23 @@
+Bonjour ${user.userAccount.username} et bienvenue sur Pairoo, 
+
+
+Félicitations ! Tu t'es inscrit(e) avec succès sur Pairoo, le site de rencontre international innovateur.
+
+Tu peux commencer tout de suite !
+Fais preuve de créativité et crée ton profil de tel manière qu'il soit attractif pour les autres membres.
+
+Pour des raisons de sécurité, nous te demandons de confirmer ton adresse e-mail.
+Nous garantissons ainsi que personne n'entretient de contacts en ton nom sur Pairoo.
+
+Ton adresse e-mail : ${user.email}.
+
+Confirme ton adresse e-mail en cliquant sur le lien suivant :
+${activationLink}
+
+Tu peux dès maintenant chercher le partenaire de tes rêves.
+
+L'équipe Pairoo te souhaite beaucoup de succès et de chance en amour.
+
+Pour toute question ou suggestion contacte nous par e-mail: support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

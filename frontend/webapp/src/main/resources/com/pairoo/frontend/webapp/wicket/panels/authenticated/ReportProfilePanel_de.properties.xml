@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="dialog.text">
+        &lt;p&gt;Sie wollen das Profil '&lt;b&gt;${userAccount.username}&lt;/b&gt;'
+            unserem Support melden, weil Sie sich belästigt fühlen.
+        &lt;/p&gt;
+        &lt;p&gt;Bitte nennen Sie uns kurz den Grund:&lt;/p&gt;
+    </entry>
+</properties>

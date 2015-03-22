@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="back">back to cropping photo</entry>
+	<entry key="save">save cropped photo</entry>
+	<entry key="instructions">&lt;h3&gt;Save cropped photo&lt;/h3&gt;
+		&lt;p&gt;Confirm the cropped photo by clicking the button "save cropped photo".&lt;br/&gt;
+If you do not want to save the cropped photo, click the button "back to cropping photo".&lt;/p&gt;</entry>
+</properties>

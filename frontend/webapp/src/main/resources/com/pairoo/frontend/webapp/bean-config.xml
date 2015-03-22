@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+	</bean>
+	<bean id="wicketWebApplication" class="com.pairoo.frontend.webapp.wicket.WicketWebApplication"></bean>
+
+    <aop:aspectj-autoproxy/>
+    <context:component-scan base-package="com.pairoo.frontend.webapp.aop"/>
+
+	<import resource="classpath:/com/pairoo/business/springBeans.xml" />
+	<import resource="classpath:/com/pairoo/backend/db/springBeans.xml" />
+	<import resource="classpath:/com/pairoo/backend/impl/email/springBeans.xml" />
+	<import resource="classpath:/com/pairoo/backend/impl/file/springBeans.xml" />
+	<import resource="classpath:/com/pairoo/backend/impl/http/springBeans.xml" />
+
+	<bean id="LoggingAspect" class="com.datazuul.framework.logging.aop.LoggingInterceptor" />
+
+	<aop:config>
+		<aop:aspect ref="LoggingAspect">
+			<aop:pointcut id="pageConstructorLogging"
+				expression="execution(* com.pairoo.frontend.webapp.wicket.pages.*.renderPage(..))" />
+			<aop:around pointcut-ref="pageConstructorLogging" method="logMethodDuration" />
+		</aop:aspect>
+	</aop:config>
+</beans>

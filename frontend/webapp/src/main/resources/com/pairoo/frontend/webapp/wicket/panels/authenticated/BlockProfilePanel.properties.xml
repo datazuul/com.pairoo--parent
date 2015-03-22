@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="dialog.text">
+        &lt;p&gt;The profile ${userAccount.username} will be blocked.&lt;/p&gt;
+
+        &lt;p&gt;Doing this no further communication from ${userAccount.username} to you is possible and
+        ${userAccount.username} can no longer view your profile.&lt;br/&gt;
+        The block can not be revoked.&lt;/p&gt;
+    </entry>
+</properties>

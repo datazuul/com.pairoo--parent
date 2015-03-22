@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="dialog.text">
+        &lt;p&gt;Il profilo ${userAccount.username} é stato bloccato.&lt;/p&gt;
+
+        &lt;p&gt;Non é possbilie contattare${userAccount.username}         e ${userAccount.username} non potrá piú accedere al tuo profilo..&lt;br/&gt;
+        Il blocco non puó essere rimosso.&lt;/p&gt;
+    </entry>
+</properties>

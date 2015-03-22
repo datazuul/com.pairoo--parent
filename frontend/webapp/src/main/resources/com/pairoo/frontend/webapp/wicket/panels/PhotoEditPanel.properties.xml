@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="crop_photo">crop photo</entry>
+	<entry key="discard_photo">discard photo</entry>
+	<entry key="instructions">&lt;h3&gt;Crop Photo&lt;/h3&gt;
+		&lt;p&gt;Select an area
+		of the photo and press the button "crop photo".&lt;br/&gt;
+		If you do not want to upload the photo press the button "discard
+		photo".&lt;/p&gt;</entry>
+</properties>

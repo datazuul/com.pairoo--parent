@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="User_new" class="com.pairoo.domain.User" scope="prototype">
+    </bean>
+    <bean id="User_saved" class="com.pairoo.domain.User" scope="prototype">
+        <property name="id" value="1"></property>
+        <property name="email" value="test@xyz.com"></property>
+        <property name="firstname" value="Hans"></property>
+        <property name="lastname" value="Huber"></property>
+    </bean>
+    <bean id="User_unsaved" class="com.pairoo.domain.User" scope="prototype">
+        <property name="email" value="test@xyz.com"></property>
+        <property name="firstname" value="Hans"></property>
+        <property name="lastname" value="Huber"></property>
+        <property name="userAccount" ref="UserAccount_unsaved"></property>
+        <property name="userProfile" ref="UserProfile_unsaved"></property>
+    </bean>
+</beans>

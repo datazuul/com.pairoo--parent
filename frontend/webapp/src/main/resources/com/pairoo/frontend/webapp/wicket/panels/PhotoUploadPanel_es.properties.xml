@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="legend">Elija usted la foto y subala</entry>
+	<entry key="upload.maxSize">el archivo debe tener un maximo de 3 MB.</entry>
+	<entry key="upload.onlyImages">se pueden subir fotos en los formatos de PNG, JP(E)G
+		und GIF.</entry>
+</properties>

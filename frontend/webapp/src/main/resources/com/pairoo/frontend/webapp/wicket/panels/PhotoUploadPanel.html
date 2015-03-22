@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <head></head>
+    
+    <body>
+        <wicket:panel>
+            <div class="well">
+                <wicket:message key="instructions">
+                    <h3>Wählen Sie das Foto aus und laden Sie es hoch</h3>
+                    <p>Ein Bild sagt mehr als 100 Worte</p>
+                </wicket:message>
+            </div>
+
+            <form class="form-horizontal" wicket:id="ajax-simpleUpload">
+                <fieldset>
+                    <legend><wicket:message key="step1">Schritt 1</wicket:message></legend>
+
+                    <div class="left" style="width: 400px;">
+                        <p>
+                            <wicket:message key="step1.text">Wählen Sie eine Bilddatei auf Ihrem Computer aus.</wicket:message>
+                        </p>
+                    </div>
+                    <div class="left" style="margin-left: 30px;">
+                        <p>
+                            <input wicket:id="fileUploadField" id="upload" type="file" />
+                        </p>
+                    </div>
+                </fieldset>
+
+                <fieldset wicket:id="step2Container">
+                    <legend><wicket:message key="step2">Schritt 2</wicket:message></legend>
+
+                    <div class="left" style="width: 400px;">
+                        <p wicket:id="step2Text">Sie haben die Bilddatei dsc967.png
+                            ausgewählt. Zum Hochladen und Bearbeiten klicken Sie bitte auf den
+                            Button.</p>
+                    </div>
+
+                    <div class="left" style="margin-left: 30px;">
+                        <p>
+                            <input class="btn btn-primary" type="submit" wicket:message="value:upload_file" />
+                        </p>
+                    </div>
+                </fieldset>
+
+                <div xxxwicket:id="progress">[[ajax upload progressbar]]</div>
+            </form>
+        </wicket:panel>
+    </body>
+</html>

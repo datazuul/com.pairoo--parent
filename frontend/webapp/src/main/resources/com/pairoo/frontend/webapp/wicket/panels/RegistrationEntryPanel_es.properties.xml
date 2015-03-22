@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="and_search_for">y busque</entry>
+	<entry key="born_on">nacido am</entry>
+	<entry key="I_am">yo soy</entry>
+	<entry key="search_now">buscar ahora</entry>
+	<entry key="search_world">busqueda en todo el mundo</entry>
+	<entry key="emailFieldLabel">Email</entry>
+	<entry key="emailFieldHint">su direccion de E-Mail no sera vista por otros
+		usuarios s
+		Respetamos su intimidad
+	</entry>
+	<entry key="passwordFieldLabel">Contraseña</entry>
+	<entry key="passwordHint">Su cotraseña debe contener entre 6 y 12 significados
+	</entry>
+	<entry key="living_in">vivo en</entry>
+	<entry key="searchProfileMaxAgeSelectionLabel">hasta</entry>
+	<entry key="searchProfileMinAgeSelectionLabel">de</entry>
+	<entry key="searchProfilePartnerTypeSelectionLabel">yo busco</entry>
+	<entry key="zipcode_area">en Codigo postal</entry>
+	<entry key="termsAndConditionsValidationCheckLabel">soy mayor de 18 años y con.... </entry>
+	<entry key="termsAndConditionsCheckLabel">Yo soy mayor de 18 años y con ${termsLink} y el
+		${conditionsLink} de acuerdo.</entry>
+	<entry key="usernameFieldLabel">Seudónimo</entry>
+	<entry key="usernameHint">utilice usted un seudónimo, que no delate su propio
+		nombre
+		.</entry>
+	<entry key="userAccount.password.StringValidator.range">el memorial en el campo '${label}' tiene que tener
+		entre ${minimum}
+		y ${maximum} significados.</entry>
+	<entry key="userProfilePartnerTypeSelectionLabel">yosoy</entry>
+
+	<entry key="error.email_not_unique">esta direccion de E-mail es ya utilizada . Si olvido
+		usted su contraseña, oprima usted "olvide la contraseña" o entable
+		contacto con nuestra asistencia tecnica.</entry>
+	<entry key="error.username_not_unique">Este seudónymo ya se utiliza. elija usted otro.</entry>
+</properties>

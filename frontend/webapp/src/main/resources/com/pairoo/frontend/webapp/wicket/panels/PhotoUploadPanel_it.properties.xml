@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="instructions">&lt;h3&gt;Scegli un'immagine e caricala&lt;/h3&gt;
+		&lt;p&gt;Una foto dice piú di 100 parole&lt;/p&gt;</entry>
+
+	<entry key="legend">Scegli un'immagine e caricala</entry>
+	<entry key="step1">Passo 1</entry>
+	<entry key="step1.text">Scegli un file immagine dal tuo computer.</entry>
+	<entry key="step2">Schritt 2</entry>
+	<entry key="step2.text">Hai scelto un file &lt;b&gt;${}&lt;/b&gt; immagine. Per caricarlo e trasformarlo premi il tasto.</entry>
+	<entry key="upload.maxSize">Le dimensioni massime del file dovranno essere 3 MB.</entry>
+	<entry key="upload.onlyImages">Si accettano immagini nei formati PNG, JP(E)G e GIF
+</entry>
+</properties>

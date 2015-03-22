@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <body>
+        <wicket:panel>
+            <div id="language_selection"><wicket:message key="select_preferred_language">Select your preferred language</wicket:message>:
+                <ul class="undecorated">
+                    <li wicket:id="lv"><a wicket:id="link" href="#" title="German"><span
+                                wicket:id="label">Deutsch</span></a></li>
+                    <wicket:remove>
+                        <li><a href="#" title="English (US)">English (US)</a></li>
+                        <li><a href="#" title="Spanish">Español</a></li>
+                        <li><a href="#" title="Portuguese (Brazil)">Português
+                                (Brasil)</a></li>
+                        <li><a href="#" title="French (France)">Français (France)</a></li>
+                        <li><a href="#" title="Italian">Italiano</a></li>
+                        <li><a href="#" title="Arabic">العربية</a></li>
+                        <li><a href="#" title="Hindi">हिन्दी</a></li>
+                        <li><a href="#" title="Simplified Chinese (China)">中文(简体)</a></li>
+                        <li><a href="#" title="Japanese">日本語</a></li>
+                    </wicket:remove>
+                </ul>
+            </div>
+        </wicket:panel>
+    </body>
+</html>

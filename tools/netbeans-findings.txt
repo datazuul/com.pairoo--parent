@@ -1,0 +1,6 @@
+- create missing method in other opened project: http://forums.netbeans.org/viewtopic.php?t=49282
+- update existing javadoc (Ctrl-Alt-J?)
+- comment line not working (Ctrl-Shift-/)
+- hbm-generation not generating properties
+- debugging: no local variables
+- no unfold all projects button

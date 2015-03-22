@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.pairoo</groupId>
+	<artifactId>parent</artifactId>
+	<version>${VERSION_NUMBER}</version>
+	<packaging>pom</packaging>
+
+	<name>${project.groupId}--${project.artifactId} (pairoo.com - Partner Community Project)</name>
+	<url>http://www.pairoo.com/</url>
+	<description>pairoo.com - Online Dating Portal</description>
+	<organization>
+		<name>Pairoo GmbH</name>
+		<url>http://www.pairoo.de/</url>
+	</organization>
+	<!-- license of the project itself <licenses> <license> <name>The Apache 
+		Software License, Version 2.0</name> <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url> 
+		<distribution>repo</distribution> </license> </licenses> -->
+	<developers>
+		<developer>
+			<id>ralf</id>
+			<name>Ralf Eichinger</name>
+			<email>ralf.eichinger@pairoo.de</email>
+			<organization>Pairoo GmbH</organization>
+			<roles>
+				<role>Java EE Architect</role>
+				<role>Java Senior Developer</role>
+				<role>Production</role>
+			</roles>
+			<organizationUrl>http://www.pairoo.de/</organizationUrl>
+			<timezone>+2</timezone>
+			<properties>
+				<Phone>+49-89-82088855</Phone>
+				<Mobile>+49-173-7501401</Mobile>
+			</properties>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Wilhelm Buntscheck</name>
+			<email>wilhelm.buntscheck@pairoo.de</email>
+			<organization>Pairoo GmbH</organization>
+			<organizationUrl>http://www.pairoo.de/</organizationUrl>
+			<roles>
+				<role>Product Manager</role>
+				<role>Sales and Marketing</role>
+			</roles>
+			<timezone>+2</timezone>
+			<properties>
+				<Phone>+49-8171-28614</Phone>
+				<Mobile>+49-172-8145011</Mobile>
+			</properties>
+		</contributor>
+	</contributors>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<debug>true</debug>
+					<optimize>true</optimize>
+				</configuration>
+				<version>2.3.1</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.4.3</version>
+				<executions>
+					<execution>
+						<id>replace-pom-placeholder</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>${basedir}</directory>
+									<includes>
+										<include>pom.xml</include>
+									</includes>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+							<outputDirectory>${project.build.directory}/pom-install-deploy-fix</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.3.1</version>
+				<executions>
+					<execution>
+						<id>overwrite-pom</id>
+						<phase>install</phase>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<configuration>
+							<packaging>pom</packaging>
+							<file>target/pom-install-deploy-fix/pom.xml</file>
+							<pomFile>target/pom-install-deploy-fix/pom.xml</pomFile>
+							<version>${project.version}</version>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>overwrite-pom</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy-file</goal>
+						</goals>
+						<configuration>
+							<packaging>pom</packaging>
+							<file>target/pom-install-deploy-fix/pom.xml</file>
+							<pomFile>target/pom-install-deploy-fix/pom.xml</pomFile>
+							<url>${deployRepoUrl}</url>
+							<version>${project.version}</version>
+							<updateReleaseInfo>${isRelease}</updateReleaseInfo>
+							<uniqueVersion>false</uniqueVersion>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-source-plugin</artifactId> 
+				<executions> <execution> <id>attach-sources</id> <phase>verify</phase> <goals> 
+				<goal>jar</goal> </goals> </execution> </executions> <version>2.1.2</version> 
+				</plugin> -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.5.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.8</version>
+				<configuration>
+					<!-- <tag>${project.artifactId}-${VERSION_NUMBER}</tag> -->
+					<tag>${VERSION_NUMBER}</tag>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<!-- test coverage -->
+			<plugin>
+				<!-- By default, the Surefire plugin executes **/Test*.java, **/*Test.java, 
+					and **/*TestCase.java test classes -->
+				<!-- see: http://maven.apache.org/plugins/maven-surefire-report-plugin/ -->
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>${surefire.version}</version>
+				<configuration>
+					<showSuccess>false</showSuccess>
+					<!-- <argLine>-Djava.awt.headless=true</argLine> -->
+					<systemPropertyVariables>
+						<java.awt.headless>true</java.awt.headless>
+						<!-- <systemProperty> <name>java.awt.headless</name> <value>true</value> 
+							</systemProperty> -->
+					</systemPropertyVariables>
+					<!-- java.lang.VerifyError: Expecting a stackmap frame at branch target 
+						138 in method http://stackoverflow.com/questions/7010665/testng-emma-cobertura-coverage-and-jdk-7-result-in-classformaterror-and-verif -->
+					<argLine>-XX:-UseSplitVerifier</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- see: http://mojo.codehaus.org/cobertura-maven-plugin/usage.html -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>${cobertura.version}</version>
+				<configuration>
+					<formats>
+						<format>xml</format>
+					</formats>
+					<!-- <argLine>-Djava.awt.headless=true</argLine> -->
+					<systemPropertyVariables>
+						<java.awt.headless>true</java.awt.headless>
+						<!-- <systemProperty> <name>java.awt.headless</name> <value>true</value> 
+							</systemProperty> -->
+					</systemPropertyVariables>
+					<argLine>-XX:-UseSplitVerifier</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- see: http://maven.apache.org/plugins/maven-javadoc-plugin/ -->
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<links>
+						<link>http://download.oracle.com/javase/6/docs/api/</link>
+					</links>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- see: http://maven.apache.org/plugins/maven-checkstyle-plugin/ -->
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<enableRulesSummary>false</enableRulesSummary>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- see: http://maven.apache.org/plugins/maven-pmd-plugin/ -->
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<sourceEncoding>utf-8</sourceEncoding>
+					<targetJdk>1.6</targetJdk>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- see: http://mojo.codehaus.org/taglist-maven-plugin/ -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>taglist-maven-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<tags>
+						<tag>TODO</tag>
+						<tag>FIXME</tag>
+						<tag>XXX</tag>
+						<tag>@todo</tag>
+						<tag>@deprecated</tag>
+					</tags>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- see: http://mojo.codehaus.org/jdepend-maven-plugin/ -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jdepend-maven-plugin</artifactId>
+				<version>2.0-beta-2</version>
+				<configuration></configuration>
+			</plugin>
+			<plugin>
+				<!-- see: http://mojo.codehaus.org/javancss-maven-plugin/ -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>javancss-maven-plugin</artifactId>
+				<version>2.0</version>
+				<configuration></configuration>
+			</plugin>
+			<plugin>
+				<!-- see: http://maven.apache.org/plugins/maven-jxr-plugin/ -->
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.3</version>
+				<configuration></configuration>
+			</plugin>
+			<plugin>
+				<!-- see: http://mojo.codehaus.org/findbugs-maven-plugin/ -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration></configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.sf</groupId>
+				<artifactId>stat-scm</artifactId>
+				<version>1.2.0</version>
+				<configuration>
+					<!-- <includes> <include>**/*.java</include> </includes> -->
+					<excludes>
+						<exclude>resources/**</exclude>
+						<exclude>**/*.docx</exclude>
+						<exclude>**/*.png</exclude>
+						<exclude>**/*.jpg</exclude>
+					</excludes>
+					<!-- <nonDeveloperLogins> <nonDeveloperLogin>Admin Smith</nonDeveloperLogin> 
+						<nonDeveloperLogin>Oleg Developer</nonDeveloperLogin> </nonDeveloperLogins> -->
+					<!-- <tags>3.0</tags> <tagsDir>/releases/</tagsDir> -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+	<scm>
+		<connection>scm:svn:https://vsrv51803.customer.xenway.de/svn-pairoo/com.pairoo--parent/trunk</connection>
+		<developerConnection>scm:svn:https://vsrv51803.customer.xenway.de/svn-pairoo/com.pairoo--parent/trunk</developerConnection>
+
+		<!-- <tag>HEAD</tag> -->
+		<!-- <url>https://pixotec.dyndns.org/websvn/</url> -->
+	</scm>
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>https://localhost:8080/jenkins/</url>
+		<!-- mail sending not configured in local Jenkins, yet... -->
+		<!-- <notifiers> <notifier> <type>mail</type> <sendOnError>true</sendOnError> 
+			<sendOnFailure>true</sendOnFailure> <sendOnSuccess>true</sendOnSuccess> <sendOnWarning>true</sendOnWarning> 
+			<configuration> <address>ralf.eichinger@pixotec.de</address> </configuration> 
+			</notifier> </notifiers> -->
+	</ciManagement>
+	<!-- <distributionManagement> <site> <id>website</id> <url>scp://sde:!sde23@enterprise-2.accounts.intern/home/sde/PROJECTS-WEBSITES/project_vms_ng/</url> 
+		</site> </distributionManagement> -->
+	<!-- <pluginRepositories> <pluginRepository> <id>maven2-repository.dev.java.net</id> 
+		<name>Java.net Maven 2 Repository</name> <url>http://download.java.net/maven/2</url> 
+		</pluginRepository> <pluginRepository> <id>maven-repository.dev.java.net</id> 
+		<name>Java.net Maven 1 Repository (legacy)</name> <ur>http://download.java.net/maven/1</url> 
+		<layout>legacy</layout> </pluginRepository> <pluginRepository> <id>download.java.net</id> 
+		<url>http://download.java.net/maven/2/</url> </pluginRepository> </pluginRepositories> -->
+
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<scope>runtime</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.mail</groupId>
+					<artifactId>mail</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>apache-log4j-extras</artifactId>
+			<version>${log4j-extras.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<!-- needed by mockito -->
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-core</artifactId>
+		</dependency>
+		<dependency><!-- needs extra dependencies: objenesis & hamcrest -->
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+		</dependency>
+		<dependency>
+			<!-- needed by mockito -->
+			<groupId>org.objenesis</groupId>
+			<artifactId>objenesis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.datazuul.framework</groupId>
+				<artifactId>datazuul-fwk-business</artifactId>
+				<version>${datazuul-fwk.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.datazuul.framework</groupId>
+				<artifactId>datazuul-fwk-domain</artifactId>
+				<version>${datazuul-fwk.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.datazuul.framework</groupId>
+				<artifactId>datazuul-fwk-i18n</artifactId>
+				<version>${datazuul-fwk.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.datazuul.framework</groupId>
+				<artifactId>datazuul-fwk-logging</artifactId>
+				<version>${datazuul-fwk.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.datazuul.framework</groupId>
+				<artifactId>datazuul-fwk-persistence</artifactId>
+				<version>${datazuul-fwk.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.datazuul.framework</groupId>
+				<artifactId>datazuul-fwk-security</artifactId>
+				<version>${datazuul-fwk.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.datazuul.framework</groupId>
+				<artifactId>datazuul-fwk-util</artifactId>
+				<version>${datazuul-fwk.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.datazuul.framework</groupId>
+				<artifactId>datazuul-fwk-webapp</artifactId>
+				<version>${datazuul-fwk.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-api</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.jqwicket</groupId>
+				<artifactId>jqwicket</artifactId>
+				<version>0.8</version>
+				<!-- manual installation: $ mvn install:install-file -DgroupId=com.google.code.jqwicket 
+					-DartifactId=jqwicket -Dversion=0.8 -Dpackaging=jar -Dfile=/path/to/file -->
+			</dependency>
+			<dependency>
+				<groupId>com.googlecode.flyway</groupId>
+				<artifactId>flyway-core</artifactId>
+				<version>${flyway.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.googlecode.genericdao</groupId>
+				<artifactId>dao-hibernate</artifactId>
+				<version>${genericdao.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.pairoo</groupId>
+				<artifactId>pairoo-domain</artifactId>
+				<version>${VERSION_NUMBER}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-api</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>slf4j-log4j12</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.pairoo.backend</groupId>
+				<artifactId>pairoo-backend-api</artifactId>
+				<version>${VERSION_NUMBER}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.pairoo.backend.impl</groupId>
+				<artifactId>pairoo-backend-database</artifactId>
+				<version>${VERSION_NUMBER}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-api</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>slf4j-log4j12</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.pairoo.backend.impl</groupId>
+				<artifactId>pairoo-backend-email</artifactId>
+				<version>${VERSION_NUMBER}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-api</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>slf4j-log4j12</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.pairoo.backend.impl</groupId>
+				<artifactId>pairoo-backend-file</artifactId>
+				<version>${VERSION_NUMBER}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-api</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>slf4j-log4j12</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.pairoo.backend.impl</groupId>
+				<artifactId>pairoo-backend-http</artifactId>
+				<version>${VERSION_NUMBER}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-api</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>slf4j-log4j12</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.pairoo.business</groupId>
+				<artifactId>pairoo-business-api</artifactId>
+				<version>${VERSION_NUMBER}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-api</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>slf4j-log4j12</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.pairoo.business</groupId>
+				<artifactId>pairoo-business-impl</artifactId>
+				<version>${VERSION_NUMBER}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-api</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>slf4j-log4j12</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.visural</groupId>
+				<artifactId>visural-common</artifactId>
+				<version>${visural.common.version}</version>
+				<!-- manual installation: $ mvn install:install-file -Dfile=visural-common-0.5.0.jar 
+					-DgroupId=com.visural -DartifactId=visural-common -Dversion=0.5.0 -Dpackaging=jar -->
+			</dependency>
+			<dependency>
+				<groupId>com.visural</groupId>
+				<artifactId>visural-wicket-w15</artifactId>
+				<version>${visural.wicket.version}</version>
+				<!-- manual installation: $ mvn install:install-file -Dfile=visural-wicket-w15-0.7.0.jar 
+					-DgroupId=com.visural -DartifactId=visural-wicket-w15 -Dversion=0.7.0 -Dpackaging=jar -->
+			</dependency>
+			<dependency>
+				<groupId>com.vividsolutions</groupId>
+				<artifactId>jts</artifactId>
+				<version>1.12</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${commons-lang.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-bootstrap</artifactId>
+				<version>${wicket-bootstrap.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.agilecoders.wicket</groupId>
+				<artifactId>wicket-bootstrap-extensions</artifactId>
+				<version>${wicket-bootstrap.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.agilecoders.wicket</groupId>
+				<artifactId>wicket-bootstrap-themes</artifactId>
+				<version>${wicket-bootstrap.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>${javamail.version}</version>
+			</dependency>
+			<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>jsp-api</artifactId> 
+				<version>${jsp-api.version}</version> <scope>provided</scope> </dependency> -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${servlet-api.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${jodatime.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>catalina</artifactId> 
+				<version>${tomcat.version}</version> <scope>test</scope> </dependency> -->
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-core</artifactId>
+				<version>${ehcache-core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket</artifactId>
+				<version>${wicket.version}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-auth-roles</artifactId>
+				<version>${wicket.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-datetime</artifactId>
+				<version>${wicket.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-extensions</artifactId>
+				<version>${wicket.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-spring</artifactId>
+				<version>${wicket.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjrt</artifactId>
+				<version>${aspectj.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>${aspectj.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.easymock</groupId>
+				<artifactId>easymock</artifactId>
+				<version>${easymock.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<!-- needed by mockito -->
+				<groupId>org.hamcrest</groupId>
+				<artifactId>hamcrest-core</artifactId>
+				<version>${hamcrest.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-ehcache</artifactId>
+				<version>${hibernate.version}</version>
+				<!-- <exclusions> <exclusion> <artifactId>ehcache-core</artifactId> <groupId>net.sf.ehcache</groupId> 
+					</exclusion> </exclusions> -->
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>${hibernate.validator.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hsqldb</groupId>
+				<artifactId>hsqldb</artifactId>
+				<version>${hsqldb.version}</version>
+				<type>jar</type>
+				<!-- <scope>test</scope> -->
+			</dependency>
+			<dependency>
+				<groupId>org.javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>${javassist.version}</version>
+			</dependency>
+			<dependency><!-- needs extra dependencies: objenesis & hamcrest -->
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>${mockito.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty</artifactId>
+				<version>${jetty.version}</version>
+				<!-- <scope>test</scope> -->
+			</dependency>
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-management</artifactId>
+				<version>${jetty.version}</version>
+				<!-- <scope>test</scope> -->
+			</dependency>
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-util</artifactId>
+				<version>${jetty.version}</version>
+				<!-- <scope>test</scope> -->
+			</dependency>
+			<dependency>
+				<!-- needed by mockito -->
+				<groupId>org.objenesis</groupId>
+				<artifactId>objenesis</artifactId>
+				<version>${objenesis.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.odlabs.wiquery</groupId>
+				<artifactId>wiquery</artifactId>
+				<version>${wiquery.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${springframework.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>commons-logging</artifactId>
+						<groupId>commons-logging</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>spring-integration-core</artifactId>
+				<version>${spring-integration.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>spring-integration-file</artifactId>
+				<version>${spring-integration.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>spring-integration-http</artifactId>
+				<version>${spring-integration.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-webmvc</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>spring-integration-mail</artifactId>
+				<version>${spring-integration.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.wicketstuff</groupId>
+				<artifactId>openlayers</artifactId>
+				<version>1.5-RC5.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.wicketstuff</groupId>
+				<artifactId>wicketstuff-jslibraries</artifactId>
+				<version>1.5.7</version>
+			</dependency>
+			<dependency>
+				<groupId>pl.rabbitsoftware</groupId>
+				<artifactId>enhancedwickettester</artifactId>
+				<version>${enhancedwickettester.version}</version>
+				<scope>test</scope>
+				<!-- manual installation: $ mvn install:install-file -Dfile=enhancedwickettester-1.1.0-SNAPSHOT.jar 
+					-DgroupId=pl.rabbitsoftware -DartifactId=enhancedwickettester -Dversion=1.1.0-SNAPSHOT 
+					-Dpackaging=jar -->
+			</dependency>
+			<dependency>
+				<groupId>postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>${postgresql.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>jqwicket</id>
+			<url>http://jqwicket.googlecode.com/svn/m2-repo/releases/</url>
+		</repository>
+		<repository>
+			<id>visural-common</id>
+			<name>visural-common</name>
+			<url>http://visural-common.googlecode.com/svn/trunk/visural-common/maven/</url>
+		</repository>
+		<repository>
+			<id>visural-wicket</id>
+			<name>visural-wicket</name>
+			<url>http://visural-wicket.googlecode.com/svn/trunk/visural-wicket/maven/</url>
+		</repository>
+
+		<!-- spring related -->
+		<repository>
+			<id>com.springsource.repository.bundles.release</id>
+			<name>EBR Spring Release Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.bundles.external</id>
+			<name>EBR External Release Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>org.springframework.maven.milestone</id>
+			<name>Maven Central Compatible Spring Milestone Repository</name>
+			<url>http://maven.springframework.org/milestone</url>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.bundles.milestone</id>
+			<name>EBR Spring Milestone Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/milestone</url>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>org.springframework.maven.snapshot</id>
+			<name>Maven Central Compatible Spring Snapshot Repository</name>
+			<url>http://maven.springframework.org/snapshot</url>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.bundles.snapshot</id>
+			<name>EBR Spring Snapshot Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/snapshot</url>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.libraries.release</id>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Library Releases</name>
+			<url>http://repository.springsource.com/maven/libraries/release</url>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.libraries.external</id>
+			<name>SpringSource Enterprise Bundle Repository - External Library Releases</name>
+			<url>http://repository.springsource.com/maven/libraries/external</url>
+			<snapshots>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>cobertura-it-maven-plugin-maven2-release</id>
+			<url>http://cobertura-it-maven-plugin.googlecode.com/svn/maven2/releases</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<properties>
+		<VERSION_NUMBER>1.0-SNAPSHOT</VERSION_NUMBER>
+		<releaseRepoUrl>http://vsrv51803.customer.xenway.de/nexus/content/repositories/releases</releaseRepoUrl>
+		<snapshotRepoUrl>http://vsrv51803.customer.xenway.de/nexus/content/repositories/snapshots</snapshotRepoUrl>
+		<deployRepoUrl>${releaseRepoUrl}</deployRepoUrl>
+		<isRelease>true</isRelease>
+
+		<!-- <servlet-api.version>2.5</servlet-api.version> -->
+		<aspectj.version>1.6.12</aspectj.version>
+		<cobertura.version>2.5.2</cobertura.version>
+		<commons-lang.version>2.6</commons-lang.version>
+<!--		<datazuul-fwk.version>1.0-SNAPSHOT</datazuul-fwk.version>-->
+ 		<datazuul-fwk.version>2013-07-30_21-28-31</datazuul-fwk.version>
+		<easymock.version>3.1</easymock.version>
+		<ehcache-core.version>2.4.7</ehcache-core.version>
+		<enhancedwickettester.version>1.1.0-SNAPSHOT</enhancedwickettester.version>
+		<flyway.version>2.2</flyway.version>
+		<genericdao.version>1.2.0</genericdao.version>
+		<hamcrest.version>1.1</hamcrest.version>
+		<hibernate.version>4.2.3.Final</hibernate.version>
+		<hibernate.validator.version>4.2.0.Final</hibernate.validator.version>
+		<hsqldb.version>2.2.6</hsqldb.version>
+		<javamail.version>1.4.4</javamail.version>
+		<javassist.version>3.15.0-GA</javassist.version>
+		<jetty.version>6.1.26</jetty.version>
+		<jodatime.version>2.0</jodatime.version>
+		<jsp-api.version>2.0</jsp-api.version>
+		<junit.version>4.8.2</junit.version>
+		<log4j.version>1.2.17</log4j.version>
+		<log4j-extras.version>1.0</log4j-extras.version>
+		<mockito.version>1.9.5</mockito.version>
+		<objenesis.version>1.2</objenesis.version>
+		<postgresql.version>9.1-901.jdbc4</postgresql.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<servlet-api.version>2.5</servlet-api.version>
+		<slf4j.version>1.6.4</slf4j.version>
+		<spring-integration.version>2.2.4.RELEASE</spring-integration.version>
+		<springframework.version>3.2.3.RELEASE</springframework.version>
+		<surefire.version>2.12.4</surefire.version>
+		<tomcat.version>6.0.35</tomcat.version>
+		<velocity.version>1.7</velocity.version>
+		<visural.common.version>0.5.0</visural.common.version>
+		<visural.wicket.version>0.7.0</visural.wicket.version>
+		<wicket.version>6.7.0</wicket.version>
+		<wicket-bootstrap.version>0.8</wicket-bootstrap.version>
+		<wiquery.version>1.2.4</wiquery.version>
+	</properties>
+
+	<modules>
+		<module>domain</module>
+		<module>backend</module>
+		<module>business</module>
+		<module>frontend</module>
+		<module>tools</module>
+	</modules>
+
+	<profiles>
+		<profile>
+			<!-- TODO add coverage reports: http://code.google.com/p/cobertura-it-maven-plugin/wiki/HowToUse -->
+			<!-- Build with also executing the long running integration tests -->
+			<id>integration</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+				<property>
+					<name>withIntegrationTests</name>
+					<value>true</value>
+				</property>
+			</activation>
+
+			<build>
+				<plugins>
+					<plugin>
+						<!-- The Failsafe plugin will look for **/IT*.java, **/*IT.java, and 
+							**/*ITCase.java. -->
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-failsafe-plugin</artifactId>
+						<version>2.12</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>integration-test</goal>
+									<goal>verify</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<systemPropertyVariables>
+								<env>TEST</env>
+								<!-- Turns out that the reason it was failing is that when you run 
+									maven test it spawns into a separate process and that does not pull down 
+									the necessary properties. -->
+								<java.awt.headless>true</java.awt.headless>
+								<!-- <systemProperty> <name>java.awt.headless</name> <value>true</value> 
+									</systemProperty> -->
+							</systemPropertyVariables>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>snapshot-deploy-url-override</id>
+			<activation>
+				<property>
+					<name>!VERSION_NUMBER</name>
+				</property>
+			</activation>
+			<properties>
+				<deployRepoUrl>${snapshotRepoUrl}</deployRepoUrl>
+				<isRelease>false</isRelease>
+			</properties>
+		</profile>
+	</profiles>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots-repo</id>
+			<name>Snapshots Repo</name>
+			<url>${snapshotRepoUrl}</url>
+		</snapshotRepository>
+		<repository>
+			<id>releases-repo</id>
+			<name>Releases Repo</name>
+			<url>${releaseRepoUrl}</url>
+		</repository>
+	</distributionManagement>
+</project>

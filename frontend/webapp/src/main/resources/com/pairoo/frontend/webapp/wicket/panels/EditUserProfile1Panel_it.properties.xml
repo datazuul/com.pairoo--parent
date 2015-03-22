@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title1">Chi sono?</entry>
+	<entry key="title2">Il mio aspetto?</entry>
+	<entry key="title3">Studi</entry>
+	<entry key="title4">Parlo le seguenti lingue</entry>
+
+	<entry key="userProfileBirthdateSelectionLabel">data di nascita</entry>
+	<entry key="userProfileBodyTypeSelectionLabel">Aspetto</entry>
+	<entry key="userProfileCountrySelectionLabel">Luogo di residenza</entry>
+	<entry key="userProfileEducationTypeSelectionLabel">Titolo di studio</entry>
+	<entry key="userProfileEthnicitySelectionLabel">Aspetto esteriore</entry>
+	<entry key="userProfileEyeColorSelectionLabel">Colore degli occhi</entry>
+	<entry key="userProfileFamilyStatusTypeSelectionLabel">Stato civile</entry>
+	<entry key="userProfileHairColorSelectionLabel">Colore dei capelli</entry>
+	<entry key="userProfileHeightSelectionLabel">Altezza</entry>
+	<entry key="userProfileIncomeTypeSelectionLabel">Stipendio annuo</entry>
+	<entry key="userProfileLanguagesSelectionLabel">altre lingue parlate</entry>
+	<entry key="userProfileNumberOfKidsTypeSelectionLabel">Figli</entry>
+	<entry key="userProfileOccupationTypeSelectionLabel">Categoria professionale</entry>
+	<entry key="userProfilePartnerTypeSelectionLabel">Io sono</entry>
+	<entry key="userProfileWeightSelectionLabel">Peso</entry>
+	<entry key="userProfileZipcodeSelectionLabel">CAP</entry>
+</properties>

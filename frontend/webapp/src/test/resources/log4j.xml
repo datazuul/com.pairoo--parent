@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "./log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+<!--
+    c - The calling class name, if giving without precision is the fully qualified name returned.
+    C - The fully qualified class name.
+    d - The date of the logging request, can be formatted with java.text.SimpleDateFormat, i.e. %d{yyyy-MM-dd}
+    F - The name of the calling File.
+    l - The location information, same as %C%M(%F:%L). This can be slow.
+    L - The calling class line number
+    m - The logging message.
+    M - The calling class method.
+    n - The platform dependent line separator.
+    p - The logging Level.
+    r - The relative date in millisecond since application start.
+    t - The invoking thread.
+    [x|X] - the Message Diagnostic (MDC) information.
+-->
+	<!-- standard output (no warnings errors): this goes e.g. to catalina.out -->
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}] %-5p %c %m %n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="DEBUG" />
+			<param name="LevelMax" value="INFO" />
+		</filter>
+	</appender>
+
+	<!-- standard error output (just warnings and errors): this goes e.g. to
+		catalina.out (?) -->
+	<appender name="STDERR" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.err" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}] %-5p %c %m %n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="WARN" />
+			<param name="LevelMax" value="FATAL" />
+		</filter>
+	</appender>
+
+	<!-- Logfile (rolling daily) -->
+	<appender name="FILE" class="org.apache.log4j.rolling.RollingFileAppender">
+		<param name="file" value="/var/log/pairoo/pairoo.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+
+		<rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+			<!-- The file to roll to, this is a fairly intelligent parameter, if the file
+			ends in .gz, it gzips it, based on the date stamp it rolls at that time,
+			default is yyyy-MM-dd, (rolls at midnight)
+			See: http://logging.apache.org/log4j/companions/extras/apidocs/org/apache/log4j/rolling/TimeBasedRollingPolicy.html -->
+            <param name="FileNamePattern" value="/var/log/pairoo/pairoo.%d.log.gz" />
+		</rollingPolicy>
+
+		<!-- <param name="MaxFileSize" value="10MB" /> -->
+		<!-- Keep 10 backup files -->
+		<!-- <param name="MaxBackupIndex" value="10"/> -->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}] %5p [%t][%x] %c.%M - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Declare the SMTPAppender -->
+	<appender name="EMAIL" class="org.apache.log4j.net.SMTPAppender">
+		<param name="BufferSize" value="512" />
+		<param name="SMTPHost" value="smtp.pixoblog.de" />
+		<param name="From" value="log4j@pairoo.com" />
+		<param name="To" value="ralf.eichinger@pixotec.de" />
+		<param name="Subject" value="[SMTPAppender] Application message" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}]%n%n%-5p%n%n%c%n%n%m%n%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="ERROR" />
+			<param name="LevelMax" value="FATAL" />
+		</filter>
+	</appender>
+
+	<!-- package specific logging (all|debug|info|warn|error|fatal|off|null) -->
+	<logger name="com.googlecode.flyway">
+		<level value="debug"/>
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="com.googlecode.genericdao.dao.hibernate">
+		<level value="info"/>
+		<appender-ref ref="STDOUT"/>
+	</logger>
+	<logger name="org.apache.wicket.protocol.http.RequestLogger" additivity="false">
+		<level value="info"/>
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="org.apache.wicket.resource.PropertiesFactory">
+		<level value="warn"/>
+		<appender-ref ref="STDOUT"/>
+	</logger>
+
+<!-- org.hibernate=WARN, consoleAppender
+com.googlecode.flyway=DEBUG, consoleAppender
+com.googlecode.genericdao.search.BaseSearchProcessor=INFO, consoleAppender
+com.googlecode.genericdao.search.hibernate.HibernateSearchProcessor=INFO, consoleAppender
+com.googlecode.genericdao.search.jpa.JPASearchProcessor=INFO, consoleAppender
+org.springframework.jdbc=INFO, consoleAppender -->
+
+	<!-- setup log4j's root logger -->
+	<root>
+		<priority value="info" />
+		<!-- <level value="all" /> -->
+
+		<!-- NO STANDARD LOGOUT, JUST TO FILE and EMAIL-->
+		<appender-ref ref="STDOUT" />
+		<!-- <appender-ref ref="STDERR" /> -->
+		<!-- <appender-ref ref="FILE" /> -->
+		<!-- <appender-ref ref="EMAIL" /> -->
+	</root>
+	<!-- HINT: deactivate catalina.out in Tomcat:
+		change in conf/logging.properties:
+		.handlers = 1catalina.org.apache.juli.FileHandler, java.util.logging.ConsoleHandler
+		to
+		.handlers = 1catalina.org.apache.juli.FileHandler -->
+</log4j:configuration>

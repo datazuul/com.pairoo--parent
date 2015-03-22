@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="image_of_total_images">Foto %d de %d</entry>
+	<entry key="instructions">
+		&lt;p&gt;Para cargar una foto oprima usted el boton "Elegir foto"&lt;/p&gt;
+		
+		&lt;p&gt;Despues de cargar la foto,puede usted desbloquearla para otros
+		afiliados.&lt;br/&gt;
+		Ademas puede usted determinar cual foto debe aparecer en su perfil como Foto
+		Perfil. Para mostrar una foto como foto perfil, Oprima usted el boton "Foto
+		perfil". Usted solo puede elegir una foto como foto perfil.&lt;/p&gt; </entry>
+</properties>

@@ -1,0 +1,14 @@
+Bonjour ${user.userAccount.username}, 
+
+${visitor.userAccount.username} te trouve attractif(ve) et t'a envoyé un clin d'oeil.
+
+Regarde tout de suite.
+Clique sur le lien pour accéder directement à ta boîte aux lettres.
+
+${activationLink}
+
+L'équipe Pairoo te souhaite beaucoup de succès et de chance dans la recherche du partenaire de tes rêves et de l'amour.
+
+Pour toute question ou suggestion contacte nous par e-mail: support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

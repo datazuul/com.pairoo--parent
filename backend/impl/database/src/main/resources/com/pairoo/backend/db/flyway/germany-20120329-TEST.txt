@@ -1,0 +1,2 @@
+DE	81245	München	Bayern	BY	Oberbayern	091	München	09162	48.161	11.414
+DE	82515	Wolfratshausen	Bayern	BY	Oberbayern	091	Bad Tölz-Wolfratshausen	09173	47.9075	11.4272

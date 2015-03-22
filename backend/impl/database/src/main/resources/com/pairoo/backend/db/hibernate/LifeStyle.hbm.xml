@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.pairoo.domain.LifeStyle" table="LIFESTYLE">
+		<id name="id" column="ID" type="java.lang.Long">
+			<generator class="org.hibernate.id.enhanced.TableGenerator">
+				<param name="table_name">ID_SEQUENCES</param>
+				<!-- <param name="value_column_name">next_val</param> -->
+				<!-- <param name="segment_column_name">sequence_name</param> -->
+				<param name="segment_value">com.pairoo.domain.LifeStyle</param>
+				<!-- <param name="segment_value_length">255</param> -->
+                <!-- <param name="initial_value">1</param> -->
+				<param name="increment_size">10</param>
+				<param name="optimizer">pooled</param>
+			</generator>
+		</id>
+		<version column="VERSION_ID" name="version" type="java.lang.Integer"
+			unsaved-value="null" />
+		<property name="uuid" type="java.lang.String">
+			<column name="UUID" />
+		</property>
+
+		<property name="drinkType">
+			<column name="DRINKTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.DrinkType</param>
+			</type>
+		</property>
+		<property name="smokeType">
+			<column name="SMOKETYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.SmokeType</param>
+			</type>
+		</property>
+		<property name="occupationType">
+			<column name="OCCUPATIONTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.OccupationType</param>
+			</type>
+		</property>
+		<property name="professionType">
+			<column name="PROFESSIONTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.ProfessionType</param>
+			</type>
+		</property>
+		<property name="homeType">
+			<column name="HOMETYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.HomeType</param>
+			</type>
+		</property>
+		<property name="livingSituation">
+			<column name="LIVINGSITUATION" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.LivingSituation</param>
+			</type>
+		</property>
+		<property name="playInstrument" type="java.lang.Boolean">
+			<column name="PLAYINSTRUMENT" />
+		</property>
+		<property name="sportsActivityType">
+			<column name="SPORTSACTIVITYTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.SportsActivityType</param>
+			</type>
+		</property>
+		<property name="holidayPlanningType">
+			<column name="HOLIDAYPLANNINGTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.HolidayPlanning</param>
+			</type>
+		</property>
+		<property name="fitnessType">
+			<column name="FITNESSTYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="type">12</param>
+				<param name="enumClass">com.pairoo.domain.enums.FitnessType</param>
+			</type>
+		</property>
+		<bag name="foodTypes" table="LIFESTYLE_FOODTYPES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="LIFESTYLE_ID" />
+			<!-- if mapping = "list": <index column="idx" /> -->
+			<element>
+				<column name="FOODTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.FoodType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="kitchenTypes" table="LIFESTYLE_KITCHENTYPES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="LIFESTYLE_ID" />
+			<element>
+				<column name="KITCHENTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.KitchenType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="petTypes" table="LIFESTYLE_PETTYPES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="LIFESTYLE_ID" />
+			<element>
+				<column name="PETTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.PetType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="hobbyTypes" table="LIFESTYLE_HOBBYTYPES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="LIFESTYLE_ID" />
+			<element>
+				<column name="HOBBYTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.HobbyType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="musicTypes" table="LIFESTYLE_MUSICTYPES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="LIFESTYLE_ID" />
+			<element>
+				<column name="MUSICTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.MusicType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="sportTypes" table="LIFESTYLE_SPORTTYPES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="LIFESTYLE_ID" />
+			<element>
+				<column name="SPORTTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.SportType</param>
+				</type>
+			</element>
+		</bag>
+		<bag name="holidayTypes" table="LIFESTYLE_HOLIDAYTYPES" lazy="false"
+			cascade="all" fetch="subselect">
+			<key column="LIFESTYLE_ID" />
+			<element>
+				<column name="HOLIDAYTYPE" />
+				<type name="org.hibernate.type.EnumType">
+					<param name="type">12</param>
+					<param name="enumClass">com.pairoo.domain.enums.HolidayType</param>
+				</type>
+			</element>
+		</bag>
+	</class>
+</hibernate-mapping>

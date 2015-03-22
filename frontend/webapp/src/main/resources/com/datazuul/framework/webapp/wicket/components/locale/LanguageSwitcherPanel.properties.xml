@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!--============================================= -->
+<!-- E N G L I S H text strings for enumerations -->
+<!-- ============================================ -->
+<properties>
+	<entry key="Language.CZECH">čeština</entry>
+	<entry key="Language.DUTCH">nederlands</entry>
+	<entry key="Language.ENGLISH">english</entry>
+	<entry key="Language.FRENCH">français</entry>
+	<entry key="Language.GERMAN">deutsch</entry>
+	<entry key="Language.ITALIAN">italiano</entry>
+	<entry key="Language.POLISH">polsku</entry>
+	<entry key="Language.PORTUGUESE">português</entry>
+	<entry key="Language.RUSSIAN">русский</entry>
+	<entry key="Language.SPANISH">español</entry>
+</properties>

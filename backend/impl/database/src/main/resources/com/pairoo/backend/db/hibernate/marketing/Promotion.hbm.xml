@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01.10.2012 17:16:06 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pairoo.domain.marketing.Promotion" table="PROMOTION">
+        <!-- column (optional - defaults to the property name): the name of the
+        primary key column. class = increment, identity, sequence, hilo, seqhilo,
+        uuid, guid, native, assigned, select, foreign, sequence-identity -->
+        <id name="id" column="ID" type="java.lang.Long">
+            <generator class="org.hibernate.id.enhanced.TableGenerator">
+                <param name="table_name">ID_SEQUENCES</param>
+                <!-- <param name="value_column_name">next_val</param> -->
+                <!-- <param name="segment_column_name">sequence_name</param> -->
+                <param name="segment_value">com.pairoo.domain.marketing.Promotion</param>
+                <!-- <param name="segment_value_length">255</param> -->
+                <!-- <param name="initial_value">1</param> -->
+                <param name="increment_size">10</param>
+                <param name="optimizer">pooled</param>
+            </generator>
+        </id>
+        <version column="VERSION_ID" name="version" type="java.lang.Integer"
+                         unsaved-value="null" />
+        <property name="uuid" type="java.lang.String">
+            <column name="UUID" />
+        </property>
+
+        <property name="promotionType">
+            <column name="PROMOTION_TYPE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">com.pairoo.domain.marketing.enums.PromotionType</param>
+            </type>
+        </property>
+        <property name="code" type="java.lang.String">
+            <column name="CODE" />
+        </property>
+        <property name="used" type="java.lang.Boolean">
+            <column name="USED" />
+        </property>
+        <property name="validFrom" type="java.util.Date">
+            <column name="VALID_FROM" />
+        </property>
+        <property name="validTo" type="java.util.Date">
+            <column name="VALID_TO" />
+        </property>
+        <property name="timeStamp" type="java.util.Date">
+            <column name="TIME_STAMP" />
+        </property>
+
+        <many-to-one name="userAccount" class="com.pairoo.domain.UserAccount"
+                             fetch="join" lazy="false" cascade="none">
+            <column name="USERACCOUNT" />
+        </many-to-one>
+        <many-to-one name="product" class="com.pairoo.domain.Product"
+                             fetch="join" lazy="false" cascade="none" not-null="true">
+            <column name="PRODUCT" />
+            <!--  not-null="true" unfortunately not done on table creation... -->
+        </many-to-one>
+    </class>
+</hibernate-mapping>

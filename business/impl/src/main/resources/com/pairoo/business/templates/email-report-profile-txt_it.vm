@@ -1,0 +1,13 @@
+Hallo ${receiverEmail}!
+
+'${reporterUsername}' 
+Ha segnalato un abuso da parte di'${profileUsername}' con il seguente messaggio.
+
+---
+${text}
+---
+PAIROO ti contatterà entro72 ore.
+
+
+Copyright 2011-2014 PAIROO GmbH
+

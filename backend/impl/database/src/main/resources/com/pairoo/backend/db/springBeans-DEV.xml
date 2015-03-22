@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Flyway DB versioning/migration tool -->
+    <bean id="flyway" class="com.googlecode.flyway.core.FlywayBeanAware"
+          init-method="migrate">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sqlMigrationPrefix" value="V" />
+        <property name="sqlMigrationSuffix" value="-${env}.sql" />
+        <property name="locations" value="com/pairoo/backend/db/flyway" />
+    </bean>
+    <bean class="com.pairoo.backend.db.flyway.V1_0_08_02__DML_GIS_DataMigration">
+        <property name="dataFilename">
+            <value>germany-20120329.txt</value>
+        </property>
+    </bean>
+</beans>

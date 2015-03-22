@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mail="http://www.springframework.org/schema/integration/mail"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:si="http://www.springframework.org/schema/integration"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/integration
+           http://www.springframework.org/schema/integration/spring-integration.xsd
+           http://www.springframework.org/schema/integration/mail
+           http://www.springframework.org/schema/integration/mail/spring-integration-mail.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:/com/pairoo/backend/impl/email/springBeans-${env}.properties</value>
+		</property>
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+	</bean>
+	
+	<!-- <si:annotation-config /> -->
+
+	<context:component-scan base-package="com.pairoo.backend.sao" />
+
+<!-- 	<bean id="emailSao" autowire="byType" class="com.pairoo.backend.sao.EmailSao" /> 
+ -->
+	<si:gateway id="sendEmailGateway" service-interface="com.pairoo.backend.sao.EmailSao"
+		default-request-channel="sendEmailPreProcessingChannel">
+		<si:method name="sendEmail" />
+	</si:gateway>
+
+	<si:channel id="sendEmailPreProcessingChannel" />
+
+	<si:transformer input-channel="sendEmailPreProcessingChannel"
+		output-channel="sendEmailChannel" method="transform">
+		<bean class="com.pairoo.backend.impl.email.MessageToMailMessageTransformer">
+			<!-- <property name="templatePath" value=""/> -->
+		</bean>
+	</si:transformer>
+
+	<si:channel id="sendEmailChannel">
+		<!-- <si:queue capacity="100" /> -->
+	</si:channel>
+
+	<mail:outbound-channel-adapter channel="sendEmailChannel"
+		mail-sender="mailSender" />
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${smtp.host}"/>
+		<property name="port" value="${smtp.port}" />
+		<property name="protocol" value="${smtp.protocol}" />
+		<property name="username" value="${smtp.username}" />
+		<property name="password" value="${smtp.password}" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">${smtp.starttls}</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

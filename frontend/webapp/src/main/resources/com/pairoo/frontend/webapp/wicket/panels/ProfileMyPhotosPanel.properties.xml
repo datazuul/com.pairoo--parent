@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="image_of_total_images">Photo %d of %d</entry>
+	<entry key="instructions">
+		&lt;p&gt;For uploading a photo click the button "new photo"&lt;/p&gt;
+
+		&lt;p&gt;After uploading a photo you may publish the photo to other
+		members.&lt;br/&gt;
+		Additionally you can specify the photo that should be shown as your profile photo.
+		To show a photo as profile photo, click onto the button "as profile
+		photo". Only one photo can be specified as profile photo.&lt;/p&gt; </entry>
+	<entry key="new_photo">new photo</entry>
+	<entry key="photo">Photo ${}</entry>
+</properties>

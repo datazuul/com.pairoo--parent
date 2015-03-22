@@ -1,0 +1,1 @@
+ALTER TABLE message ALTER COLUMN text TYPE varchar(4000);

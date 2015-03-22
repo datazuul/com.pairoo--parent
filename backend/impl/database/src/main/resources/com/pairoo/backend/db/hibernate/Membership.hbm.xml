@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pairoo.domain.Membership" table="MEMBERSHIP">
+        <id name="id" column="ID" type="java.lang.Long">
+            <generator class="org.hibernate.id.enhanced.TableGenerator">
+                <param name="table_name">ID_SEQUENCES</param>
+                <!-- <param name="value_column_name">next_val</param> -->
+                <!-- <param name="segment_column_name">sequence_name</param> -->
+                <param name="segment_value">com.pairoo.domain.Membership</param>
+                <!-- <param name="segment_value_length">255</param> -->
+                <!-- <param name="initial_value">1</param> -->
+                <param name="increment_size">10</param>
+                <param name="optimizer">pooled</param>
+            </generator>
+        </id>
+        <version column="VERSION_ID" name="version" type="java.lang.Integer"
+                         unsaved-value="null" />
+        <property name="uuid" type="java.lang.String">
+            <column name="UUID" />
+        </property>
+
+        <properties name="uniqueIdentfier" unique="true">
+            <many-to-one name="userAccount" class="com.pairoo.domain.UserAccount"
+                                     column="USERACCOUNT_ID" fetch="join" lazy="false" />
+            <property generated="never" lazy="false" name="startDate"
+                                  type="java.util.Date">
+                <column name="STARTDATE" />
+            </property>
+        </properties>
+        <property generated="never" lazy="false" name="endDate"
+                          type="java.util.Date">
+            <column name="ENDDATE" />
+        </property>
+        <property generated="never" lazy="false" name="acceptedTerms"
+                          type="java.lang.Boolean">
+            <column name="ACCEPTEDTERMS" />
+        </property>
+        <property generated="never" lazy="false" name="status">
+            <column name="STATUS" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">com.pairoo.domain.enums.MembershipStatus</param>
+            </type>
+        </property>
+
+        <many-to-one name="paymentTransaction" class="com.pairoo.domain.payment.Transaction"
+                             fetch="join" lazy="false" cascade="delete" not-null="false">
+            <column name="PAYMENTTRANSACTION" />
+        </many-to-one>
+        <many-to-one name="product" class="com.pairoo.domain.Product"
+                             fetch="join" lazy="false" cascade="none" not-null="false">
+            <column name="PRODUCT" />
+        </many-to-one>
+        <many-to-one name="promotion" class="com.pairoo.domain.marketing.Promotion"
+                             fetch="join" lazy="false" cascade="none" not-null="false">
+            <column name="PROMOTION" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+Hallo ${user.userAccount.username} willkommen bei PAIROO!
+
+Vielen Dank für die erfolgreiche Registrierung bei Deutschlands innovativer Partnerbörse
+und herzlichen Glückwunsch zur Aktivierung Ihres Gutscheins.
+ 
+Jetzt kann es gleich losgehen und Sie können als PAIROO Premium Mitglied unbegrenzt kontakten und flirten.
+Beginnen Sie jetzt Ihre Suche nach Ihrem Wunschpartner. 
+ 
+Zu Ihrer Sicherheit möchten wir Sie bitten, Ihre E-Mail Adresse zu bestätigen.
+Damit ist sichergestellt, dass niemand in Ihrem Namen bei PAIROO Kontakte pflegt. 
+
+Ihre Email-Adresse lautet ${user.email}.
+
+Bestätigen Sie jetzt Ihre E-Mail und klicken Sie auf den folgenden Link:
+${activationLink}
+
+Zur Information haben wir Ihre Mitgliedsdaten nochmals für Sie aufgeführt.
+ 
+Mitgliedstatus:  ${productRole} bis ${endDate}
+Abofunktion:     ${subscriptionFunctionality}
+Kosten:          keine (bezahlt mit Gutschein)
+
+Nach Ablauf des Gutscheins wird Ihre Premium Mitgliedschaft in eine kostenlose Mitgliedschaft umgewandelt.
+
+Das Pairoo Team wünscht Ihnen viel Erfolg und Glück in der Liebe.
+
+Bei Fragen oder Anregungen senden Sie uns eine E-Mail an support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+
+    <head>
+    </head>
+    <body>
+        <wicket:extend>
+            <div class="container" style="margin-bottom:20px;">
+                <div class="row">
+                    <div class="span6">
+                        <div class="box" style="margin-top:50px;">
+                            <h2 class="heading"><wicket:message key="registrationForm.title">Neu bei Pairoo?</wicket:message></h2>
+
+                            <div class="main">
+                                <form class="form-horizontal" wicket:id="registrationForm">
+                                    <div wicket:id="registrationEntryPanel">[RegistrationEntryPanel.html]</div>
+
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <input type="submit" class="btn btn-primary" wicket:message="value:register_and_activate_voucher" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="box" style="margin-top:250px;">
+                            <h2 class="heading"><wicket:message key="loginForm.title">Bereits Mitglied bei Pairoo</wicket:message></h2>
+
+                            <div class="main">
+                                <p><wicket:message key="loginIntro">Bitte melden Sie sich mit
+                                        Ihrem Pseudonym und Ihrem Passwort an, um den Gutschein
+                                        einzulösen.</wicket:message></p>
+
+                                <form class="form-horizontal" wicket:id="loginForm" method="post" action="VoucherConfirmationPage.html">
+                                    <fieldset>
+                                        <div class="control-group">
+                                            <label class="control-label" wicket:id="lblUsername">Pseudonym</label>
+                                            <div class="controls">
+                                                <input class="input-medium" wicket:id="userAccount.username" type="text" />
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                            <label class="control-label" wicket:id="lblPassword">Passwort</label>
+                                            <div class="controls">
+                                                <input class="input-medium" wicket:id="userAccount.password" type="password" />
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <input class="btn btn-primary" type="submit" wicket:message="value:activate_voucher" />
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </wicket:extend>
+    </body>
+</html>

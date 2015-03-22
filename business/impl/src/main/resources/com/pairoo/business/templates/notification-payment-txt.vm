@@ -1,0 +1,5 @@
+Hello PAIROO!
+
+New Payment from user ${user.userAccount.username}.
+Payment-Channel: ${paymentChannelType}
+Amount:          ${amount}

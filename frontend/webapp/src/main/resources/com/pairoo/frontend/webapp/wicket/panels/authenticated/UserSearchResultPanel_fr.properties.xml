@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="NumberOfKidsType.DONT_SAY">je ne dis pas</entry>
+	<entry key="NumberOfKidsType.NONE">sans enfant</entry>
+	<entry key="NumberOfKidsType.SOME">un enfant ou plus</entry>
+</properties>

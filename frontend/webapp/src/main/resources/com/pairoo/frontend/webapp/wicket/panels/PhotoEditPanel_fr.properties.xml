@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="crop_photo">Découper la photo</entry>
+	<entry key="discard_photo">Jeter la photo</entry>
+	<entry key="instructions">&lt;h3&gt;Découper la photo&lt;/h3&gt;
+		&lt;p&gt;Sélectionne la 
+		section de la photo et appuie sur le bouton "Découper la photo".&lt;br/&gt;
+		Si tu ne veux pas ajouter de photo, appuie sur le bouton "jeter la photo".&lt;/p&gt;</entry>
+</properties>

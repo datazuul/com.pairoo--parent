@@ -1,0 +1,4 @@
+select count(*) from geolocation;
+select * from geolocation where zipcode='94315';
+select * from subdivision where id=8896;
+select * from subdivision where id=8932;

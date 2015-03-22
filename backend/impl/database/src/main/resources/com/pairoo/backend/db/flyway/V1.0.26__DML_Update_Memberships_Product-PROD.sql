@@ -1,0 +1,1 @@
+update memberships set product=product.id from product where product.role='STANDARD';

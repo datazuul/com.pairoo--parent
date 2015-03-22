@@ -1,0 +1,23 @@
+Hallo ${user.userAccount.username} willkommen bei PAIROO, 
+
+
+wir beglückwünschen Sie zur erfolgreichen Registrierung bei PAIROO, der innovativen und internationalen Partnerbörse.
+
+Jetzt kann es gleich losgehen!
+Seien Sie kreativ und gestalten Sie Ihr Profil so, dass Sie für andere Mitglieder interessant sind.
+
+Zu Ihrer Sicherheit möchten wir Sie bitten, Ihre E-Mail Adresse zu bestätigen.
+Damit ist sichergestellt, dass niemand in Ihrem Namen bei PAIROO Kontakte pflegt.
+
+Ihre Email-Adresse lautet ${user.email}.
+
+Bestätigen Sie jetzt Ihre E-Mail und klicken Sie auf den folgenden Link:
+${activationLink}
+
+Jetzt können Sie Ihren Traumpartner finden.
+
+Das Pairoo Team wünscht Ihnen viel Erfolg und Glück in der Liebe.
+
+Bei Fragen oder Anregungen senden Sie uns eine E-Mail an support@pairoo.de.
+
+Copyright 2011-2014 PAIROO GmbH

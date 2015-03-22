@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="four_reasons_for_pairoo.content">
+		&lt;ul class="hooks"&gt;
+		&lt;li&gt;PAIROO é un portale privo di pubblicitá&lt;/li&gt;
+		&lt;li&gt;Prova PAIROO
+		gratis&lt;/li&gt;
+		&lt;li&gt;Comunica a livello internazionale.&lt;/li&gt;
+		&lt;li&gt;Sicurezza dei tuoi dati personali&lt;/li&gt;
+		&lt;/ul&gt; </entry>
+                
+        <entry key="intro">Ben il 50% degli iscritti a PAIROO&lt;br/&gt;
+         &lt;em&gt;ha la chance &lt;/em&gt;di trovare la propria anima gemella nei primi sei mesi. </entry>
+              
+	<entry key="pairoo_quality.content">
+		Su PAIROO il cliente é al 1 posto.
+		&lt;p&gt;PAIROO si impegna a fornire la massima qualitá e sicurezza
+                dati nella ricerca online di partner.&lt;br/&gt;
+		Siamo per la trasparenza nei servizi al pubblico.
+                Non nascondiamo abbonamenti. La formula Premium puó essere
+                disdetta per Email o posta.&lt;/p&gt;
+
+		&lt;p&gt;Il portale online  PAIROO
+		si orienta al codice S.P.I.N.del
+		Bundesverbands Digitale
+		Wirtschaft e.V., vedi anche &lt;a href="http://www.spin-kodex.de/"
+		target="_blank"&gt;www.spin-kodex.de.&lt;/a&gt;.&lt;/p&gt;</entry>
+	<entry key="register_for_free">Iscriviti subito gratis</entry>
+	<entry key="registration.title">Iscriviti gratis e trova il grande amore.</entry>
+</properties>

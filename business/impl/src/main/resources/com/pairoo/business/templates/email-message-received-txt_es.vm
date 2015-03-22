@@ -1,0 +1,18 @@
+Hola ${user.userAccount.username}, 
+
+${visitor.userAccount.username} tiene interes por usted y le ha enviado un mensaje.
+
+mire usted ahora mismo.
+oprima usted el Link para que entre directamente en su casilla postal.
+
+${activationLink}
+
+el equipo de Pairoo le desea mucho exito y suerte en la busqueda de el compañero y amor
+de sus sueños.
+
+
+
+en caso de preguntas o ideas envienos un E-Mail a support@pairoo.de.
+
+
+Copyright 2011-2014 PAIROO GmbH

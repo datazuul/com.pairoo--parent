@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="step4.title">Passo 4: Conferma</entry>
+	<entry key="confirmation.text">Grazie per aver scelto la formula Premium!</entry>
+</properties>

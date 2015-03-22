@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="basicSearchPanel.title">Finden Sie Ihren Traumpartner</entry>
+	<entry key="searchProfile.ethnicities.label">Wie soll mein Partner aussehen?</entry>
+	<entry key="searchProfile.geoArea.label">in </entry>
+	<entry key="searchProfile.maxAge.label"> bis </entry>
+	<entry key="searchProfile.minAge.label">von </entry>
+	<entry key="searchProfile.partnerType.label">Ich suche</entry>
+</properties>

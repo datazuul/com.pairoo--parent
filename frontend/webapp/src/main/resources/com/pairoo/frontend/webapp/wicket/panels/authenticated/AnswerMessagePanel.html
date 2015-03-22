@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="https://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <wicket:panel>
+            <td colspan="4">
+                <form wicket:id="form" method="post" action="#">
+                    <div class="control-group">
+                        <label class="control-label" wicket:id="subjectFieldLabel">Betreff</label>
+                        <div class="controls">
+                            <input class="input-block-level" type="text" wicket:id="subject" value="" />
+                            <textarea class="input-block-level" wicket:id="text" rows="10" cols="80">Input comes here</textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <input class="btn" wicket:id="btnCancel" type="submit" value="Abbrechen" wicket:message="value:cancel" /> <input class="btn btn-primary" type="submit" value="Nachricht senden" wicket:message="value:send_message" />
+                    </div>
+                </form>
+            </td>
+        </wicket:panel>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title1">Wer bin ich?</entry>
+	<entry key="title2">Wie sehe ich aus?</entry>
+	<entry key="title3">Bildung</entry>
+	<entry key="title4">Ich spreche folgende Sprachen</entry>
+
+	<entry key="userProfileBirthdateSelectionLabel">geboren am</entry>
+	<entry key="userProfileBodyTypeSelectionLabel">Figur</entry>
+	<entry key="userProfileCountrySelectionLabel">Wohnsitz</entry>
+	<entry key="userProfileEducationTypeSelectionLabel">Abschluß</entry>
+	<entry key="userProfileEthnicitySelectionLabel">Aussehen</entry>
+	<entry key="userProfileEyeColorSelectionLabel">Augenfarbe</entry>
+	<entry key="userProfileFamilyStatusTypeSelectionLabel">Familienstand</entry>
+	<entry key="userProfileHairColorSelectionLabel">Haarfarbe</entry>
+	<entry key="userProfileHeightSelectionLabel">Größe</entry>
+	<entry key="userProfileIncomeTypeSelectionLabel">Jahresverdienst</entry>
+	<entry key="userProfileLanguagesSelectionLabel">weitere gesprochene Sprachen</entry>
+	<entry key="userProfileNumberOfKidsTypeSelectionLabel">Kinder</entry>
+	<entry key="userProfileOccupationTypeSelectionLabel">Berufsgruppe</entry>
+	<entry key="userProfilePartnerTypeSelectionLabel">Ich bin</entry>
+	<entry key="userProfileWeightSelectionLabel">Gewicht</entry>
+	<entry key="userProfileZipcodeSelectionLabel">PLZ</entry>
+</properties>

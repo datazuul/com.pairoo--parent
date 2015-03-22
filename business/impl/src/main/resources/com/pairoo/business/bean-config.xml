@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <value>classpath:/com/pairoo/business/springBeans-${env}.properties
+            </value>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+    </bean>
+
+    <bean id="applicationService"
+          class="com.pairoo.business.services.impl.ApplicationServiceImpl" />
+
+    <bean id="authorizationService"
+          class="com.pairoo.business.services.impl.payment.payone.AuthorizationServiceImpl">
+        <constructor-arg index="0" ref="payOneSao" />
+        <constructor-arg index="1" ref="payoneTransactionService" />
+        <constructor-arg index="2" ref="productService" />
+        <constructor-arg index="3" value="${payone.merchantId}" />
+        <constructor-arg index="4" value="${payone.portalId}" />
+        <constructor-arg index="5" value="${payone.subAccountId}" />
+        <constructor-arg index="6" value="${payone.secretKey}" />
+        <constructor-arg index="7" value="${sysEnv.pairoo.payoneMode}" />
+        <constructor-arg ref="notificationService" />
+    </bean>
+
+    <bean id="blockedUserService"
+          class="com.pairoo.business.services.impl.BlockedUserServiceImpl">
+        <constructor-arg ref="blockedUserDao" />
+    </bean>
+
+    <bean id="continentService" class="com.pairoo.business.services.impl.ContinentServiceImpl" />
+
+    <bean id="countryService" class="com.pairoo.business.services.impl.CountryServiceImpl" />
+
+    <bean id="creditCardCheckService"
+          class="com.pairoo.business.services.impl.payment.payone.CreditCardCheckServiceImpl">
+        <constructor-arg index="0" value="${payone.merchantId}" />
+        <constructor-arg index="1" value="${payone.portalId}" />
+        <constructor-arg index="2" value="${payone.subAccountId}" />
+        <constructor-arg index="3" value="${payone.secretKey}" />
+        <constructor-arg index="4" value="${sysEnv.pairoo.payoneMode}" />
+    </bean>
+    <bean id="elvCheckService"
+          class="com.pairoo.business.services.impl.payment.payone.ELVCheckServiceImpl">
+        <constructor-arg index="0" value="${payone.merchantId}" />
+        <constructor-arg index="1" value="${payone.portalId}" />
+        <constructor-arg index="2" value="${payone.subAccountId}" />
+        <constructor-arg index="3" value="${payone.secretKey}" />
+        <constructor-arg index="4" value="${sysEnv.pairoo.payoneMode}" />
+    </bean>
+    <bean id="favoriteService" class="com.pairoo.business.services.impl.FavoriteServiceImpl">
+        <constructor-arg ref="favoriteDao" />
+    </bean>
+    <bean id="geoAreaService" class="com.pairoo.business.services.impl.GeoAreaServiceImpl">
+        <constructor-arg ref="geoAreaDao" />
+    </bean>
+    <bean id="geoLocationService"
+          class="com.pairoo.business.services.impl.GeoLocationServiceImpl">
+        <constructor-arg ref="geoLocationDao" />
+        <constructor-arg ref="subdivisionService" />
+    </bean>
+    <bean id="imageEntryService" class="com.pairoo.business.services.impl.ImageEntryServiceImpl">
+        <constructor-arg ref="imageEntryDao" />
+    </bean>
+    <bean id="imageService" class="com.pairoo.business.services.impl.ImageServiceImpl">
+        <constructor-arg ref="imageDao" />
+    </bean>
+    <bean id="landingPageActionService"
+          class="com.pairoo.business.services.impl.LandingPageActionServiceImpl">
+        <constructor-arg ref="landingPageActionDao" />
+    </bean>
+    <bean id="membershipService" class="com.pairoo.business.services.impl.MembershipServiceImpl">
+        <constructor-arg ref="membershipDao" />
+        <constructor-arg ref="userAccountService" />
+    </bean>
+    <bean id="messageService" class="com.pairoo.business.services.impl.MessageServiceImpl">
+        <constructor-arg ref="messageDao" />
+        <constructor-arg ref="velocityEngine" />
+    </bean>
+    <bean id="notificationService" class="com.pairoo.business.services.impl.NotificationServiceImpl">
+        <constructor-arg ref="messageService" />
+        <!-- <constructor-arg ref="emailSao" /> -->
+    </bean>
+    <bean id="paymentChannelService"
+          class="com.pairoo.business.services.impl.payment.PaymentChannelServiceImpl">
+        <constructor-arg ref="paymentChannelDao" />
+    </bean>
+    <bean id="payoneTransactionService"
+          class="com.pairoo.business.services.impl.payment.payone.PayOneTransactionServiceImpl">
+        <constructor-arg ref="payoneTransactionDao" />
+    </bean>
+    <bean id="personProfileService"
+          class="com.pairoo.business.services.impl.PersonProfileServiceImpl" />
+
+    <bean id="preAuthorizationService"
+          class="com.pairoo.business.services.impl.payment.payone.PreAuthorizationServiceImpl">
+        <constructor-arg index="0" ref="payOneSao" />
+        <constructor-arg index="1" value="${payone.merchantId}" />
+        <constructor-arg index="2" value="${payone.portalId}" />
+        <constructor-arg index="3" value="${payone.subAccountId}" />
+        <constructor-arg index="4" value="${payone.secretKey}" />
+        <constructor-arg index="5" value="${sysEnv.pairoo.payoneMode}" />
+    </bean>
+
+    <bean id="productService" class="com.pairoo.business.services.impl.ProductServiceImpl">
+        <constructor-arg ref="productDao" />
+    </bean>
+    <bean id="promotionService"
+          class="com.pairoo.business.services.impl.marketing.PromotionServiceImpl">
+        <constructor-arg ref="promotionDao" />
+    </bean>
+    <bean id="subdivisionService"
+          class="com.pairoo.business.services.impl.SubdivisionServiceImpl">
+        <constructor-arg ref="subdivisionDao" />
+    </bean>
+    <bean id="transactionService"
+          class="com.pairoo.business.services.impl.payment.TransactionServiceImpl">
+        <constructor-arg ref="transactionDao" />
+    </bean>
+    <bean id="userAccountService"
+          class="com.pairoo.business.services.impl.UserAccountServiceImpl">
+        <constructor-arg ref="userAccountDao" />
+    </bean>
+    <bean id="userProfileService"
+          class="com.pairoo.business.services.impl.UserProfileServiceImpl">
+        <constructor-arg ref="userProfileDao" />
+    </bean>
+    <bean id="userService" class="com.pairoo.business.services.impl.UserServiceImpl">
+        <constructor-arg ref="userDao" />
+        <constructor-arg ref="userAccountService" />
+        <constructor-arg ref="personProfileService" />
+        <constructor-arg ref="messageService" />
+        <!-- <constructor-arg ref="emailSao" /> -->
+        <constructor-arg ref="productService" />
+        <constructor-arg ref="membershipService" />
+        <constructor-arg ref="countryService" />
+        <constructor-arg ref="promotionService" />
+        <constructor-arg ref="voucherPaymentService" />
+        <constructor-arg ref="geoLocationService" />
+        <constructor-arg ref="notificationService" />
+    </bean>
+    <bean id="visitService" class="com.pairoo.business.services.impl.VisitServiceImpl">
+        <constructor-arg ref="visitDao" />
+        <constructor-arg ref="messageService" />
+    </bean>
+    <bean id="voucherPaymentService"
+          class="com.pairoo.business.services.impl.payment.VoucherPaymentServiceImpl">
+        <constructor-arg ref="paymentChannelDao" />
+        <constructor-arg ref="voucherPaymentDao" />
+        <constructor-arg ref="membershipService" />
+        <constructor-arg ref="promotionService" />
+        <constructor-arg ref="transactionService" />
+    </bean>
+
+    <bean id="velocityEngine"
+          class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <value>
+                resource.loader=class
+                class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+            </value>
+        </property>
+    </bean>
+
+    <!-- the transactional advice (i.e. what 'happens'; see the <aop:advisor/>
+    bean below) -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <!-- the transactional semantics... -->
+        <tx:attributes>
+            <!-- all methods starting with 'get' are read-only -->
+            <tx:method name="get*" read-only="true" propagation="REQUIRED" />
+            <tx:method name="find*" read-only="true" propagation="REQUIRED" />
+            <tx:method name="count*" read-only="true" propagation="REQUIRED" />
+            <!-- other methods use the default transaction settings (see below) -->
+            <tx:method name="*" read-only="false" propagation="REQUIRED" rollback-for="java.lang.RuntimeException"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- ensure that the above transactional advice runs for any execution of
+    an operation defined by the BusinessService interfaces -->
+    <aop:config>
+        <!-- *: Der erste Stern im Attribut "expression" steht für den Rückgabewert und bedeutet,
+        dass der Pointcut zutrifft, egal ob die Methode void, int oder etwas anderes
+        zurückgibt.
+        Die Sterne in der Package-Deklaration dienen als Platzhalter/Wildcards.
+        (..): Die Parameter in der Methodensignatur müssen nicht unbedingt festgelegt werden.
+        Soll kein Parameter vorkommen, wird zwischen die Klammern kein Ausdruck geschrieben.
+        Wenn mehrere Methoden mit dem gleichen Namen existieren und sich nur durch die Parameter
+        unterscheiden, so kann die Expression auch so formuliert werden,
+        dass sie auf alle Parameter (null oder x-beliebig viele) zutrifft: mit (..)-->
+        <aop:pointcut id="businessServiceMethods"
+                      expression="execution(* com.pairoo.business.api.*.*(..))" />
+        <aop:pointcut id="marketingServiceMethods"
+                      expression="execution(* com.pairoo.business.api.marketing.*.*(..))" />
+        <aop:pointcut id="paymentServiceMethods"
+                      expression="execution(* com.pairoo.business.api.payment.*.*(..))" />
+        <aop:pointcut id="businessServiceMethodsFramework"
+                      expression="execution(* com.datazuul.framework.business.services.*.*(..))" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="businessServiceMethods" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="marketingServiceMethods" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="paymentServiceMethods" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="businessServiceMethodsFramework" />
+    </aop:config>
+</beans>

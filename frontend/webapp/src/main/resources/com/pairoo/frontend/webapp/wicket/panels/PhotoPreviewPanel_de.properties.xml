@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="back">zurück zum Bild zuschneiden</entry>
+	<entry key="save">Bildausschnitt speichern</entry>
+	<entry key="instructions">&lt;h3&gt;Bildausschnitt speichern&lt;/h3&gt;
+		&lt;p&gt;Bestätigen Sie den Bildausschnitt und klicken Sie auf den Button "Bildausschnitt speichern".&lt;br/&gt;
+Wenn Sie den Bildausschnitt nicht speichern wollen, klicken Sie den Button "zurück zum Bild zuschneiden".&lt;/p&gt;</entry>
+</properties>
