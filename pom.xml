@@ -952,8 +952,8 @@
 		<aspectj.version>1.6.12</aspectj.version>
 		<cobertura.version>2.5.2</cobertura.version>
 		<commons-lang.version>2.6</commons-lang.version>
-<!--		<datazuul-fwk.version>1.0-SNAPSHOT</datazuul-fwk.version>-->
- 		<datazuul-fwk.version>2013-07-30_21-28-31</datazuul-fwk.version>
+		<datazuul-fwk.version>1.0-SNAPSHOT</datazuul-fwk.version>
+ 		<!--<datazuul-fwk.version>2013-07-30_21-28-31</datazuul-fwk.version>-->
 		<easymock.version>3.1</easymock.version>
 		<ehcache-core.version>2.4.7</ehcache-core.version>
 		<enhancedwickettester.version>1.1.0-SNAPSHOT</enhancedwickettester.version>

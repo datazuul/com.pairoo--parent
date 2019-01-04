@@ -1,0 +1,16 @@
+/domain/target/
+/backend/api/target/
+/backend/impl/database/target/
+/backend/impl/email/target/
+/backend/impl/file/target/
+/backend/impl/http/target/
+/business/api/target/
+/backend/target/
+/backend/impl/target/
+/business/impl/target/
+/business/target/
+/frontend/webapp/target/
+/frontend/target/
+/target/
+/tools/target/
+/frontend/file/target/

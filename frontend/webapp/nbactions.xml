@@ -11,4 +11,14 @@
                 <skipTests>true</skipTests>
             </properties>
         </action>
+        <action>
+            <actionName>CUSTOM-mvn jetty:run</actionName>
+            <displayName>mvn jetty:run</displayName>
+            <goals>
+                <goal>jetty:run</goal>
+            </goals>
+            <activatedProfiles>
+                <activatedProfile>DEV</activatedProfile>
+            </activatedProfiles>
+        </action>
     </actions>
